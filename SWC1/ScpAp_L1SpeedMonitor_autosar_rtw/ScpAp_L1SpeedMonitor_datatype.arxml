@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model ScpAp_L1SpeedMonitor
+Model version                : 1.158
+Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
+XML source code generated on : Wed Feb 04 11:29:29 2026
+Model Checksum               : 1916757303 3778785942 3820453525 1380853742
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00052.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_Platform</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>BaseTypes</SHORT-NAME>
+                    <ELEMENTS>
+                        <SW-BASE-TYPE UUID="2abdc184-07e3-5c0a-7d1f-45a4be35f34d">
+                            <SHORT-NAME>float64</SHORT-NAME>
+                            <CATEGORY>FIXED_LENGTH</CATEGORY>
+                            <BASE-TYPE-SIZE>64</BASE-TYPE-SIZE>
+                            <BASE-TYPE-ENCODING>IEEE754</BASE-TYPE-ENCODING>
+                            <NATIVE-DECLARATION>float64</NATIVE-DECLARATION>
+                        </SW-BASE-TYPE>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                    <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+                    <ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE UUID="599e163f-ccbd-5d8d-4710-6cc647c22ec5">
+                            <SHORT-NAME>float64</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/float64</BASE-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE UUID="694a7dc5-f136-556a-d06b-c5ba1836e494">
+                            <SHORT-NAME>float64_const</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/float64</BASE-TYPE-REF>
+                                        <ADDITIONAL-NATIVE-TYPE-QUALIFIER>const </ADDITIONAL-NATIVE-TYPE-QUALIFIER>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                    </ELEMENTS>
+                    <AR-PACKAGES>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>SwAddrMethods</SHORT-NAME>
+                            <ELEMENTS>
+                                <SW-ADDR-METHOD UUID="3ff947e8-9080-5e7c-0d3c-fd4dc90c2a4b">
+                                    <SHORT-NAME>AswVariable</SHORT-NAME>
+                                    <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                                    <SECTION-INITIALIZATION-POLICY>INIT</SECTION-INITIALIZATION-POLICY>
+                                    <SECTION-TYPE>VAR</SECTION-TYPE>
+                                </SW-ADDR-METHOD>
+                                <SW-ADDR-METHOD UUID="4c6eb19c-ca38-5749-d761-d410afe3e5ef">
+                                    <SHORT-NAME>CALIB</SHORT-NAME>
+                                    <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                                    <SECTION-TYPE>CONST</SECTION-TYPE>
+                                </SW-ADDR-METHOD>
+                                <SW-ADDR-METHOD UUID="898c6d8c-8878-5c05-b4b4-4a56cf6230c4">
+                                    <SHORT-NAME>CODE</SHORT-NAME>
+                                    <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                                    <SECTION-TYPE>CODE</SECTION-TYPE>
+                                </SW-ADDR-METHOD>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>Units</SHORT-NAME>
+                            <ELEMENTS>
+                                <UNIT UUID="23bd64a4-6f74-5b70-c19b-62fe2798fcc5">
+                                    <SHORT-NAME>NoUnit</SHORT-NAME>
+                                    <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
+                                    <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
+                                </UNIT>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                    </AR-PACKAGES>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,1908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model ScpAp_L1SpeedMonitor
+Model version                : 1.158
+Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
+XML source code generated on : Wed Feb 04 11:29:29 2026
+Model Checksum               : 1916757303 3778785942 3820453525 1380853742
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00052.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_Platform</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>BaseTypes</SHORT-NAME>
+                    <ELEMENTS>
+                        <SW-BASE-TYPE>
+                            <SHORT-NAME>boolean</SHORT-NAME>
+                            <CATEGORY>FIXED_LENGTH</CATEGORY>
+                            <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+                            <BASE-TYPE-ENCODING>BOOLEAN</BASE-TYPE-ENCODING>
+                            <NATIVE-DECLARATION>boolean</NATIVE-DECLARATION>
+                        </SW-BASE-TYPE>
+                        <SW-BASE-TYPE>
+                            <SHORT-NAME>float32</SHORT-NAME>
+                            <CATEGORY>FIXED_LENGTH</CATEGORY>
+                            <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
+                            <BASE-TYPE-ENCODING>IEEE754</BASE-TYPE-ENCODING>
+                            <NATIVE-DECLARATION>float32</NATIVE-DECLARATION>
+                        </SW-BASE-TYPE>
+                        <SW-BASE-TYPE>
+                            <SHORT-NAME>uint16</SHORT-NAME>
+                            <CATEGORY>FIXED_LENGTH</CATEGORY>
+                            <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+                            <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+                            <NATIVE-DECLARATION>uint16</NATIVE-DECLARATION>
+                        </SW-BASE-TYPE>
+                        <SW-BASE-TYPE>
+                            <SHORT-NAME>uint8</SHORT-NAME>
+                            <CATEGORY>FIXED_LENGTH</CATEGORY>
+                            <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+                            <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+                            <NATIVE-DECLARATION>uint8</NATIVE-DECLARATION>
+                        </SW-BASE-TYPE>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                    <SHORT-NAME>CompuMethods</SHORT-NAME>
+                    <ELEMENTS>
+                        <COMPU-METHOD>
+                            <SHORT-NAME>boolean_CompuMethod</SHORT-NAME>
+                            <CATEGORY>TEXTTABLE</CATEGORY>
+                            <UNIT-REF DEST="UNIT">/AUTOSAR_Platform/ImplementationDataTypes/Units/NoUnit</UNIT-REF>
+                            <COMPU-INTERNAL-TO-PHYS>
+                                <COMPU-SCALES>
+                                    <COMPU-SCALE>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>FALSE</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>TRUE</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                </COMPU-SCALES>
+                            </COMPU-INTERNAL-TO-PHYS>
+                        </COMPU-METHOD>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                    <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+                    <ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE>
+                            <SHORT-NAME>boolean</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="FOR-ALL">boolean has the value space required to support the mathematical concept of 
+binary-valued logic: {true, false}.</L-2>
+                            </DESC>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/boolean</BASE-TYPE-REF>
+                                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_Platform/CompuMethods/boolean_CompuMethod</COMPU-METHOD-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE>
+                            <SHORT-NAME>float32</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="FOR-ALL">float32 corresponds to the IEEE single-precision 32-bit floating point type
+[IEEE 754-1985]. The basic value space of float32 consists of the values 
+m * 2^e, where m is an integer whose absolute value is less than 2^24, 
+and e is an integer between -149 and 104, inclusive. In addition to the basic
+value space described above, the value space of float32 also contains the 
+following special values: positive and negative zero, positive and negative 
+infinity and not-a-number. The order-relation on float32 is: 
+x &lt; y if y - x is positive. Positive zero is greater than negative zero.
+Not-a-number equals itself and is greater than all float values including positive infinity. 
+
+float32 values have a lexical representation consisting of a mantissa followed, 
+optionally, by the character &quot;E&quot; or &quot;e&quot;, followed by an exponent. The exponent
+must be an integer. The mantissa must be a decimal number. The representations
+for exponent and mantissa must follow the lexical rules for integer and decimal.
+If the &quot;E&quot; or &quot;e&quot; and the following exponent are omitted, an exponent value 
+of 0 is assumed. 
+
+The special values positive and negative zero, positive and negative infinity
+and not-a-number have lexical representations 0, -0, INF, -INF and NaN, 
+respectively. 
+
+For example, -1E4, 1267.43233E12, 12.78e-2, 12 and INF are all legal literals
+for float32.</L-2>
+                            </DESC>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/float32</BASE-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE>
+                            <SHORT-NAME>uint16</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="FOR-ALL">uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+The order-relation on uint16 is: x &lt; y if y - x is positive.
+uint16 has a lexical representation consisting of a finite-length sequence 
+of decimal digits (#x30-#x39).
+
+For example: 1, 0, 1267, +10000.</L-2>
+                            </DESC>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint16</BASE-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE>
+                            <SHORT-NAME>uint8</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="FOR-ALL">uint8 represents integers with a minimum value of 0 and a maximum value of 255.
+The order-relation on uint8 is: x &lt; y if y - x is positive.
+uint8 has a lexical representation consisting of a finite-length sequence 
+of decimal digits (#x30-#x39).
+
+For example: 1, 0, 126, +10.</L-2>
+                            </DESC>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint8</BASE-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE>
+                            <SHORT-NAME>uint8_const</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="FOR-ALL">uint8 represents integers with a minimum value of 0 and a maximum value of 255.
+The order-relation on uint8 is: x &lt; y if y - x is positive.
+uint8 has a lexical representation consisting of a finite-length sequence 
+of decimal digits (#x30-#x39).
+
+For example: 1, 0, 126, +10.</L-2>
+                            </DESC>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint8</BASE-TYPE-REF>
+                                        <ADDITIONAL-NATIVE-TYPE-QUALIFIER>const </ADDITIONAL-NATIVE-TYPE-QUALIFIER>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE>
+                            <SHORT-NAME>uint16_const</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="FOR-ALL">uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+The order-relation on uint16 is: x &lt; y if y - x is positive.
+uint16 has a lexical representation consisting of a finite-length sequence 
+of decimal digits (#x30-#x39).
+
+For example: 1, 0, 1267, +10000.</L-2>
+                            </DESC>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint16</BASE-TYPE-REF>
+                                        <ADDITIONAL-NATIVE-TYPE-QUALIFIER>const </ADDITIONAL-NATIVE-TYPE-QUALIFIER>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE>
+                            <SHORT-NAME>float32_const</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="FOR-ALL">float32 corresponds to the IEEE single-precision 32-bit floating point type
+[IEEE 754-1985]. The basic value space of float32 consists of the values 
+m * 2^e, where m is an integer whose absolute value is less than 2^24, 
+and e is an integer between -149 and 104, inclusive. In addition to the basic
+value space described above, the value space of float32 also contains the 
+following special values: positive and negative zero, positive and negative 
+infinity and not-a-number. The order-relation on float32 is: 
+x &lt; y if y - x is positive. Positive zero is greater than negative zero.
+Not-a-number equals itself and is greater than all float values including positive infinity. 
+
+float32 values have a lexical representation consisting of a mantissa followed, 
+optionally, by the character &quot;E&quot; or &quot;e&quot;, followed by an exponent. The exponent
+must be an integer. The mantissa must be a decimal number. The representations
+for exponent and mantissa must follow the lexical rules for integer and decimal.
+If the &quot;E&quot; or &quot;e&quot; and the following exponent are omitted, an exponent value 
+of 0 is assumed. 
+
+The special values positive and negative zero, positive and negative infinity
+and not-a-number have lexical representations 0, -0, INF, -INF and NaN, 
+respectively. 
+
+For example, -1E4, 1267.43233E12, 12.78e-2, 12 and INF are all legal literals
+for float32.</L-2>
+                            </DESC>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/float32</BASE-TYPE-REF>
+                                        <ADDITIONAL-NATIVE-TYPE-QUALIFIER>const </ADDITIONAL-NATIVE-TYPE-QUALIFIER>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                    </ELEMENTS>
+                    <AR-PACKAGES>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>SwAddrMethods</SHORT-NAME>
+                            <ELEMENTS>
+                                <APPLICATION-SW-COMPONENT-TYPE UUID="15B3D813-0107-4A94-B7CC-94A950E2D5F8">
+                                    <SHORT-NAME>ScpAp_L1SpeedMonitor</SHORT-NAME>
+                                    <PORTS>
+                                        <R-PORT-PROTOTYPE UUID="F1ACE6AA-D91D-4059-A2A0-B251161251DD">
+                                            <SHORT-NAME>RP_SCpAPSG_mVcuImuLinAccel</SHORT-NAME>
+                                            <ADMIN-DATA>
+                                                <SDGS>
+                                                    <SDG GID="DV:DEV"/>
+                                                </SDGS>
+                                            </ADMIN-DATA>
+                                            <REQUIRED-COM-SPECS>
+                                                <NONQUEUED-RECEIVER-COM-SPEC>
+                                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mVcuImuLinAccel/SG_mVcuImuLinAccel_VDP</DATA-ELEMENT-REF>
+                                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                                    <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                                    <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                                                    <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                                                    <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                                                    <INIT-VALUE>
+                                                        <RECORD-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>DefaultInitValue_SG_mVcuImuLinAccel_IDT</SHORT-LABEL>
+                                                            <FIELDS>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>DefaultInitValue_uint8</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>DefaultInitValue_uint8</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>DefaultInitValue_float32</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>DefaultInitValue_float32</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>DefaultInitValue_float32</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                            </FIELDS>
+                                                        </RECORD-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </NONQUEUED-RECEIVER-COM-SPEC>
+                                            </REQUIRED-COM-SPECS>
+                                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_SG_mVcuImuLinAccel</REQUIRED-INTERFACE-TREF>
+                                        </R-PORT-PROTOTYPE>
+                                        <R-PORT-PROTOTYPE UUID="61532075-58E6-404F-8614-3F3CD606A75E">
+                                            <SHORT-NAME>RP_SCpApVmEbcm2LRx_SG_mEbcm2L_WhlSpd</SHORT-NAME>
+                                            <ADMIN-DATA>
+                                                <SDGS>
+                                                    <SDG GID="DV:DEV"/>
+                                                </SDGS>
+                                            </ADMIN-DATA>
+                                            <REQUIRED-COM-SPECS>
+                                                <NONQUEUED-RECEIVER-COM-SPEC>
+                                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mEbcm2L_WhlSpd_E2E/SG_mEbcm2L_WhlSpd</DATA-ELEMENT-REF>
+                                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                                    <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                                    <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                                                    <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                                                    <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                                                    <INIT-VALUE>
+                                                        <RECORD-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>ComSpec340e8554_2c4f562b67451db0</SHORT-LABEL>
+                                                            <FIELDS>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>MsgCntr_mEbcm2L_WhlSpd</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>MsgCrc_mEbcm2L_WhlSpd</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>WhlSpdFL</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>WhlSpdFR</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>WhlSpdR</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>CanVm7FFltCod</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                            </FIELDS>
+                                                        </RECORD-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </NONQUEUED-RECEIVER-COM-SPEC>
+                                            </REQUIRED-COM-SPECS>
+                                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_SG_mEbcm2L_WhlSpd_E2E</REQUIRED-INTERFACE-TREF>
+                                        </R-PORT-PROTOTYPE>
+                                        <R-PORT-PROTOTYPE UUID="78DE0742-85DD-4DA7-8A4F-A7E4DA8B3717">
+                                            <SHORT-NAME>RP_SCpApVmRx_SG_mWhdStat</SHORT-NAME>
+                                            <ADMIN-DATA>
+                                                <SDGS>
+                                                    <SDG GID="DV:DEV"/>
+                                                </SDGS>
+                                            </ADMIN-DATA>
+                                            <REQUIRED-COM-SPECS>
+                                                <NONQUEUED-RECEIVER-COM-SPEC>
+                                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mWhdStat_E2E/SG_mWhdStat</DATA-ELEMENT-REF>
+                                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                                    <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                                    <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                                                    <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                                                    <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                                                    <INIT-VALUE>
+                                                        <RECORD-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>ComSpec652ee185_1335c2c789070b89</SHORT-LABEL>
+                                                            <FIELDS>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>HwEnblStat</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>MsgCntr_mWhdStat</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>MsgCrc_mWhdStat</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>MtrSpd</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>MtrTrqEst</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>MvCurrEst</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>MvVolt</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>TrqEnblStat</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>CanVm64FltCod</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                            </FIELDS>
+                                                        </RECORD-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </NONQUEUED-RECEIVER-COM-SPEC>
+                                            </REQUIRED-COM-SPECS>
+                                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_SG_mWhdStat_E2E</REQUIRED-INTERFACE-TREF>
+                                        </R-PORT-PROTOTYPE>
+                                        <P-PORT-PROTOTYPE UUID="C1F46793-57B5-4584-A11A-CA3F99A720CE">
+                                            <SHORT-NAME>PP_IMU_AccelX_L1</SHORT-NAME>
+                                            <PROVIDED-COM-SPECS>
+                                                <NONQUEUED-SENDER-COM-SPEC>
+                                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_IMU_AccelX_L1p/IF_IMU_AccelX_L1p</DATA-ELEMENT-REF>
+                                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>ComSpec3740fc59_604787285220be46</SHORT-LABEL>
+                                                            <VALUE>0</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </NONQUEUED-SENDER-COM-SPEC>
+                                            </PROVIDED-COM-SPECS>
+                                            <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_IMU_AccelX_L1p</PROVIDED-INTERFACE-TREF>
+                                        </P-PORT-PROTOTYPE>
+                                        <P-PORT-PROTOTYPE UUID="9E43BD79-DDC6-4B61-8D7B-CB9A037DA94C">
+                                            <SHORT-NAME>PP_MotorSpeed_L1p</SHORT-NAME>
+                                            <PROVIDED-COM-SPECS>
+                                                <NONQUEUED-SENDER-COM-SPEC>
+                                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_MotorSpeed_L1p/IF_MotorSpeed_L1p</DATA-ELEMENT-REF>
+                                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>ComSpec8213ca7e_f94256d2655c1c70</SHORT-LABEL>
+                                                            <VALUE>0</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </NONQUEUED-SENDER-COM-SPEC>
+                                            </PROVIDED-COM-SPECS>
+                                            <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_MotorSpeed_L1p</PROVIDED-INTERFACE-TREF>
+                                        </P-PORT-PROTOTYPE>
+                                        <P-PORT-PROTOTYPE UUID="1AB718C9-59F8-46E6-8E4B-46C1A012E679">
+                                            <SHORT-NAME>PP_ValidityFlag_L1p</SHORT-NAME>
+                                            <PROVIDED-COM-SPECS>
+                                                <NONQUEUED-SENDER-COM-SPEC>
+                                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ValidityFlag_L1p/IF_ValidityFlag_L1p</DATA-ELEMENT-REF>
+                                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                                    <INIT-VALUE>
+                                                        <RECORD-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>ComSpec1d068168_c7023b00329d317b</SHORT-LABEL>
+                                                            <FIELDS>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>Motor_RPM_Valid_Flg</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>WSS_FR_Valid_Flg</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>WSS_FL_Valid_Flg</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>WSS_R_Valid_Flg</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>IMU_AccelX_Valid_Flg</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                                    <SHORT-LABEL>SensorStuck_Valid_Flg</SHORT-LABEL>
+                                                                    <VALUE>0</VALUE>
+                                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                            </FIELDS>
+                                                        </RECORD-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </NONQUEUED-SENDER-COM-SPEC>
+                                            </PROVIDED-COM-SPECS>
+                                            <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_ValidityFlag_L1p</PROVIDED-INTERFACE-TREF>
+                                        </P-PORT-PROTOTYPE>
+                                        <P-PORT-PROTOTYPE UUID="7F6B4208-AD60-46CE-8CCA-A85847A2C261">
+                                            <SHORT-NAME>PP_Wheelspeed_FL_L1p</SHORT-NAME>
+                                            <PROVIDED-COM-SPECS>
+                                                <NONQUEUED-SENDER-COM-SPEC>
+                                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_Wheelspeed_Fx_L1p/IF_Wheelspeed_Fx_L1p</DATA-ELEMENT-REF>
+                                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>DefaultInitValue_uint16</SHORT-LABEL>
+                                                            <VALUE>0</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </NONQUEUED-SENDER-COM-SPEC>
+                                            </PROVIDED-COM-SPECS>
+                                            <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_Wheelspeed_Fx_L1p</PROVIDED-INTERFACE-TREF>
+                                        </P-PORT-PROTOTYPE>
+                                        <P-PORT-PROTOTYPE UUID="AC1C3CF8-3FED-4934-9547-03AD5D5A7A4C">
+                                            <SHORT-NAME>PP_Wheelspeed_FR_L1p</SHORT-NAME>
+                                            <ADMIN-DATA>
+                                                <SDGS>
+                                                    <SDG GID="DV:DEV"/>
+                                                </SDGS>
+                                            </ADMIN-DATA>
+                                            <PROVIDED-COM-SPECS>
+                                                <NONQUEUED-SENDER-COM-SPEC>
+                                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_Wheelspeed_Fx_L1p/IF_Wheelspeed_Fx_L1p</DATA-ELEMENT-REF>
+                                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>DefaultInitValue_uint16</SHORT-LABEL>
+                                                            <VALUE>0</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </NONQUEUED-SENDER-COM-SPEC>
+                                            </PROVIDED-COM-SPECS>
+                                            <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_Wheelspeed_Fx_L1p</PROVIDED-INTERFACE-TREF>
+                                        </P-PORT-PROTOTYPE>
+                                        <P-PORT-PROTOTYPE UUID="8D6BA6BC-503A-44E0-A949-CB17D45CEC98">
+                                            <SHORT-NAME>PP_Wheelspeed_R_L1p</SHORT-NAME>
+                                            <ADMIN-DATA>
+                                                <SDGS>
+                                                    <SDG GID="DV:DEV"/>
+                                                </SDGS>
+                                            </ADMIN-DATA>
+                                            <PROVIDED-COM-SPECS>
+                                                <NONQUEUED-SENDER-COM-SPEC>
+                                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_Wheelspeed_Fx_L1p/IF_Wheelspeed_Fx_L1p</DATA-ELEMENT-REF>
+                                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>DefaultInitValue_uint16</SHORT-LABEL>
+                                                            <VALUE>0</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </NONQUEUED-SENDER-COM-SPEC>
+                                            </PROVIDED-COM-SPECS>
+                                            <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_Wheelspeed_Fx_L1p</PROVIDED-INTERFACE-TREF>
+                                        </P-PORT-PROTOTYPE>
+                                    </PORTS>
+                                    <INTERNAL-BEHAVIORS>
+                                        <SWC-INTERNAL-BEHAVIOR UUID="F1BD8088-B0F1-436E-B4C6-C470FFD47FF0">
+                                            <SHORT-NAME>ScpAp_L1SpeedMonitor_InternalBehavior</SHORT-NAME>
+                                            <CONSTANT-MEMORYS>
+                                                <PARAMETER-DATA-PROTOTYPE UUID="3875f3cf-2559-5f31-2b42-abca3180f350">
+                                                    <SHORT-NAME>Accel_Max</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CALIB</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float64_const</TYPE-TREF>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>Accel_Max</SHORT-LABEL>
+                                                            <VALUE>32.767</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </PARAMETER-DATA-PROTOTYPE>
+                                                <PARAMETER-DATA-PROTOTYPE UUID="aaae9ffd-6729-5b8f-cb66-f5441e722e47">
+                                                    <SHORT-NAME>Alpha_Accel_IMU</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CALIB</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float64_const</TYPE-TREF>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>Alpha_Accel_IMU</SHORT-LABEL>
+                                                            <VALUE>0.15</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </PARAMETER-DATA-PROTOTYPE>
+                                                <PARAMETER-DATA-PROTOTYPE UUID="489eae1d-717d-565a-0a6f-4d738d6d27d3">
+                                                    <SHORT-NAME>Alpha_Motor</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CALIB</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float64_const</TYPE-TREF>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>Alpha_Motor</SHORT-LABEL>
+                                                            <VALUE>0.45</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </PARAMETER-DATA-PROTOTYPE>
+                                                <PARAMETER-DATA-PROTOTYPE UUID="bbf7448b-3422-580f-e090-b5e3e1977a1f">
+                                                    <SHORT-NAME>Alpha_WSS</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CALIB</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float64_const</TYPE-TREF>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>Alpha_WSS</SHORT-LABEL>
+                                                            <VALUE>0.35</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </PARAMETER-DATA-PROTOTYPE>
+                                                <PARAMETER-DATA-PROTOTYPE UUID="27e80591-5016-55a3-974e-cedfa4de9053">
+                                                    <SHORT-NAME>Motor_Spd_Max</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CALIB</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16_const</TYPE-TREF>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>Motor_Spd_Max</SHORT-LABEL>
+                                                            <VALUE>1023</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </PARAMETER-DATA-PROTOTYPE>
+                                                <PARAMETER-DATA-PROTOTYPE UUID="d1f87e79-0001-5bfc-55f5-78e3cdb3b40f">
+                                                    <SHORT-NAME>Motor_Spd_Min</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CALIB</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16_const</TYPE-TREF>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>Motor_Spd_Min</SHORT-LABEL>
+                                                            <VALUE>0</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </PARAMETER-DATA-PROTOTYPE>
+                                                <PARAMETER-DATA-PROTOTYPE UUID="2782d6ed-3b00-513d-71e6-90f160c07d22">
+                                                    <SHORT-NAME>WhlSpd_Max</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CALIB</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16_const</TYPE-TREF>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>WhlSpd_Max</SHORT-LABEL>
+                                                            <VALUE>32</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </PARAMETER-DATA-PROTOTYPE>
+                                                <PARAMETER-DATA-PROTOTYPE UUID="8f034e14-185d-595d-de86-e9e734d46e1d">
+                                                    <SHORT-NAME>WhlSpd_Min</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CALIB</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16_const</TYPE-TREF>
+                                                    <INIT-VALUE>
+                                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                                            <SHORT-LABEL>WhlSpd_Min</SHORT-LABEL>
+                                                            <VALUE>0</VALUE>
+                                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                                    </INIT-VALUE>
+                                                </PARAMETER-DATA-PROTOTYPE>
+                                            </CONSTANT-MEMORYS>
+                                            <STATIC-MEMORYS>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="35e434b7-25f3-5916-8c15-48f0176a2ed3">
+                                                    <SHORT-NAME>StuckCntOutput_Prev</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float64</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="3c64522b-ab84-563d-21b5-9aa7bfacc72e">
+                                                    <SHORT-NAME>IMU_AccelX_L1p_Prev</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="9b2b3469-b5fd-5650-dc49-4119dd5f9940">
+                                                    <SHORT-NAME>STC_IMU_Accel_XL1p_Prev</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="a3ce7521-ff6e-580b-e61e-79215de82f2f">
+                                                    <SHORT-NAME>WSS_R_L1p_Prev</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="eb64fde5-efc4-5dd3-7e39-66080bab7b9d">
+                                                    <SHORT-NAME>WSS_FR_L1p_Prev</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="d08b444d-8bd4-5e57-8eba-549f60c70a0d">
+                                                    <SHORT-NAME>WSS_FL_L1p_Prev</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="949fd1e2-2c11-59c0-f525-56e1082e3ee7">
+                                                    <SHORT-NAME>STC_WSS_FR_L1p_Prev</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="0817da26-913a-52ba-862e-377732613943">
+                                                    <SHORT-NAME>STC_WSS_FL_L1p_Prev</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="43b45ecf-5028-50a3-d2e8-b4e80dcb632f">
+                                                    <SHORT-NAME>STC_WSS_R_L1p_Prev</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="eca195d1-c718-5b9a-779e-ce2582706a76">
+                                                    <SHORT-NAME>MotorSpd_Equiv_L1p_Prev</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="d873c116-0a1a-5f83-c8c1-e30939f815ee">
+                                                    <SHORT-NAME>STC_MotorSpd_Equiv_L1p_Prev</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="6699ad2b-9f57-5867-3adf-eb0c5332cfb4">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMonitor_Output</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float64</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="11d490e8-2b65-5c15-3025-71c8b6d4b7d3">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMon_X_Accel_L1_Phy</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="fa880151-d045-5b22-acef-e2c8d003fc32">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMon_IMU_AccelX_L1p</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="6e321758-2eca-5e3e-eb42-8fbc5330b1e8">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMo_IMU_AccelX_Diff</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="d8c4f614-aaf1-5fa0-352e-e5d38a0485eb">
+                                                    <SHORT-NAME>ScpAp_L1SpeedM_WhlSpdFR_Phy_Kph</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="e8c8f27b-9dec-5167-8f48-c4b7077a4512">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMonitor_WSS_R_L1p</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="3e716ee1-354c-53fc-07d0-7c98815a3ac4">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMonitor_WhlSpd_Min</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="59c38916-f474-5cdf-461c-3b2e9beca20f">
+                                                    <SHORT-NAME>ScpAp_L1Spee_WhlSpdFR_Phy_Kph_n</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="935593e0-0912-5c1d-5398-6e00a1235cda">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMonitor_WSS_FR_L1p</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="01ea064d-8be4-5fe4-5502-fd48c662f994">
+                                                    <SHORT-NAME>ScpAp_L1Spe_WhlSpdFR_Phy_Kph_nw</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="97db12a5-8bcf-5429-87b2-8d759e21621b">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMonitor_WSS_FL_L1p</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="c8d0d9ba-8ae1-53ca-0f09-723d4972389c">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMonito_WSS_FR_Diff</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="f36d2c74-7838-5ca0-dcd6-34090ffdb9b9">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMonito_WSS_FL_Diff</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="f39d42bb-1a3c-50d6-d136-f19adfacac8c">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMonitor_WSS_R_Diff</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="37fba81f-8ab6-5593-bcf1-441ea6262091">
+                                                    <SHORT-NAME>ScpAp_L1Spee_MotorSpd_Equiv_L1p</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="b4065ae2-57b6-5ed3-ded8-52e96f60a7b8">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMonit_MotorSpd_kph</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="4212275b-a179-5c15-e001-f9cc3cd8434a">
+                                                    <SHORT-NAME>ScpAp_L1Spe_MotorSpd_Equiv_Diff</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="543bd75b-bba8-5919-d98d-fb4af449a5df">
+                                                    <SHORT-NAME>ScpAp_L1Speed_WhlSpdR_Valid_Chk</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="2e817755-f849-5a5e-6cd7-0b5b3144af10">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMo_WSS_R_Valid_Flg</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="fc9e9dc4-21e3-541f-bf60-8473278b874f">
+                                                    <SHORT-NAME>ScpAp_L1Spee_WhlSpdFR_Valid_Chk</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="a9e30a15-3061-5b24-59a8-8292a7a61ab5">
+                                                    <SHORT-NAME>ScpAp_L1SpeedM_WSS_FR_Valid_Flg</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="4a421141-b8cd-5105-3820-3aaca28be39c">
+                                                    <SHORT-NAME>ScpAp_L1Spee_WhlSpdFL_Valid_Chk</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="346abb61-9f73-53a5-9a56-8bf67fcd034e">
+                                                    <SHORT-NAME>ScpAp_L1SpeedM_WSS_FL_Valid_Flg</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="69f9b509-ad8e-567c-a232-28c351ae8018">
+                                                    <SHORT-NAME>ScpAp_L1Sp_Motor_Spd_ValidCheck</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="0173afbe-77e6-5d7e-41b3-7a281abd05db">
+                                                    <SHORT-NAME>ScpAp_L1Spe_Motor_RPM_Valid_Flg</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="87748f20-f55e-575b-c25e-cc8c2317d4fd">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMo_IMU_Accel_Valid</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="4c79b2fe-a652-5a14-7de7-250fe370e9fe">
+                                                    <SHORT-NAME>ScpAp_L1Sp_IMU_AccelX_Valid_Flg</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="57c56d90-769c-55a2-2542-9b98a71f8ec0">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMoni_Chk_Stuck_Cnt</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="2cbed38a-0417-5cf8-835a-ce5cac4c52a9">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMoni_Trg_Stuck_Cnt</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                                <VARIABLE-DATA-PROTOTYPE UUID="17ecf77a-8998-524a-e074-1aa980945648">
+                                                    <SHORT-NAME>ScpAp_L1S_SensorStuck_Valid_Flg</SHORT-NAME>
+                                                    <CATEGORY>VALUE</CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                                </VARIABLE-DATA-PROTOTYPE>
+                                            </STATIC-MEMORYS>
+                                            <EVENTS>
+                                                <TIMING-EVENT UUID="9C4E4ABE-52D9-47A6-A964-92B0E17EDA4B">
+                                                    <SHORT-NAME>TMT_SensorIF_L1_Main</SHORT-NAME>
+                                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ScpAp_L1SpeedMonitor/ScpAp_L1SpeedMonitor_InternalBehavior/SensorIFL1_Main_10</START-ON-EVENT-REF>
+                                                    <PERIOD>0.01</PERIOD>
+                                                </TIMING-EVENT>
+                                            </EVENTS>
+                                            <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                                            <RUNNABLES>
+                                                <RUNNABLE-ENTITY UUID="426B2677-E041-4D20-9B02-4BB2BE359F06">
+                                                    <SHORT-NAME>SensorIFL1_Main_10</SHORT-NAME>
+                                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                                    <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CODE</SW-ADDR-METHOD-REF>
+                                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                                    <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                                                        <VARIABLE-ACCESS UUID="b2cdafec-0648-57ce-7a93-45d2c7e0563b">
+                                                            <SHORT-NAME>IN_RP_SCpAPSG_mVcuImuLinAccel_SG_mVcuImuLinAccel_VDP</SHORT-NAME>
+                                                            <ACCESSED-VARIABLE>
+                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ScpAp_L1SpeedMonitor/RP_SCpAPSG_mVcuImuLinAccel</PORT-PROTOTYPE-REF>
+                                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mVcuImuLinAccel/SG_mVcuImuLinAccel_VDP</TARGET-DATA-PROTOTYPE-REF>
+                                                                </AUTOSAR-VARIABLE-IREF>
+                                                            </ACCESSED-VARIABLE>
+                                                        </VARIABLE-ACCESS>
+                                                        <VARIABLE-ACCESS UUID="819f316b-3489-5546-0b9e-1de3e157a068">
+                                                            <SHORT-NAME>IN_RP_SCpApVmEbcm2LRx_SG_mEbcm2L_WhlSpd_SG_mEbcm2L_WhlSpd</SHORT-NAME>
+                                                            <ACCESSED-VARIABLE>
+                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ScpAp_L1SpeedMonitor/RP_SCpApVmEbcm2LRx_SG_mEbcm2L_WhlSpd</PORT-PROTOTYPE-REF>
+                                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mEbcm2L_WhlSpd_E2E/SG_mEbcm2L_WhlSpd</TARGET-DATA-PROTOTYPE-REF>
+                                                                </AUTOSAR-VARIABLE-IREF>
+                                                            </ACCESSED-VARIABLE>
+                                                        </VARIABLE-ACCESS>
+                                                        <VARIABLE-ACCESS UUID="0c405fb5-ebad-56da-e6ed-ae36e27af6e7">
+                                                            <SHORT-NAME>IN_RP_SCpApVmRx_SG_mWhdStat_SG_mWhdStat</SHORT-NAME>
+                                                            <ACCESSED-VARIABLE>
+                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ScpAp_L1SpeedMonitor/RP_SCpApVmRx_SG_mWhdStat</PORT-PROTOTYPE-REF>
+                                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mWhdStat_E2E/SG_mWhdStat</TARGET-DATA-PROTOTYPE-REF>
+                                                                </AUTOSAR-VARIABLE-IREF>
+                                                            </ACCESSED-VARIABLE>
+                                                        </VARIABLE-ACCESS>
+                                                    </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                                                    <DATA-SEND-POINTS>
+                                                        <VARIABLE-ACCESS UUID="4142b452-7cd1-559d-0e26-e78790fbd0ea">
+                                                            <SHORT-NAME>OUT_PP_IMU_AccelX_L1_IF_IMU_AccelX_L1p</SHORT-NAME>
+                                                            <ACCESSED-VARIABLE>
+                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                    <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ScpAp_L1SpeedMonitor/PP_IMU_AccelX_L1</PORT-PROTOTYPE-REF>
+                                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_IMU_AccelX_L1p/IF_IMU_AccelX_L1p</TARGET-DATA-PROTOTYPE-REF>
+                                                                </AUTOSAR-VARIABLE-IREF>
+                                                            </ACCESSED-VARIABLE>
+                                                        </VARIABLE-ACCESS>
+                                                        <VARIABLE-ACCESS UUID="535c93a5-7a26-51ef-c696-324944600c83">
+                                                            <SHORT-NAME>OUT_PP_MotorSpeed_L1p_IF_MotorSpeed_L1p</SHORT-NAME>
+                                                            <ACCESSED-VARIABLE>
+                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                    <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ScpAp_L1SpeedMonitor/PP_MotorSpeed_L1p</PORT-PROTOTYPE-REF>
+                                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_MotorSpeed_L1p/IF_MotorSpeed_L1p</TARGET-DATA-PROTOTYPE-REF>
+                                                                </AUTOSAR-VARIABLE-IREF>
+                                                            </ACCESSED-VARIABLE>
+                                                        </VARIABLE-ACCESS>
+                                                        <VARIABLE-ACCESS UUID="fcc8a2bf-0c69-5fb0-a6bd-5dc73d2c40c4">
+                                                            <SHORT-NAME>OUT_PP_ValidityFlag_L1p_IF_ValidityFlag_L1p</SHORT-NAME>
+                                                            <ACCESSED-VARIABLE>
+                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                    <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ScpAp_L1SpeedMonitor/PP_ValidityFlag_L1p</PORT-PROTOTYPE-REF>
+                                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ValidityFlag_L1p/IF_ValidityFlag_L1p</TARGET-DATA-PROTOTYPE-REF>
+                                                                </AUTOSAR-VARIABLE-IREF>
+                                                            </ACCESSED-VARIABLE>
+                                                        </VARIABLE-ACCESS>
+                                                        <VARIABLE-ACCESS UUID="9c2c9be5-cf3e-5d78-173b-7c06ffb1c5fe">
+                                                            <SHORT-NAME>OUT_PP_Wheelspeed_FL_L1p_IF_Wheelspeed_Fx_L1p</SHORT-NAME>
+                                                            <ACCESSED-VARIABLE>
+                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                    <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ScpAp_L1SpeedMonitor/PP_Wheelspeed_FL_L1p</PORT-PROTOTYPE-REF>
+                                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_Wheelspeed_Fx_L1p/IF_Wheelspeed_Fx_L1p</TARGET-DATA-PROTOTYPE-REF>
+                                                                </AUTOSAR-VARIABLE-IREF>
+                                                            </ACCESSED-VARIABLE>
+                                                        </VARIABLE-ACCESS>
+                                                        <VARIABLE-ACCESS UUID="5631099b-41be-5107-7b83-e39deab08a90">
+                                                            <SHORT-NAME>OUT_PP_Wheelspeed_FR_L1p_IF_Wheelspeed_Fx_L1p</SHORT-NAME>
+                                                            <ACCESSED-VARIABLE>
+                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                    <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ScpAp_L1SpeedMonitor/PP_Wheelspeed_FR_L1p</PORT-PROTOTYPE-REF>
+                                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_Wheelspeed_Fx_L1p/IF_Wheelspeed_Fx_L1p</TARGET-DATA-PROTOTYPE-REF>
+                                                                </AUTOSAR-VARIABLE-IREF>
+                                                            </ACCESSED-VARIABLE>
+                                                        </VARIABLE-ACCESS>
+                                                        <VARIABLE-ACCESS UUID="2dd63648-4a85-5cca-1f18-99ff06f22b78">
+                                                            <SHORT-NAME>OUT_PP_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p</SHORT-NAME>
+                                                            <ACCESSED-VARIABLE>
+                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                    <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ScpAp_L1SpeedMonitor/PP_Wheelspeed_R_L1p</PORT-PROTOTYPE-REF>
+                                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_Wheelspeed_Fx_L1p/IF_Wheelspeed_Fx_L1p</TARGET-DATA-PROTOTYPE-REF>
+                                                                </AUTOSAR-VARIABLE-IREF>
+                                                            </ACCESSED-VARIABLE>
+                                                        </VARIABLE-ACCESS>
+                                                    </DATA-SEND-POINTS>
+                                                    <SYMBOL>SensorIFL1_Main_10</SYMBOL>
+                                                </RUNNABLE-ENTITY>
+                                                <RUNNABLE-ENTITY UUID="69cafa4c-a84f-5967-dc02-af13e4b4885b">
+                                                    <SHORT-NAME>ScpAp_L1SpeedMonitor_Init</SHORT-NAME>
+                                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                                    <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CODE</SW-ADDR-METHOD-REF>
+                                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                                    <SYMBOL>ScpAp_L1SpeedMonitor_Init</SYMBOL>
+                                                </RUNNABLE-ENTITY>
+                                            </RUNNABLES>
+                                            <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                                        </SWC-INTERNAL-BEHAVIOR>
+                                    </INTERNAL-BEHAVIORS>
+                                </APPLICATION-SW-COMPONENT-TYPE>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                    </AR-PACKAGES>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+            <SHORT-NAME>DataTypes</SHORT-NAME>
+            <ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE UUID="FF3F8A8F-72B6-4944-A6B8-37D5CBF82FC1">
+                    <SHORT-NAME>IF_ValidityFlag_L1p_IDT</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="EDCFA721-3722-46FA-8963-899B28665218">
+                            <SHORT-NAME>Motor_RPM_Valid_Flg</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="0F4EA6ED-52A3-43E9-9E36-BBBF0547E8E9">
+                            <SHORT-NAME>WSS_FR_Valid_Flg</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="BE6EF74E-63BB-4A9D-8CD3-FB29946F90A1">
+                            <SHORT-NAME>WSS_FL_Valid_Flg</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="BF427966-F88A-419B-A02A-4CDD87677F82">
+                            <SHORT-NAME>WSS_R_Valid_Flg</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="2D1C0C63-458E-4036-9A7B-4464CDE996E5">
+                            <SHORT-NAME>IMU_AccelX_Valid_Flg</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="57EC54CC-9758-49EA-99ED-75079E0641BB">
+                            <SHORT-NAME>SensorStuck_Valid_Flg</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="7DA85955-57EE-43EF-8A3D-76B8C2432760">
+                    <SHORT-NAME>SG_mEbcm2L_WhlSpd_IDT_E2E</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="441C14A6-FDF2-4B6B-9784-6A50F1370FA3">
+                            <SHORT-NAME>MsgCntr_mEbcm2L_WhlSpd</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="BD5F1655-9334-4EE2-BF19-7E670729FD4D">
+                            <SHORT-NAME>MsgCrc_mEbcm2L_WhlSpd</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="1305C44C-8A74-4919-AD13-94F51760988C">
+                            <SHORT-NAME>WhlSpdFL</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="E3E86E6A-AEF9-498D-862A-70FDA663E7C3">
+                            <SHORT-NAME>WhlSpdFR</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="41596084-DDC5-447B-BE6C-BF1F9E3CE326">
+                            <SHORT-NAME>WhlSpdR</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="C05CD68B-3E93-45C4-B3F6-53B4BAE42F2C">
+                            <SHORT-NAME>CanVm7FFltCod</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="ED0B38AF-277C-4DC4-8BD2-CFAAD2BD1E5F">
+                    <SHORT-NAME>SG_mVcuImuLinAccel_IDT</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="1AE46B39-36F1-4F2B-887B-CA86D9973BAB">
+                            <SHORT-NAME>MsgCntr_ImuLin</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="2972AF7D-C815-420D-AD66-DBDE5A8D1136">
+                            <SHORT-NAME>MsgCrc_ImuLin</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="D69A9A6B-6ED7-4A66-83FB-5AA4187B89AA">
+                            <SHORT-NAME>X_Accel</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="D6687BF1-5F4F-4974-B44D-83C597D49161">
+                            <SHORT-NAME>Y_Accel</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="46D88CD1-4ACE-4564-9ED0-F59B0AED4918">
+                            <SHORT-NAME>Z_Accel</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="F4F16F12-9B79-4AE2-BCD7-82A16408EAE7">
+                    <SHORT-NAME>SG_mWhdStat_IDT_E2E</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="40C70F73-FFBF-442B-ABF7-6F858BBE84F8">
+                            <SHORT-NAME>HwEnblStat</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="99C63947-EC55-4D9F-9388-59871463E44B">
+                            <SHORT-NAME>MsgCntr_mWhdStat</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="DF32CC93-0D7B-42FF-803A-5BA8DD9C5752">
+                            <SHORT-NAME>MsgCrc_mWhdStat</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="EBCAFE72-1192-4AA7-AC25-5EFB9227F244">
+                            <SHORT-NAME>MtrSpd</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="B9CAB276-5959-4952-8E1F-53517A42221A">
+                            <SHORT-NAME>MtrTrqEst</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="6833C00C-3D93-420E-BD65-D67D43D1A427">
+                            <SHORT-NAME>MvCurrEst</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="52775A2E-05C8-4965-9471-656056CFDC1C">
+                            <SHORT-NAME>MvVolt</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="72687557-9C3C-447B-978B-FD874086876E">
+                            <SHORT-NAME>TrqEnblStat</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="B23DEDE2-C54A-4D25-A9C4-2DEB9AF07859">
+                            <SHORT-NAME>CanVm64FltCod</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                </IMPLEMENTATION-DATA-TYPE>
+            </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+            <SHORT-NAME>PortInterfaces</SHORT-NAME>
+            <ELEMENTS>
+                <SENDER-RECEIVER-INTERFACE UUID="02857BF0-EA49-4195-AEBF-C6B0FA77882F">
+                    <SHORT-NAME>IF_IMU_AccelX_L1p</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="01E2298A-BC70-4F34-BABB-A07816BCAD66">
+                            <SHORT-NAME>IF_IMU_AccelX_L1p</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_IMU_AccelX_L1p/IF_IMU_AccelX_L1p</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="D284E9E0-EE54-4765-886C-1DC10255CEAA">
+                    <SHORT-NAME>IF_MotorSpeed_L1p</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="257DCB91-6C87-4F2A-B950-490F2D4254ED">
+                            <SHORT-NAME>IF_MotorSpeed_L1p</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_MotorSpeed_L1p/IF_MotorSpeed_L1p</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="DD0551BE-F2A6-40E8-8FEA-7218795D1C87">
+                    <SHORT-NAME>IF_SG_mEbcm2L_WhlSpd_E2E</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="A2D31AF8-E790-424B-883C-6D05A8475EC2">
+                            <SHORT-NAME>SG_mEbcm2L_WhlSpd</SHORT-NAME>
+                            <CATEGORY>STRUCTURE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/SG_mEbcm2L_WhlSpd_IDT_E2E</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mEbcm2L_WhlSpd_E2E/SG_mEbcm2L_WhlSpd</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="82ACA669-64D6-446B-8E46-37CAB8FB5A07">
+                    <SHORT-NAME>IF_SG_mVcuImuLinAccel</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="960B3FCB-8DFF-4C28-BD1C-8069D3FB3A14">
+                            <SHORT-NAME>SG_mVcuImuLinAccel_VDP</SHORT-NAME>
+                            <CATEGORY>STRUCTURE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/SG_mVcuImuLinAccel_IDT</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mVcuImuLinAccel/SG_mVcuImuLinAccel_VDP</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="C36634C3-94F0-41BC-A56D-0AA3725DC528">
+                    <SHORT-NAME>IF_SG_mWhdStat_E2E</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="AF340790-CAE0-4136-924B-74F7E151ECD1">
+                            <SHORT-NAME>SG_mWhdStat</SHORT-NAME>
+                            <CATEGORY>STRUCTURE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/SG_mWhdStat_IDT_E2E</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mWhdStat_E2E/SG_mWhdStat</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="F968F5D0-3DDD-4A8C-BA8C-1A22BE9EAF58">
+                    <SHORT-NAME>IF_ValidityFlag_L1p</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="57C85BC6-5A45-4576-B4F3-7DA10C7FB66A">
+                            <SHORT-NAME>IF_ValidityFlag_L1p</SHORT-NAME>
+                            <CATEGORY>STRUCTURE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/IF_ValidityFlag_L1p_IDT</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ValidityFlag_L1p/IF_ValidityFlag_L1p</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="594AC425-1E82-4DB0-BF4F-501408D87150">
+                    <SHORT-NAME>IF_Wheelspeed_Fx_L1p</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="9DF34738-6CBC-441C-AB32-DBAE7B32C591">
+                            <SHORT-NAME>IF_Wheelspeed_Fx_L1p</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_Wheelspeed_Fx_L1p/IF_Wheelspeed_Fx_L1p</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+            </ELEMENTS>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>
