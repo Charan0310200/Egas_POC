@@ -1,0 +1,78 @@
+/* This file contains stub implementations of the AUTOSAR RTE functions.
+   The stub implementations can be used for testing the generated code in
+   Simulink, for example, in SIL/PIL simulations of the component under
+   test. Note that this file should be replaced with an appropriate RTE
+   file when deploying the generated code outside of Simulink.
+
+   This file is generated for:
+   Atomic software component:  "ScpAp_VechilestateEstimation_L2p"
+   ARXML schema: "R23-11"
+   File generated on: "Sun Feb 08 17:48:22 2026"  */
+
+#ifndef Rte_ScpAp_VechilestateEstimation_L2p_h
+#define Rte_ScpAp_VechilestateEstimation_L2p_h
+#include "Rte_Type.h"
+#include "Compiler.h"
+
+/* Data access functions */
+#define Rte_Read_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p Rte_Read_ScpAp_VechilestateEstimation_L2p_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p
+
+Std_ReturnType Rte_Read_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p(float32* u);
+
+#define Rte_IRead_VehstateEst_Main_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p Rte_IRead_ScpAp_VechilestateEstimation_L2p_VehstateEst_Main_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p
+
+uint8
+  Rte_IRead_VehstateEst_Main_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p
+  (void);
+
+#define Rte_Read_RP_ScpAp_ValidityFlag_L1p_IF_ValidityFlag_L1p Rte_Read_ScpAp_VechilestateEstimation_L2p_RP_ScpAp_ValidityFlag_L1p_IF_ValidityFlag_L1p
+
+Std_ReturnType Rte_Read_RP_ScpAp_ValidityFlag_L1p_IF_ValidityFlag_L1p
+  (IF_ValidityFlag_L1p_IDT* u);
+
+#define Rte_Read_RP_ScpAp_Wheelspeed_FL_L1p_IF_Wheelspeed_Fx_L1p Rte_Read_ScpAp_VechilestateEstimation_L2p_RP_ScpAp_Wheelspeed_FL_L1p_IF_Wheelspeed_Fx_L1p
+
+Std_ReturnType Rte_Read_RP_ScpAp_Wheelspeed_FL_L1p_IF_Wheelspeed_Fx_L1p(uint16*
+  u);
+
+#define Rte_Read_RP_ScpAp_Wheelspeed_FR_L1p_IF_Wheelspeed_Fx_L1p Rte_Read_ScpAp_VechilestateEstimation_L2p_RP_ScpAp_Wheelspeed_FR_L1p_IF_Wheelspeed_Fx_L1p
+
+Std_ReturnType Rte_Read_RP_ScpAp_Wheelspeed_FR_L1p_IF_Wheelspeed_Fx_L1p(uint16*
+  u);
+
+#define Rte_Read_RP_ScpAp_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p Rte_Read_ScpAp_VechilestateEstimation_L2p_RP_ScpAp_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p
+
+Std_ReturnType Rte_Read_RP_ScpAp_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p(uint16* u);
+
+#define Rte_Write_PP_SensorValidityFlag_L2p_IF_SensorFaultFlags_L2p Rte_Write_ScpAp_VechilestateEstimation_L2p_PP_SensorValidityFlag_L2p_IF_SensorFaultFlags_L2p
+
+Std_ReturnType Rte_Write_PP_SensorValidityFlag_L2p_IF_SensorFaultFlags_L2p(const
+  IF_SensorFaultFlgs_L2p_IDT* u);
+
+#define Rte_Invalidate_PP_SensorValidityFlag_L2p_IF_SensorFaultFlags_L2p Rte_Invalidate_ScpAp_VechilestateEstimation_L2p_PP_SensorValidityFlag_L2p_IF_SensorFaultFlags_L2p
+
+Std_ReturnType Rte_Invalidate_PP_SensorValidityFlag_L2p_IF_SensorFaultFlags_L2p
+  (void);
+
+#define Rte_Write_PP_VechileAccel_L2p_IF_VechileAccel_L2p Rte_Write_ScpAp_VechilestateEstimation_L2p_PP_VechileAccel_L2p_IF_VechileAccel_L2p
+
+Std_ReturnType Rte_Write_PP_VechileAccel_L2p_IF_VechileAccel_L2p(sint16 u);
+
+#define Rte_Invalidate_PP_VechileAccel_L2p_IF_VechileAccel_L2p Rte_Invalidate_ScpAp_VechilestateEstimation_L2p_PP_VechileAccel_L2p_IF_VechileAccel_L2p
+
+Std_ReturnType Rte_Invalidate_PP_VechileAccel_L2p_IF_VechileAccel_L2p(void);
+
+#define Rte_Write_PP_Vechilespeed_L2p_IF_Vechilespeed_L2p Rte_Write_ScpAp_VechilestateEstimation_L2p_PP_Vechilespeed_L2p_IF_Vechilespeed_L2p
+
+Std_ReturnType Rte_Write_PP_Vechilespeed_L2p_IF_Vechilespeed_L2p(uint16 u);
+
+#define Rte_Invalidate_PP_Vechilespeed_L2p_IF_Vechilespeed_L2p Rte_Invalidate_ScpAp_VechilestateEstimation_L2p_PP_Vechilespeed_L2p_IF_Vechilespeed_L2p
+
+Std_ReturnType Rte_Invalidate_PP_Vechilespeed_L2p_IF_Vechilespeed_L2p(void);
+
+/* Entry point functions */
+extern FUNC(void, ScpAp_VechilestateEstimation_L2p_CODE) VehstateEst_Main(void);
+extern FUNC(void, ScpAp_VechilestateEstimation_L2p_CODE)
+  ScpAp_VechilestateEstimation_L2p_Init(void);
+
+#endif
