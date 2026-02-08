@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Auto generated XML Component Description for model ScpAp_SafetyModeManager
-Model version                : 1.28
+Model version                : 1.64
 Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
-XML source code generated on : Wed Feb 04 15:06:30 2026
-Model Checksum               : 1600721357 4142068108 1503111373 1673202040
+XML source code generated on : Sun Feb 08 19:19:10 2026
+Model Checksum               : 3311032103 4219640234 1267892419 3699580184
 -->
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
     <AR-PACKAGES>
@@ -36,6 +36,7 @@ Model Checksum               : 1600721357 4142068108 1503111373 1673202040
                         <COMPU-METHOD>
                             <SHORT-NAME>boolean_CompuMethod</SHORT-NAME>
                             <CATEGORY>TEXTTABLE</CATEGORY>
+                            <UNIT-REF DEST="UNIT">/DataTypes/Units/NoUnit</UNIT-REF>
                             <COMPU-INTERNAL-TO-PHYS>
                                 <COMPU-SCALES>
                                     <COMPU-SCALE>
@@ -168,8 +169,50 @@ binary-valued logic: {true, false}.</L-2>
                         <SWC-INTERNAL-BEHAVIOR UUID="4F77F767-504C-4442-B88A-FA752B547000">
                             <SHORT-NAME>ScpAp_SafetyModeManager_InternalBehavior</SHORT-NAME>
                             <STATIC-MEMORYS>
-                                <VARIABLE-DATA-PROTOTYPE UUID="57b8a487-1fca-5a24-2d0f-27b2588103bc">
-                                    <SHORT-NAME>ScpAp_SafetyModeMana_Autonomous</SHORT-NAME>
+                                <VARIABLE-DATA-PROTOTYPE UUID="78f161e6-db9a-5b86-3130-dc4689b7ab5d">
+                                    <SHORT-NAME>ScpAp_SafetyModeManage_Mode_Chk</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="fbb1afb0-8bf2-5fb2-1182-9ece2c617f2f">
+                                    <SHORT-NAME>ScpAp_SafetyModeMana_Status_Chk</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="8675ed8a-fcdd-5922-a09c-76f6578f044f">
+                                    <SHORT-NAME>ScpAp_SafetyMo_VechSafetyStatus</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/VechSafetyStatus_L2p_IDT</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="4f8dbc00-46d6-5115-1e01-3c3c2fd46901">
+                                    <SHORT-NAME>ScpAp_SafetyModeManage_Mode_L2p</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
                                         <SW-DATA-DEF-PROPS-VARIANTS>
@@ -182,7 +225,7 @@ binary-valued logic: {true, false}.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/SafetyMode_L2p_IDT</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="97ba8e76-12b3-5586-9b62-095ed974eb59">
+                                <VARIABLE-DATA-PROTOTYPE UUID="083d6ee2-37c9-54a4-c687-12f4f30afe96">
                                     <SHORT-NAME>ScpAp_SafetyM_AutonomousAllowed</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>

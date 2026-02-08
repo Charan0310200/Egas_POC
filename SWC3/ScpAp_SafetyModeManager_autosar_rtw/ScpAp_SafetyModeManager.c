@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_SafetyModeManager'.
  *
- * Model version                  : 1.28
+ * Model version                  : 1.64
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Wed Feb  4 15:06:14 2026
+ * C/C++ source code generated on : Sun Feb  8 19:19:03 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -19,6 +19,7 @@
 
 #include "ScpAp_SafetyModeManager.h"
 #include "Rte_Type.h"
+#include "Platform_Types.h"
 
 /* Static Memory for Internal Data */
 
@@ -26,8 +27,11 @@
 #define ScpAp_SafetyModeManager_START_SEC_AswVariable
 #include "ScpAp_SafetyModeManager_MemMap.h"
 
-SafetyMode_L2p_IDT ScpAp_SafetyModeMana_Autonomous;/* '<S5>/Autonomous' */
+VechSafetyStatus_L2p_IDT ScpAp_SafetyMo_VechSafetyStatus;/* '<S3>/Data Type Conversion' */
+SafetyMode_L2p_IDT ScpAp_SafetyModeManage_Mode_L2p;/* '<S5>/Autonomous' */
 SafetyMode_L2p_IDT ScpAp_SafetyM_AutonomousAllowed;/* '<S5>/Switch' */
+boolean ScpAp_SafetyModeManage_Mode_Chk;/* '<S5>/Relational Operator' */
+boolean ScpAp_SafetyModeMana_Status_Chk;/* '<S5>/Relational Operator1' */
 
 #define ScpAp_SafetyModeManager_STOP_SEC_AswVariable
 #include "ScpAp_SafetyModeManager_MemMap.h"
@@ -40,36 +44,41 @@ SafetyMode_L2p_IDT ScpAp_SafetyM_AutonomousAllowed;/* '<S5>/Switch' */
 
 void SafetyModeManager_Main(void)
 {
-  VechSafetyStatus_L2p_IDT tmpRead;
-
-  /* Inport: '<Root>/RP_ScpAp_VechSafetyStatus_L2p_IF_VechSafetyStatus_L2p' */
-  (void)Rte_Read_RP_ScpAp_VechSafetyStatus_L2p_IF_VechSafetyStatus_L2p(&tmpRead);
+  /* DataTypeConversion: '<S3>/Data Type Conversion' incorporates:
+   *  Inport: '<Root>/RP_ScpAp_VechSafetyStatus_L2p_IF_VechSafetyStatus_L2p'
+   */
+  (void)Rte_Read_RP_ScpAp_VechSafetyStatus_L2p_IF_VechSafetyStatus_L2p
+    (&ScpAp_SafetyMo_VechSafetyStatus);
 
   /* Outputs for Atomic SubSystem: '<Root>/SafetyModeManager_Main_sys' */
   /* Outputs for Atomic SubSystem: '<S1>/SWC3_Control' */
   /* SignalConversion generated from: '<S5>/Autonomous' incorporates:
    *  Constant: '<S1>/Constant'
    */
-  ScpAp_SafetyModeMana_Autonomous = AUTONOMOUS;
+  ScpAp_SafetyModeManage_Mode_L2p = AUTONOMOUS;
+
+  /* RelationalOperator: '<S5>/Relational Operator' */
+  ScpAp_SafetyModeManage_Mode_Chk = TRUE;
+
+  /* RelationalOperator: '<S5>/Relational Operator1' incorporates:
+   *  Constant: '<S5>/Constant4'
+   *  DataTypeConversion: '<S3>/Data Type Conversion'
+   */
+  ScpAp_SafetyModeMana_Status_Chk = (ScpAp_SafetyMo_VechSafetyStatus == NORMAL);
 
   /* Switch: '<S5>/Switch' incorporates:
-   *  Constant: '<S5>/Constant4'
-   *  DataTypeConversion: '<S5>/Data Type Conversion3'
-   *  Inport: '<Root>/RP_ScpAp_VechSafetyStatus_L2p_IF_VechSafetyStatus_L2p'
-   *  RelationalOperator: '<S5>/Relational Operator1'
+   *  Logic: '<S5>/AND'
    */
-  if (tmpRead == 0) {
+  if (ScpAp_SafetyModeMana_Status_Chk) {
     /* Switch: '<S5>/Switch' incorporates:
-     *  DataTypeConversion: '<S5>/Data Type Conversion1'
+     *  Constant: '<S5>/Constant'
      */
-    ScpAp_SafetyM_AutonomousAllowed =
-      ScpAp_SafetyModeManager_ConstB.DataTypeConversion1;
+    ScpAp_SafetyM_AutonomousAllowed = AUTONOMOUS;
   } else {
     /* Switch: '<S5>/Switch' incorporates:
-     *  DataTypeConversion: '<S5>/Data Type Conversion2'
+     *  Constant: '<S5>/Constant2'
      */
-    ScpAp_SafetyM_AutonomousAllowed =
-      ScpAp_SafetyModeManager_ConstB.DataTypeConversion2;
+    ScpAp_SafetyM_AutonomousAllowed = MANUAL;
   }
 
   /* End of Switch: '<S5>/Switch' */
@@ -100,7 +109,7 @@ void SafetyModeManager_Main(void)
 void ScpAp_SafetyModeManager_Init(void)
 {
   /* Registration code */
-  ScpAp_SafetyModeMana_Autonomous = AUTONOMOUS;
+  ScpAp_SafetyModeManage_Mode_L2p = AUTONOMOUS;
   ScpAp_SafetyM_AutonomousAllowed = AUTONOMOUS;
 }
 

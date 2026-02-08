@@ -2,7 +2,7 @@
 ## Makefile generated for component 'ScpAp_SafetyModeManager'. 
 ## 
 ## Makefile     : ScpAp_SafetyModeManager.mk
-## Generated on : Wed Feb 04 14:54:13 2026
+## Generated on : Sun Feb 08 19:19:11 2026
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/ScpAp_SafetyModeManager.exe
 ## Product type : executable
 ## 
@@ -183,7 +183,7 @@ DEFINES = $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(DEFINES_STAN
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/ScpAp_SafetyModeManager_autosar_rtw/ScpAp_SafetyModeManager.c $(START_DIR)/ScpAp_SafetyModeManager_autosar_rtw/ScpAp_SafetyModeManager_data.c
+SRCS = $(START_DIR)/ScpAp_SafetyModeManager_autosar_rtw/ScpAp_SafetyModeManager.c
 
 ALL_SRCS = $(SRCS)
 
@@ -191,7 +191,7 @@ ALL_SRCS = $(SRCS)
 ## OBJECTS
 ###########################################################################
 
-OBJS = ScpAp_SafetyModeManager.obj ScpAp_SafetyModeManager_data.obj
+OBJS = ScpAp_SafetyModeManager.obj
 
 ALL_OBJS = $(OBJS)
 
@@ -568,10 +568,6 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS)
 
 
 ScpAp_SafetyModeManager.obj : $(START_DIR)/ScpAp_SafetyModeManager_autosar_rtw/ScpAp_SafetyModeManager.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-ScpAp_SafetyModeManager_data.obj : $(START_DIR)/ScpAp_SafetyModeManager_autosar_rtw/ScpAp_SafetyModeManager_data.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 

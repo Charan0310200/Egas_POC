@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_SafetyModeManager'.
  *
- * Model version                  : 1.28
+ * Model version                  : 1.64
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Wed Feb  4 15:06:14 2026
+ * C/C++ source code generated on : Sun Feb  8 19:19:03 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -28,25 +28,20 @@
 #include "ScpAp_SafetyModeManager_types.h"
 #include "Rte_Type.h"
 
-/* Invariant block signals (default storage) */
-typedef struct {
-  const SafetyMode_L2p_IDT DataTypeConversion1;/* '<S5>/Data Type Conversion1' */
-  const SafetyMode_L2p_IDT DataTypeConversion2;/* '<S5>/Data Type Conversion2' */
-} ConstB_ScpAp_SafetyModeManage_T;
-
 /* Static Memory for Internal Data */
 
 /* SwAddrMethod AswVariable for Internal Data */
 #define ScpAp_SafetyModeManager_START_SEC_AswVariable
 #include "ScpAp_SafetyModeManager_MemMap.h"
 
-extern SafetyMode_L2p_IDT ScpAp_SafetyModeMana_Autonomous;/* '<S5>/Autonomous' */
+extern VechSafetyStatus_L2p_IDT ScpAp_SafetyMo_VechSafetyStatus;/* '<S3>/Data Type Conversion' */
+extern SafetyMode_L2p_IDT ScpAp_SafetyModeManage_Mode_L2p;/* '<S5>/Autonomous' */
 extern SafetyMode_L2p_IDT ScpAp_SafetyM_AutonomousAllowed;/* '<S5>/Switch' */
+extern boolean ScpAp_SafetyModeManage_Mode_Chk;/* '<S5>/Relational Operator' */
+extern boolean ScpAp_SafetyModeMana_Status_Chk;/* '<S5>/Relational Operator1' */
 
 #define ScpAp_SafetyModeManager_STOP_SEC_AswVariable
 #include "ScpAp_SafetyModeManager_MemMap.h"
-
-extern const ConstB_ScpAp_SafetyModeManage_T ScpAp_SafetyModeManager_ConstB;/* constant block i/o */
 
 /*-
  * The generated code includes comments that allow you to trace directly

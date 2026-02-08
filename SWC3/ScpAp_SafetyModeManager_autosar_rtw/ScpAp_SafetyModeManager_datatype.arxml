@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Auto generated XML Component Description for model ScpAp_SafetyModeManager
-Model version                : 1.28
+Model version                : 1.64
 Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
-XML source code generated on : Wed Feb 04 15:06:30 2026
-Model Checksum               : 1600721357 4142068108 1503111373 1673202040
+XML source code generated on : Sun Feb 08 19:19:10 2026
+Model Checksum               : 3311032103 4219640234 1267892419 3699580184
 -->
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
     <AR-PACKAGES>
@@ -19,8 +19,8 @@ Model Checksum               : 1600721357 4142068108 1503111373 1673202040
                             <DATA-CONSTR-RULES>
                                 <DATA-CONSTR-RULE>
                                     <INTERNAL-CONSTRS>
-                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-INF</LOWER-LIMIT>
-                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">INF</UPPER-LIMIT>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
                                     </INTERNAL-CONSTRS>
                                 </DATA-CONSTR-RULE>
                             </DATA-CONSTR-RULES>
