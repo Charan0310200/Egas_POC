@@ -2,7 +2,7 @@
 ## Makefile generated for component 'ScpAp_VechilestateEstimation_L2p'. 
 ## 
 ## Makefile     : ScpAp_VechilestateEstimation_L2p.mk
-## Generated on : Sun Feb 08 17:48:26 2026
+## Generated on : Mon Feb 09 11:21:46 2026
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/ScpAp_VechilestateEstimation_L2p.exe
 ## Product type : executable
 ## 
@@ -23,7 +23,7 @@ MAKEFILE                  = ScpAp_VechilestateEstimation_L2p.mk
 MATLAB_ROOT               = F:/Matlab_2025B
 MATLAB_BIN                = F:/Matlab_2025B/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = F:/POC/EGas_Models/Git_Clone/Egas_POC/SWC_2
+START_DIR                 = F:/POC/EGas_Models/Git_Clone/Egas_POC/SWC2
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0

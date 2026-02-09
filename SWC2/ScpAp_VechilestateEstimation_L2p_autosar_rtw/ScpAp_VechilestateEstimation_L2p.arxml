@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Auto generated XML Component Description for model ScpAp_VechilestateEstimation_L2p
-Model version                : 1.117
+Model version                : 1.118
 Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
-XML source code generated on : Sun Feb 08 17:48:25 2026
-Model Checksum               : 1549756946 886680577 847395773 1256191490
+XML source code generated on : Mon Feb 09 11:21:37 2026
+Model Checksum               : 4117715403 4270029495 3077938306 2646928886
 -->
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00052.xsd">
     <AR-PACKAGES>
@@ -529,12 +529,6 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                         </SW-DATA-DEF-PROPS-VARIANTS>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float64_const</TYPE-TREF>
-                                    <INIT-VALUE>
-                                        <NUMERICAL-VALUE-SPECIFICATION>
-                                            <SHORT-LABEL>DT</SHORT-LABEL>
-                                            <VALUE>0.01</VALUE>
-                                        </NUMERICAL-VALUE-SPECIFICATION>
-                                    </INIT-VALUE>
                                 </PARAMETER-DATA-PROTOTYPE>
                                 <PARAMETER-DATA-PROTOTYPE UUID="e91781b5-3984-5591-f805-046e93ef8e3c">
                                     <SHORT-NAME>Speed_Diff_Th</SHORT-NAME>
@@ -618,7 +612,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                 </PARAMETER-DATA-PROTOTYPE>
                             </CONSTANT-MEMORYS>
                             <STATIC-MEMORYS>
-                                <VARIABLE-DATA-PROTOTYPE UUID="fd255515-1e91-55f9-b5da-f04716708488">
+                                <VARIABLE-DATA-PROTOTYPE UUID="32ac44f2-5543-5fe9-0721-ecc0a8e91652">
                                     <SHORT-NAME>VehicleSpeed_L2_Prev</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -632,7 +626,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="b06c46a7-8ccc-547e-86e2-5dba2951dffd">
+                                <VARIABLE-DATA-PROTOTYPE UUID="bd9ffb71-0395-5b0d-5602-15bcabb765fd">
                                     <SHORT-NAME>ScpAp_VechilestateE_Valid_Wheel</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -646,7 +640,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float64</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="8ca144ca-b58d-5ecd-6a54-cc8afc4dd555">
+                                <VARIABLE-DATA-PROTOTYPE UUID="e29658a4-d9be-5429-d0e2-54991585cc4c">
                                     <SHORT-NAME>ScpAp_Vechilestat_Valid_Wheel_R</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -660,7 +654,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float64</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="9ef1be1d-b68b-5105-88fb-fec981fc033b">
+                                <VARIABLE-DATA-PROTOTYPE UUID="a580b5b0-e8f9-52f1-3d4b-e8bda0c5f81b">
                                     <SHORT-NAME>ScpAp_Vechilesta_Valid_Wheel_FR</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -674,7 +668,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float64</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="35633659-2396-5b3b-9077-112cf0ced5e9">
+                                <VARIABLE-DATA-PROTOTYPE UUID="90956c34-e8c8-51d1-a84b-b94b46418902">
                                     <SHORT-NAME>ScpAp_Vechilesta_Valid_Wheel_FL</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -688,7 +682,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float64</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="539e359c-fe2a-5634-a47b-d64c85fff6f0">
+                                <VARIABLE-DATA-PROTOTYPE UUID="8607061e-acde-56f2-0e2c-a6a32b2f3cd6">
                                     <SHORT-NAME>ScpAp_Vechilesta_IMU_AccelX_L1p</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -702,7 +696,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="df18f3ef-42e3-5a93-3fb1-eb67d455723f">
+                                <VARIABLE-DATA-PROTOTYPE UUID="8b95bd04-d721-561f-df1f-d5346982f442">
                                     <SHORT-NAME>ScpAp_Vechile_Wheelspeed_FL_L1p</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -716,7 +710,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="f5c5a5a4-746e-5211-867f-62d4e4bac473">
+                                <VARIABLE-DATA-PROTOTYPE UUID="f9a4b073-002f-5376-bf90-87f7943f491b">
                                     <SHORT-NAME>ScpAp_Vechile_Wheelspeed_FR_L1p</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -730,7 +724,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="7484c211-61ac-5ea2-303c-da1afa0ea4d0">
+                                <VARIABLE-DATA-PROTOTYPE UUID="07c7d83d-1f68-5ec8-839d-d42d6b4a9bdb">
                                     <SHORT-NAME>ScpAp_Vechiles_Wheelspeed_R_L1p</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -744,7 +738,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="2e71cbe8-1807-5525-0330-f80f0583cb2a">
+                                <VARIABLE-DATA-PROTOTYPE UUID="819daae6-da38-57e0-3f28-6138d61dfc88">
                                     <SHORT-NAME>ScpAp_V_VehicleAccel_from_speed</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -758,7 +752,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="f296f72b-f4d4-5889-392b-a9fd1295df90">
+                                <VARIABLE-DATA-PROTOTYPE UUID="eb92efc7-558d-5514-4dee-bdea5d3c0923">
                                     <SHORT-NAME>ScpAp_Vechilest_VehicleAccel_L2</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -772,7 +766,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="660027d7-b1c9-5f62-5923-778dcbbd7ecb">
+                                <VARIABLE-DATA-PROTOTYPE UUID="d6a34a55-cb47-53b5-cbc9-a2487d3c09d7">
                                     <SHORT-NAME>ScpAp_Vechi_Cal_VehicleAccel_L2</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -786,7 +780,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="6ed84a34-99aa-5778-23f1-ecfa4dc3718b">
+                                <VARIABLE-DATA-PROTOTYPE UUID="8ac2658c-4884-5062-1f38-c626ef8bd31e">
                                     <SHORT-NAME>ScpAp_Vechilestat_WSS_x_L1p_Max</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -800,7 +794,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="b79cc1b9-4a39-534a-397a-bbab38a734ad">
+                                <VARIABLE-DATA-PROTOTYPE UUID="4a0ee1c7-0240-5331-f06f-653b6615d2da">
                                     <SHORT-NAME>ScpAp_Vechilestat_WSS_x_L1p_Min</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -814,7 +808,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="990e34b4-aa0a-594a-04cf-a40d793c3aa3">
+                                <VARIABLE-DATA-PROTOTYPE UUID="8aaff9ea-c3b4-5acd-0be2-ac4757615f43">
                                     <SHORT-NAME>ScpAp_Vechilest_Wheel_Speed_Avg</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -828,7 +822,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="e186c3f2-92f0-5ffd-6938-24e743f42dc0">
+                                <VARIABLE-DATA-PROTOTYPE UUID="9f9183bc-27b0-508d-b661-19fe0c9cd29d">
                                     <SHORT-NAME>ScpAp_VehicleSpeed_Weighted_L2</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -842,7 +836,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="62c8707c-d0b8-5021-33a1-43da8dfadbc3">
+                                <VARIABLE-DATA-PROTOTYPE UUID="d25fad58-2835-5324-3a02-1bf7fa6d0b34">
                                     <SHORT-NAME>ScpAp_Vechilest_VehicleSpeed_L2</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -856,7 +850,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="6d136ef7-da87-5dfc-1e01-cdda071a48d0">
+                                <VARIABLE-DATA-PROTOTYPE UUID="68330727-2d41-5d74-055a-b36f35fbfef4">
                                     <SHORT-NAME>ScpAp_VechilestateEst_Motor_Spd</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -870,7 +864,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="9f71b166-e24c-5dc0-29c5-a7829385d21e">
+                                <VARIABLE-DATA-PROTOTYPE UUID="0699a462-1cd3-5bbf-59dc-f439689e5c03">
                                     <SHORT-NAME>ScpAp_Vechilesta_MotorSpeed_L1p</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -884,7 +878,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="777b03a0-7495-529a-7489-74aacf73b88b">
+                                <VARIABLE-DATA-PROTOTYPE UUID="6df603a7-d658-5d10-b7be-d01b2115759a">
                                     <SHORT-NAME>ScpAp_Vechilest_Valid_Wheel_Cnt</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -898,7 +892,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="b09bb550-45b2-5d73-3c2f-450f0985899f">
+                                <VARIABLE-DATA-PROTOTYPE UUID="a51f6d8d-b270-537c-16a3-181a40b0b472">
                                     <SHORT-NAME>ScpAp_Vech_VhlSpd_Wgt_L2_Switch</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -912,7 +906,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="c66b7318-4d6f-5aa7-808f-cf8a6a734f17">
+                                <VARIABLE-DATA-PROTOTYPE UUID="a22a8ea6-d0aa-53b2-f85b-8ce88f37064e">
                                     <SHORT-NAME>ScpAp_Vechilesta_MotorRPM_Fault</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -926,7 +920,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="ee232759-c03b-5543-eba5-31317bd337c4">
+                                <VARIABLE-DATA-PROTOTYPE UUID="cdcb12ef-4202-5d48-12bf-cd17ba9854c6">
                                     <SHORT-NAME>ScpAp_VechilestateE_Accel_Fault</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -940,7 +934,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="02d995ca-4745-531f-1991-9b5214ece4a6">
+                                <VARIABLE-DATA-PROTOTYPE UUID="689056dd-180b-535d-c7f7-c16f689a7751">
                                     <SHORT-NAME>ScpAp_VechilestateEst_WSS_fault</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -954,7 +948,7 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="775ad291-87a0-5a4c-622d-f1195b7ab3eb">
+                                <VARIABLE-DATA-PROTOTYPE UUID="052a5eb6-b301-5239-3184-7eabb8d8a335">
                                     <SHORT-NAME>ScpAp_Vechile_VehSpeedEst_Fault</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_VechilestateEstimation_L2p'.
  *
- * Model version                  : 1.117
+ * Model version                  : 1.118
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sun Feb  8 17:48:14 2026
+ * C/C++ source code generated on : Mon Feb  9 11:20:41 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -80,6 +80,7 @@ void VehstateEst_Main(void)
 {
   IF_ValidityFlag_L1p_IDT rtb_TmpSignalConversionAtRP_Scp;
   float64 rtb_Sum;
+  sint32 tmp;
   sint16 u;
 
   /* DataTypeConversion: '<S3>/Data Type Conversion4' incorporates:
@@ -373,14 +374,14 @@ void VehstateEst_Main(void)
    *  Sum: '<S8>/Subtract'
    *  UnitDelay: '<S5>/Unit Delay'
    */
-  rtb_Sum = fmod(floor((float64)(sint16)(ScpAp_Vechilest_VehicleSpeed_L2 -
-    VehicleSpeed_L2_Prev) / DT), 65536.0);
-  if (rtb_Sum < 0.0) {
+  tmp = (sint32)fmod(floor((float64)(sint16)(ScpAp_Vechilest_VehicleSpeed_L2 -
+    VehicleSpeed_L2_Prev) / 0.01), 65536.0);
+  if (tmp < 0) {
     /* DataTypeConversion: '<S8>/Data Type Conversion' */
-    ScpAp_V_VehicleAccel_from_speed = (uint16)-(sint16)(uint16)-rtb_Sum;
+    ScpAp_V_VehicleAccel_from_speed = (uint16)-(sint16)(uint16)-(float64)tmp;
   } else {
     /* DataTypeConversion: '<S8>/Data Type Conversion' */
-    ScpAp_V_VehicleAccel_from_speed = (uint16)rtb_Sum;
+    ScpAp_V_VehicleAccel_from_speed = (uint16)tmp;
   }
 
   /* End of DataTypeConversion: '<S8>/Data Type Conversion' */

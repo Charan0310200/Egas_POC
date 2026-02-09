@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Auto generated XML Component Description for model ScpAp_SafetyModeManager
-Model version                : 1.64
+Model version                : 1.65
 Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
-XML source code generated on : Sun Feb 08 19:19:10 2026
+XML source code generated on : Mon Feb 09 11:24:12 2026
 Model Checksum               : 3311032103 4219640234 1267892419 3699580184
 -->
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
@@ -169,7 +169,7 @@ binary-valued logic: {true, false}.</L-2>
                         <SWC-INTERNAL-BEHAVIOR UUID="4F77F767-504C-4442-B88A-FA752B547000">
                             <SHORT-NAME>ScpAp_SafetyModeManager_InternalBehavior</SHORT-NAME>
                             <STATIC-MEMORYS>
-                                <VARIABLE-DATA-PROTOTYPE UUID="78f161e6-db9a-5b86-3130-dc4689b7ab5d">
+                                <VARIABLE-DATA-PROTOTYPE UUID="e3286eaf-eed4-5a96-1752-4250863db71d">
                                     <SHORT-NAME>ScpAp_SafetyModeManage_Mode_Chk</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -183,7 +183,7 @@ binary-valued logic: {true, false}.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="fbb1afb0-8bf2-5fb2-1182-9ece2c617f2f">
+                                <VARIABLE-DATA-PROTOTYPE UUID="5ea48a06-6afe-5f09-c637-22d7e53aefd0">
                                     <SHORT-NAME>ScpAp_SafetyModeMana_Status_Chk</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -197,7 +197,7 @@ binary-valued logic: {true, false}.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="8675ed8a-fcdd-5922-a09c-76f6578f044f">
+                                <VARIABLE-DATA-PROTOTYPE UUID="75246629-93ec-5568-a49c-339a2656fd55">
                                     <SHORT-NAME>ScpAp_SafetyMo_VechSafetyStatus</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -211,7 +211,7 @@ binary-valued logic: {true, false}.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/VechSafetyStatus_L2p_IDT</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="4f8dbc00-46d6-5115-1e01-3c3c2fd46901">
+                                <VARIABLE-DATA-PROTOTYPE UUID="b029437b-eaae-51ec-0858-2a9c548ae3f0">
                                     <SHORT-NAME>ScpAp_SafetyModeManage_Mode_L2p</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -225,7 +225,7 @@ binary-valued logic: {true, false}.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/SafetyMode_L2p_IDT</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="083d6ee2-37c9-54a4-c687-12f4f30afe96">
+                                <VARIABLE-DATA-PROTOTYPE UUID="0d087768-e8ad-590a-4934-78894183b68d">
                                     <SHORT-NAME>ScpAp_SafetyM_AutonomousAllowed</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>

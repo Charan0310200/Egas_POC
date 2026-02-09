@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_VechilestateEstimation_L2p'.
  *
- * Model version                  : 1.117
+ * Model version                  : 1.118
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sun Feb  8 17:48:14 2026
+ * C/C++ source code generated on : Mon Feb  9 11:20:41 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -81,9 +81,6 @@ extern boolean ScpAp_Vechile_VehSpeedEst_Fault;/* '<S7>/Switch3' */
 
 extern const float64 Accel_Diff_Th;    /* Variable: Accel_Diff_Th
                                         * Referenced by: '<S7>/Constant5'
-                                        */
-extern const float64 DT;               /* Variable: DT
-                                        * Referenced by: '<S8>/Constant'
                                         */
 extern const float64 Speed_Diff_Th;    /* Variable: Speed_Diff_Th
                                         * Referenced by: '<S7>/Constant1'
