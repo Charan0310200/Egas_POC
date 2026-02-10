@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Auto generated XML Component Description for model ScpAp_L1SpeedMonitor
-Model version                : 1.158
+Model version                : 1.177
 Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
-XML source code generated on : Wed Feb 04 11:29:29 2026
-Model Checksum               : 1916757303 3778785942 3820453525 1380853742
+XML source code generated on : Tue Feb 10 15:23:38 2026
+Model Checksum               : 3930843065 802252341 2884601330 2628265606
 -->
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00052.xsd">
     <AR-PACKAGES>

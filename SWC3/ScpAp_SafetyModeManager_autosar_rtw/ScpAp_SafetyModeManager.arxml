@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Auto generated XML Component Description for model ScpAp_SafetyModeManager
-Model version                : 1.65
+Model version                : 1.67
 Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
-XML source code generated on : Mon Feb 09 11:24:12 2026
-Model Checksum               : 3311032103 4219640234 1267892419 3699580184
+XML source code generated on : Tue Feb 10 15:47:19 2026
+Model Checksum               : 2632358371 4267714046 2505507379 4288060418
 -->
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
     <AR-PACKAGES>
@@ -169,21 +169,7 @@ binary-valued logic: {true, false}.</L-2>
                         <SWC-INTERNAL-BEHAVIOR UUID="4F77F767-504C-4442-B88A-FA752B547000">
                             <SHORT-NAME>ScpAp_SafetyModeManager_InternalBehavior</SHORT-NAME>
                             <STATIC-MEMORYS>
-                                <VARIABLE-DATA-PROTOTYPE UUID="e3286eaf-eed4-5a96-1752-4250863db71d">
-                                    <SHORT-NAME>ScpAp_SafetyModeManage_Mode_Chk</SHORT-NAME>
-                                    <CATEGORY>VALUE</CATEGORY>
-                                    <SW-DATA-DEF-PROPS>
-                                        <SW-DATA-DEF-PROPS-VARIANTS>
-                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
-                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/AswVariable</SW-ADDR-METHOD-REF>
-                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
-                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
-                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
-                                        </SW-DATA-DEF-PROPS-VARIANTS>
-                                    </SW-DATA-DEF-PROPS>
-                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
-                                </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="5ea48a06-6afe-5f09-c637-22d7e53aefd0">
+                                <VARIABLE-DATA-PROTOTYPE UUID="ef35e56b-4d11-543d-4d1e-6c892bf5eb02">
                                     <SHORT-NAME>ScpAp_SafetyModeMana_Status_Chk</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -197,8 +183,8 @@ binary-valued logic: {true, false}.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="75246629-93ec-5568-a49c-339a2656fd55">
-                                    <SHORT-NAME>ScpAp_SafetyMo_VechSafetyStatus</SHORT-NAME>
+                                <VARIABLE-DATA-PROTOTYPE UUID="6c031318-5371-5dbd-c2be-62d28829fd20">
+                                    <SHORT-NAME>ScpAp_SafetyModeManage_Mode_Chk</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
                                         <SW-DATA-DEF-PROPS-VARIANTS>
@@ -209,10 +195,10 @@ binary-valued logic: {true, false}.</L-2>
                                             </SW-DATA-DEF-PROPS-CONDITIONAL>
                                         </SW-DATA-DEF-PROPS-VARIANTS>
                                     </SW-DATA-DEF-PROPS>
-                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/VechSafetyStatus_L2p_IDT</TYPE-TREF>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="b029437b-eaae-51ec-0858-2a9c548ae3f0">
-                                    <SHORT-NAME>ScpAp_SafetyModeManage_Mode_L2p</SHORT-NAME>
+                                <VARIABLE-DATA-PROTOTYPE UUID="4ae66785-05d7-5600-57b9-d05bb8c517d7">
+                                    <SHORT-NAME>ScpAp_SafetyM_AutonomousAllowed</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
                                         <SW-DATA-DEF-PROPS-VARIANTS>
@@ -225,8 +211,8 @@ binary-valued logic: {true, false}.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/SafetyMode_L2p_IDT</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="0d087768-e8ad-590a-4934-78894183b68d">
-                                    <SHORT-NAME>ScpAp_SafetyM_AutonomousAllowed</SHORT-NAME>
+                                <VARIABLE-DATA-PROTOTYPE UUID="9d94c6da-8fe7-5d00-9d22-ca42fe3efd16">
+                                    <SHORT-NAME>ScpAp_SafetyModeManage_Mode_L2p</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
                                         <SW-DATA-DEF-PROPS-VARIANTS>
@@ -424,7 +410,7 @@ binary-valued logic: {true, false}.</L-2>
                             <SW-DATA-DEF-PROPS>
                                 <SW-DATA-DEF-PROPS-VARIANTS>
                                     <SW-DATA-DEF-PROPS-CONDITIONAL>
-                                        <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
                                         <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
                                     </SW-DATA-DEF-PROPS-CONDITIONAL>
                                 </SW-DATA-DEF-PROPS-VARIANTS>
@@ -449,7 +435,7 @@ binary-valued logic: {true, false}.</L-2>
                             <SW-DATA-DEF-PROPS>
                                 <SW-DATA-DEF-PROPS-VARIANTS>
                                     <SW-DATA-DEF-PROPS-CONDITIONAL>
-                                        <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
                                         <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
                                     </SW-DATA-DEF-PROPS-CONDITIONAL>
                                 </SW-DATA-DEF-PROPS-VARIANTS>
@@ -474,7 +460,7 @@ binary-valued logic: {true, false}.</L-2>
                             <SW-DATA-DEF-PROPS>
                                 <SW-DATA-DEF-PROPS-VARIANTS>
                                     <SW-DATA-DEF-PROPS-CONDITIONAL>
-                                        <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
                                         <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
                                     </SW-DATA-DEF-PROPS-CONDITIONAL>
                                 </SW-DATA-DEF-PROPS-VARIANTS>

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_VechilestateEstimation_L2p'.
  *
- * Model version                  : 1.118
+ * Model version                  : 1.128
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Mon Feb  9 11:20:41 2026
+ * C/C++ source code generated on : Tue Feb 10 13:10:56 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -32,6 +32,16 @@
 typedef struct {
   IF_SensorFaultFlgs_L2p_IDT PP_SensorValidityFlag_L2p_IF_Se;
                 /* '<Root>/PP_SensorValidityFlag_L2p_IF_SensorFaultFlags_L2p' */
+  float32 IMU_AccelX_L1p;  /* '<S3>/RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p' */
+  sint16 VehicleSpeed_L2_i;            /* '<S4>/VehicleSpeed_L2' */
+  uint16 VehicleAccel_L2_g;            /* '<S4>/VehicleAccel_L2' */
+  uint16 Wheelspeed_FL_L1p;
+                    /* '<S3>/RP_ScpAp_Wheelspeed_FL_L1p_IF_Wheelspeed_Fx_L1p' */
+  uint16 Wheelspeed_FR_L1p;
+                    /* '<S3>/RP_ScpAp_Wheelspeed_FR_L1p_IF_Wheelspeed_Fx_L1p' */
+  uint16 Wheelspeed_R_L1p;
+                     /* '<S3>/RP_ScpAp_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p' */
+  uint8 MotorSpeed_L1p;   /* '<S3>/RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p' */
 } ARID_DEF_ScpAp_VechilestateEs_T;
 
 /* PublicStructure Variables for Internal Data */
@@ -48,21 +58,16 @@ extern float64 ScpAp_VechilestateE_Valid_Wheel;/* '<S10>/Sum' */
 extern float64 ScpAp_Vechilestat_Valid_Wheel_R;/* '<S15>/Switch' */
 extern float64 ScpAp_Vechilesta_Valid_Wheel_FR;/* '<S14>/Switch' */
 extern float64 ScpAp_Vechilesta_Valid_Wheel_FL;/* '<S13>/Switch' */
-extern float32 ScpAp_Vechilesta_IMU_AccelX_L1p;/* '<S3>/Data Type Conversion' */
 extern sint16 ScpAp_Vechilest_Wheel_Speed_Avg;/* '<S10>/Data Type Conversion' */
 extern sint16 ScpAp_VehicleSpeed_Weighted_L2;/* '<S9>/Sum' */
 extern sint16 ScpAp_Vechilest_VehicleSpeed_L2;/* '<S9>/Switch' */
 extern sint16 ScpAp_VechilestateEst_Motor_Spd;/* '<S6>/Switch' */
 extern sint16 VehicleSpeed_L2_Prev;    /* '<S5>/Unit Delay' */
-extern uint16 ScpAp_Vechile_Wheelspeed_FL_L1p;/* '<S3>/Data Type Conversion2' */
-extern uint16 ScpAp_Vechile_Wheelspeed_FR_L1p;/* '<S3>/Data Type Conversion3' */
-extern uint16 ScpAp_Vechiles_Wheelspeed_R_L1p;/* '<S3>/Data Type Conversion4' */
 extern uint16 ScpAp_V_VehicleAccel_from_speed;/* '<S8>/Data Type Conversion' */
 extern uint16 ScpAp_Vechilest_VehicleAccel_L2;/* '<S8>/Switch1' */
 extern uint16 ScpAp_Vechi_Cal_VehicleAccel_L2;/* '<S11>/Data Type Conversion' */
 extern uint16 ScpAp_Vechilestat_WSS_x_L1p_Max;/* '<S7>/Max' */
 extern uint16 ScpAp_Vechilestat_WSS_x_L1p_Min;/* '<S7>/Max1' */
-extern uint8 ScpAp_Vechilesta_MotorSpeed_L1p;/* '<S3>/Data Type Conversion1' */
 extern uint8 ScpAp_Vechilest_Valid_Wheel_Cnt;/* '<S12>/Sum' */
 extern boolean ScpAp_Vech_VhlSpd_Wgt_L2_Switch;/* '<S9>/OR' */
 extern boolean ScpAp_Vechilesta_MotorRPM_Fault;/* '<S7>/Switch' */
@@ -105,6 +110,10 @@ extern const sint16 W2;                /* Variable: W2
 extern const uint16 WhlSpd_Max;        /* Referenced by:
                                         * '<S7>/Constant12'
                                         * '<S9>/Constant3'
+                                        */
+extern const uint16 WhlSpd_Min;        /* Referenced by:
+                                        * '<S7>/Constant11'
+                                        * '<S9>/Constant2'
                                         */
 
 /*-

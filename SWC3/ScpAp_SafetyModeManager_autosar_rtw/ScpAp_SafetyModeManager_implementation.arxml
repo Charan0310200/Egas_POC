@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Auto generated XML Component Description for model ScpAp_SafetyModeManager
-Model version                : 1.65
+Model version                : 1.67
 Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
-XML source code generated on : Mon Feb 09 11:24:12 2026
-Model Checksum               : 3311032103 4219640234 1267892419 3699580184
+XML source code generated on : Tue Feb 10 15:47:19 2026
+Model Checksum               : 2632358371 4267714046 2505507379 4288060418
 -->
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
     <AR-PACKAGES>
@@ -50,7 +50,7 @@ Model Checksum               : 3311032103 4219640234 1267892419 3699580184
                             </MEMORY-SECTION>
                         </MEMORY-SECTIONS>
                     </RESOURCE-CONSUMPTION>
-                    <SW-VERSION>1.65.1</SW-VERSION>
+                    <SW-VERSION>1.67.1</SW-VERSION>
                     <USED-CODE-GENERATOR>Embedded Coder 25.2 (R2025b) 28-Jul-2025</USED-CODE-GENERATOR>
                     <VENDOR-ID>0</VENDOR-ID>
                     <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/ScpAp_SafetyModeManager/ScpAp_SafetyModeManager_InternalBehavior</BEHAVIOR-REF>

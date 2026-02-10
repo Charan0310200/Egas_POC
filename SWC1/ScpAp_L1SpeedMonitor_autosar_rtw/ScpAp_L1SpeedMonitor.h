@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_L1SpeedMonitor'.
  *
- * Model version                  : 1.158
+ * Model version                  : 1.177
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Wed Feb  4 11:29:08 2026
+ * C/C++ source code generated on : Tue Feb 10 15:17:05 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -32,6 +32,11 @@
 typedef struct {
   IF_ValidityFlag_L1p_IDT PP_ValidityFlag_L1p_IF_Validity;
                           /* '<Root>/PP_ValidityFlag_L1p_IF_ValidityFlag_L1p' */
+  float32 IMU_AccelX_L1p_g;            /* '<S4>/IMU_AccelX_L1p' */
+  uint16 WSS_FL_L1p_e;                 /* '<S4>/WSS_FL_L1p' */
+  uint16 WSS_FR_L1p_p;                 /* '<S4>/WSS_FR_L1p' */
+  uint16 WSS_R_L1p_b;                  /* '<S4>/WSS_R_L1p' */
+  uint8 MotorSpd_Equiv_L1p_l;          /* '<S4>/MotorSpd_Equiv_L1p' */
 } ARID_DEF_ScpAp_L1SpeedMonitor_T;
 
 /* PublicStructure Variables for Internal Data */
@@ -44,6 +49,7 @@ extern ARID_DEF_ScpAp_L1SpeedMonitor_T ScpAp_L1SpeedMonitor_ARID_DEF;
 #define ScpAp_L1SpeedMonitor_START_SEC_AswVariable
 #include "ScpAp_L1SpeedMonitor_MemMap.h"
 
+extern float64 ScpAp_L1Spee_Cal_IMU_AccelX_L1p;/* '<S16>/Add' */
 extern float64 ScpAp_L1SpeedMonitor_Output;/* '<S12>/Switch1' */
 extern float64 StuckCntOutput_Prev;    /* '<S12>/Unit Delay' */
 extern float32 ScpAp_L1SpeedMon_X_Accel_L1_Phy;/* '<S13>/Abs' */
@@ -53,11 +59,13 @@ extern float32 IMU_AccelX_L1p_Prev;    /* '<S13>/Unit Delay' */
 extern float32 STC_IMU_Accel_XL1p_Prev;/* '<S11>/Unit Delay3' */
 extern uint16 ScpAp_L1SpeedM_WhlSpdFR_Phy_Kph;/* '<S21>/Data Type Conversion' */
 extern uint16 ScpAp_L1SpeedMonitor_WSS_R_L1p;/* '<S21>/Switch1' */
-extern uint16 ScpAp_L1SpeedMonitor_WhlSpd_Min;/* '<S20>/Constant' */
+extern uint16 ScpAp_L1SpeedMoni_Cal_WSS_R_L1p;/* '<S24>/Add' */
 extern uint16 ScpAp_L1Spee_WhlSpdFR_Phy_Kph_n;/* '<S20>/Data Type Conversion' */
 extern uint16 ScpAp_L1SpeedMonitor_WSS_FR_L1p;/* '<S20>/Switch1' */
+extern uint16 ScpAp_L1SpeedMon_Cal_WSS_FR_L1p;/* '<S23>/Add' */
 extern uint16 ScpAp_L1Spe_WhlSpdFR_Phy_Kph_nw;/* '<S19>/Data Type Conversion' */
 extern uint16 ScpAp_L1SpeedMonitor_WSS_FL_L1p;/* '<S19>/Switch1' */
+extern uint16 ScpAp_L1SpeedMon_Cal_WSS_FL_L1p;/* '<S22>/Add' */
 extern uint16 ScpAp_L1SpeedMonito_WSS_FR_Diff;/* '<S11>/Subtract' */
 extern uint16 ScpAp_L1SpeedMonito_WSS_FL_Diff;/* '<S11>/Subtract1' */
 extern uint16 ScpAp_L1SpeedMonitor_WSS_R_Diff;/* '<S11>/Subtract2' */
@@ -69,6 +77,7 @@ extern uint16 STC_WSS_FL_L1p_Prev;     /* '<S11>/Unit Delay1' */
 extern uint16 STC_WSS_R_L1p_Prev;      /* '<S11>/Unit Delay2' */
 extern uint8 ScpAp_L1Spee_MotorSpd_Equiv_L1p;/* '<S14>/Switch1' */
 extern uint8 ScpAp_L1SpeedMonit_MotorSpd_kph;/* '<S18>/Data Type Conversion' */
+extern uint8 ScpAp_L1_Cal_MotorSpd_Equiv_L1p;/* '<S17>/Add' */
 extern uint8 ScpAp_L1Spe_MotorSpd_Equiv_Diff;/* '<S11>/Subtract4' */
 extern uint8 MotorSpd_Equiv_L1p_Prev;  /* '<S14>/Unit Delay' */
 extern uint8 STC_MotorSpd_Equiv_L1p_Prev;/* '<S11>/Unit Delay4' */
@@ -113,21 +122,24 @@ extern const uint16 Motor_Spd_Max;     /* Variable: Motor_Spd_Max
 extern const uint16 Motor_Spd_Min;     /* Variable: Motor_Spd_Min
                                         * Referenced by: '<S14>/Motor_Min_Spd'
                                         */
-extern const uint16 WhlSpd_Max;        /* Variable: WhlSpd_Max
-                                        * Referenced by:
-                                        *   '<S19>/Constant1'
-                                        *   '<S20>/Constant1'
-                                        *   '<S21>/Constant1'
-                                        */
-extern const uint16 WhlSpd_Min;        /* Variable: WhlSpd_Min
-                                        * Referenced by:
-                                        *   '<S19>/Constant'
-                                        *   '<S20>/Constant'
-                                        *   '<S21>/Constant'
-                                        */
 
 #define ScpAp_L1SpeedMonitor_STOP_SEC_CALIB
 #include "ScpAp_L1SpeedMonitor_MemMap.h"
+
+/* Exported data declaration */
+
+/* Const memory section */
+/* Declaration for custom storage class: Const */
+extern const uint16 WhlSpd_Max;        /* Referenced by:
+                                        * '<S19>/Constant1'
+                                        * '<S20>/Constant1'
+                                        * '<S21>/Constant1'
+                                        */
+extern const uint16 WhlSpd_Min;        /* Referenced by:
+                                        * '<S19>/Constant'
+                                        * '<S20>/Constant'
+                                        * '<S21>/Constant'
+                                        */
 
 /*-
  * The generated code includes comments that allow you to trace directly

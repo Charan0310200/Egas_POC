@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_SafetyModeManager'.
  *
- * Model version                  : 1.64
+ * Model version                  : 1.65
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sun Feb  8 19:19:03 2026
+ * C/C++ source code generated on : Tue Feb 10 15:43:49 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -28,17 +28,28 @@
 #include "ScpAp_SafetyModeManager_types.h"
 #include "Rte_Type.h"
 
+/* PublicStructure Variables for Internal Data, for system '<Root>' */
+typedef struct {
+  VechSafetyStatus_L2p_IDT VechSafetyStatus;
+              /* '<S3>/RP_ScpAp_VechSafetyStatus_L2p_IF_VechSafetyStatus_L2p' */
+  SafetyMode_L2p_IDT AutonomousAllowed_d;/* '<S4>/AutonomousAllowed' */
+  SafetyMode_L2p_IDT Mode_L2p_b;       /* '<S4>/Mode_L2p' */
+} ARID_DEF_ScpAp_SafetyModeMana_T;
+
+/* PublicStructure Variables for Internal Data */
+extern ARID_DEF_ScpAp_SafetyModeMana_T ScpAp_SafetyModeManage_ARID_DEF;
+              /* '<S3>/RP_ScpAp_VechSafetyStatus_L2p_IF_VechSafetyStatus_L2p' */
+
 /* Static Memory for Internal Data */
 
 /* SwAddrMethod AswVariable for Internal Data */
 #define ScpAp_SafetyModeManager_START_SEC_AswVariable
 #include "ScpAp_SafetyModeManager_MemMap.h"
 
-extern VechSafetyStatus_L2p_IDT ScpAp_SafetyMo_VechSafetyStatus;/* '<S3>/Data Type Conversion' */
-extern SafetyMode_L2p_IDT ScpAp_SafetyModeManage_Mode_L2p;/* '<S5>/Autonomous' */
 extern SafetyMode_L2p_IDT ScpAp_SafetyM_AutonomousAllowed;/* '<S5>/Switch' */
-extern boolean ScpAp_SafetyModeManage_Mode_Chk;/* '<S5>/Relational Operator' */
+extern SafetyMode_L2p_IDT ScpAp_SafetyModeManage_Mode_L2p;/* '<S5>/Autonomous' */
 extern boolean ScpAp_SafetyModeMana_Status_Chk;/* '<S5>/Relational Operator1' */
+extern boolean ScpAp_SafetyModeManage_Mode_Chk;/* '<S5>/Relational Operator' */
 
 #define ScpAp_SafetyModeManager_STOP_SEC_AswVariable
 #include "ScpAp_SafetyModeManager_MemMap.h"

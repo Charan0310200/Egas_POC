@@ -7,7 +7,7 @@
    This file is generated for:
    Atomic software component:  "ScpAp_VechilestateEstimation_L2p"
    ARXML schema: "R23-11"
-   File generated on: "Mon Feb 09 11:21:22 2026"  */
+   File generated on: "Tue Feb 10 13:11:22 2026"  */
 
 #ifndef Rte_ScpAp_VechilestateEstimation_L2p_h
 #define Rte_ScpAp_VechilestateEstimation_L2p_h
@@ -15,10 +15,6 @@
 #include "Compiler.h"
 
 /* Data access functions */
-#define Rte_Read_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p Rte_Read_ScpAp_VechilestateEstimation_L2p_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p
-
-Std_ReturnType Rte_Read_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p(float32* u);
-
 #define Rte_IRead_VehstateEst_Main_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p Rte_IRead_ScpAp_VechilestateEstimation_L2p_VehstateEst_Main_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p
 
 uint8
@@ -69,6 +65,12 @@ Std_ReturnType Rte_Write_PP_Vechilespeed_L2p_IF_Vechilespeed_L2p(uint16 u);
 #define Rte_Invalidate_PP_Vechilespeed_L2p_IF_Vechilespeed_L2p Rte_Invalidate_ScpAp_VechilestateEstimation_L2p_PP_Vechilespeed_L2p_IF_Vechilespeed_L2p
 
 Std_ReturnType Rte_Invalidate_PP_Vechilespeed_L2p_IF_Vechilespeed_L2p(void);
+
+#define Rte_IRead_VehstateEst_Main_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p Rte_IRead_ScpAp_VechilestateEstimation_L2p_VehstateEst_Main_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p
+
+float32
+  Rte_IRead_VehstateEst_Main_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p
+  (void);
 
 /* Entry point functions */
 extern FUNC(void, ScpAp_VechilestateEstimation_L2p_CODE) VehstateEst_Main(void);
