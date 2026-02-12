@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model ScpAp_VechileLongiControl
+Model version                : 1.45
+Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
+XML source code generated on : Thu Feb 12 10:19:49 2026
+Model Checksum               : 1537756737 1383374916 3745667351 2637286210
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>ComponentTypes</SHORT-NAME>
+            <ELEMENTS>
+                <SWC-IMPLEMENTATION UUID="4eb43488-9141-57e4-6354-8c71320c8cf4">
+                    <SHORT-NAME>ScpAp_VechileLongiControl_imp</SHORT-NAME>
+                    <CODE-DESCRIPTORS>
+                        <CODE>
+                            <SHORT-NAME>Code</SHORT-NAME>
+                            <ARTIFACT-DESCRIPTORS>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_VechileLongiControl_c</SHORT-LABEL>
+                                    <CATEGORY>SWSRC</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_VechileLongiControl_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_VechileLongiControl_private_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_VechileLongiControl_types_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                            </ARTIFACT-DESCRIPTORS>
+                        </CODE>
+                    </CODE-DESCRIPTORS>
+                    <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                    <RESOURCE-CONSUMPTION>
+                        <SHORT-NAME>RsrcCons_ScpAp_VechileLongiControl</SHORT-NAME>
+                        <MEMORY-SECTIONS>
+                            <MEMORY-SECTION>
+                                <SHORT-NAME>CODE</SHORT-NAME>
+                                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+                            </MEMORY-SECTION>
+                            <MEMORY-SECTION>
+                                <SHORT-NAME>ASW_Variables</SHORT-NAME>
+                                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ASW_Variables</SW-ADDRMETHOD-REF>
+                            </MEMORY-SECTION>
+                        </MEMORY-SECTIONS>
+                    </RESOURCE-CONSUMPTION>
+                    <SW-VERSION>1.45.1</SW-VERSION>
+                    <USED-CODE-GENERATOR>Embedded Coder 25.2 (R2025b) 28-Jul-2025</USED-CODE-GENERATOR>
+                    <VENDOR-ID>0</VENDOR-ID>
+                    <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/ScpAp_VechileLongiControl/ScpAp_VechileLongiControl_InternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+            </ELEMENTS>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>
