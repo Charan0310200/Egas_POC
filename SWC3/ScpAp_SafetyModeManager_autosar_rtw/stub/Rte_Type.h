@@ -7,7 +7,7 @@
    This file is generated for:
    Atomic software component:  "ScpAp_SafetyModeManager"
    ARXML schema: "R20-11"
-   File generated on: "Tue Feb 10 15:43:55 2026"  */
+   File generated on: "Thu Feb 12 16:24:20 2026"  */
 
 #ifndef Rte_Type_h
 #define Rte_Type_h
@@ -65,7 +65,11 @@ typedef uint8 VechSafetyStatus_L2p_IDT;
 #endif
 
 #ifndef FAULT_STOP
-#define FAULT_STOP                     (3)
+#define FAULT_STOP                     (2)
+#endif
+
+#ifndef OVERSPEED_HANDLING
+#define OVERSPEED_HANDLING             (3)
 #endif
 
 typedef void* Rte_Instance;

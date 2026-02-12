@@ -7,7 +7,7 @@
    This file is generated for:
    Atomic software component:  "ScpAp_SafetyModeManager"
    ARXML schema: "R20-11"
-   File generated on: "Tue Feb 10 15:43:55 2026"  */
+   File generated on: "Thu Feb 12 16:24:20 2026"  */
 
 #ifndef Rte_ScpAp_SafetyModeManager_h
 #define Rte_ScpAp_SafetyModeManager_h
@@ -17,8 +17,7 @@
 /* Data access functions */
 #define Rte_Write_PP_AutonomousAllowed_IF_AutonomousAllowed Rte_Write_ScpAp_SafetyModeManager_PP_AutonomousAllowed_IF_AutonomousAllowed
 
-Std_ReturnType Rte_Write_PP_AutonomousAllowed_IF_AutonomousAllowed
-  (SafetyMode_L2p_IDT u);
+Std_ReturnType Rte_Write_PP_AutonomousAllowed_IF_AutonomousAllowed(boolean u);
 
 #define Rte_Invalidate_PP_AutonomousAllowed_IF_AutonomousAllowed Rte_Invalidate_ScpAp_SafetyModeManager_PP_AutonomousAllowed_IF_AutonomousAllowed
 

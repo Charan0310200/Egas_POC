@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_SafetyModeManager'.
  *
- * Model version                  : 1.65
+ * Model version                  : 1.75
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Feb 10 15:43:49 2026
+ * C/C++ source code generated on : Thu Feb 12 16:24:11 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -31,9 +31,9 @@ ARID_DEF_ScpAp_SafetyModeMana_T ScpAp_SafetyModeManage_ARID_DEF;
 #define ScpAp_SafetyModeManager_START_SEC_AswVariable
 #include "ScpAp_SafetyModeManager_MemMap.h"
 
-SafetyMode_L2p_IDT ScpAp_SafetyM_AutonomousAllowed;/* '<S5>/Switch' */
 SafetyMode_L2p_IDT ScpAp_SafetyModeManage_Mode_L2p;/* '<S5>/Autonomous' */
 boolean ScpAp_SafetyModeMana_Status_Chk;/* '<S5>/Relational Operator1' */
+boolean ScpAp_SafetyM_AutonomousAllowed;/* '<S5>/Switch' */
 boolean ScpAp_SafetyModeManage_Mode_Chk;/* '<S5>/Relational Operator' */
 
 #define ScpAp_SafetyModeManager_STOP_SEC_AswVariable
@@ -65,25 +65,13 @@ void SafetyModeManager_Main(void)
   /* Switch: '<S5>/Switch' incorporates:
    *  Logic: '<S5>/AND'
    */
-  if (ScpAp_SafetyModeManage_Mode_Chk && ScpAp_SafetyModeMana_Status_Chk) {
-    /* Switch: '<S5>/Switch' incorporates:
-     *  Constant: '<S5>/Constant'
-     */
-    ScpAp_SafetyM_AutonomousAllowed = AUTONOMOUS;
-  } else {
-    /* Switch: '<S5>/Switch' incorporates:
-     *  Constant: '<S5>/Constant2'
-     */
-    ScpAp_SafetyM_AutonomousAllowed = MANUAL;
-  }
+  ScpAp_SafetyM_AutonomousAllowed = (ScpAp_SafetyModeManage_Mode_Chk &&
+    ScpAp_SafetyModeMana_Status_Chk);
 
-  /* End of Switch: '<S5>/Switch' */
   /* End of Outputs for SubSystem: '<S1>/SWC3_Control' */
 
   /* Outputs for Atomic SubSystem: '<S1>/Comm_Tx' */
-  /* SignalConversion generated from: '<S4>/AutonomousAllowed' incorporates:
-   *  Switch: '<S5>/Switch'
-   */
+  /* SignalConversion generated from: '<S4>/AutonomousAllowed' */
   ScpAp_SafetyModeManage_ARID_DEF.AutonomousAllowed_d =
     ScpAp_SafetyM_AutonomousAllowed;
 
@@ -95,9 +83,7 @@ void SafetyModeManager_Main(void)
   /* End of Outputs for SubSystem: '<S1>/Comm_Tx' */
   /* End of Outputs for SubSystem: '<Root>/SafetyModeManager_Main_sys' */
 
-  /* Outport: '<Root>/PP_AutonomousAllowed_IF_AutonomousAllowed' incorporates:
-   *  SignalConversion generated from: '<S4>/AutonomousAllowed'
-   */
+  /* Outport: '<Root>/PP_AutonomousAllowed_IF_AutonomousAllowed' */
   (void)Rte_Write_PP_AutonomousAllowed_IF_AutonomousAllowed
     (ScpAp_SafetyModeManage_ARID_DEF.AutonomousAllowed_d);
 
@@ -120,9 +106,7 @@ void SafetyModeManager_Main(void)
 void ScpAp_SafetyModeManager_Init(void)
 {
   /* Registration code */
-  ScpAp_SafetyModeManage_ARID_DEF.AutonomousAllowed_d = AUTONOMOUS;
   ScpAp_SafetyModeManage_ARID_DEF.Mode_L2p_b = AUTONOMOUS;
-  ScpAp_SafetyM_AutonomousAllowed = AUTONOMOUS;
   ScpAp_SafetyModeManage_Mode_L2p = AUTONOMOUS;
 
   /* ConstCode for Atomic SubSystem: '<Root>/SafetyModeManager_Main_sys' */

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_SafetyModeManager'.
  *
- * Model version                  : 1.65
+ * Model version                  : 1.75
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Feb 10 15:43:49 2026
+ * C/C++ source code generated on : Thu Feb 12 16:24:11 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
