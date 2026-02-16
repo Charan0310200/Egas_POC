@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_VechilestateEstimation_L2p'.
  *
- * Model version                  : 1.128
+ * Model version                  : 1.17
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Feb 10 13:10:56 2026
+ * C/C++ source code generated on : Mon Feb 16 10:54:50 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -41,15 +41,14 @@ ARID_DEF_ScpAp_VechilestateEs_T ScpAp_VechilestateEsti_ARID_DEF;
 
 /* Static Memory for Internal Data */
 
-/* SwAddrMethod ASW_Variables for Internal Data */
-#define ScpAp_VechilestateEstimation_L2p_START_SEC_ASW_Variables
+/* SwAddrMethod ASW_Variable for Internal Data */
+#define ScpAp_VechilestateEstimation_L2p_START_SEC_ASW_Variable
 #include "ScpAp_VechilestateEstimation_L2p_MemMap.h"
 
 float64 ScpAp_VechilestateE_Valid_Wheel;/* '<S10>/Sum' */
 float64 ScpAp_Vechilestat_Valid_Wheel_R;/* '<S15>/Switch' */
 float64 ScpAp_Vechilesta_Valid_Wheel_FR;/* '<S14>/Switch' */
 float64 ScpAp_Vechilesta_Valid_Wheel_FL;/* '<S13>/Switch' */
-sint16 ScpAp_Vechilest_Wheel_Speed_Avg;/* '<S10>/Data Type Conversion' */
 sint16 ScpAp_VehicleSpeed_Weighted_L2; /* '<S9>/Sum' */
 sint16 ScpAp_Vechilest_VehicleSpeed_L2;/* '<S9>/Switch' */
 sint16 ScpAp_VechilestateEst_Motor_Spd;/* '<S6>/Switch' */
@@ -59,14 +58,13 @@ uint16 ScpAp_Vechilest_VehicleAccel_L2;/* '<S8>/Switch1' */
 uint16 ScpAp_Vechi_Cal_VehicleAccel_L2;/* '<S11>/Data Type Conversion' */
 uint16 ScpAp_Vechilestat_WSS_x_L1p_Max;/* '<S7>/Max' */
 uint16 ScpAp_Vechilestat_WSS_x_L1p_Min;/* '<S7>/Max1' */
-uint8 ScpAp_Vechilest_Valid_Wheel_Cnt; /* '<S12>/Sum' */
 boolean ScpAp_Vech_VhlSpd_Wgt_L2_Switch;/* '<S9>/OR' */
 boolean ScpAp_Vechilesta_MotorRPM_Fault;/* '<S7>/Switch' */
 boolean ScpAp_VechilestateE_Accel_Fault;/* '<S7>/Switch1' */
-boolean ScpAp_VechilestateEst_WSS_fault;/* '<S7>/Switch2' */
+boolean ScpAp_VechilestateEst_WSS_Fault;/* '<S7>/Switch2' */
 boolean ScpAp_Vechile_VehSpeedEst_Fault;/* '<S7>/Switch3' */
 
-#define ScpAp_VechilestateEstimation_L2p_STOP_SEC_ASW_Variables
+#define ScpAp_VechilestateEstimation_L2p_STOP_SEC_ASW_Variable
 #include "ScpAp_VechilestateEstimation_L2p_MemMap.h"
 
 /* Model step function */
@@ -80,7 +78,7 @@ void VehstateEst_Main(void)
   IF_ValidityFlag_L1p_IDT rtb_TmpSignalConversionAtRP_Scp;
   float64 rtb_Sum;
   sint32 tmp;
-  sint16 u;
+  sint16 rtb_Wheel_Speed_Avg;
 
   /* SignalConversion generated from: '<S3>/RP_ScpAp_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p' incorporates:
    *  Inport: '<Root>/RP_ScpAp_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p'
@@ -100,6 +98,18 @@ void VehstateEst_Main(void)
   (void)Rte_Read_RP_ScpAp_Wheelspeed_FL_L1p_IF_Wheelspeed_Fx_L1p
     (&ScpAp_VechilestateEsti_ARID_DEF.Wheelspeed_FL_L1p);
 
+  /* SignalConversion generated from: '<S3>/RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p' incorporates:
+   *  Inport: '<Root>/RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p'
+   */
+  (void)Rte_Read_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p
+    (&ScpAp_VechilestateEsti_ARID_DEF.MotorSpeed_L1p);
+
+  /* SignalConversion generated from: '<S3>/RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p' incorporates:
+   *  Inport: '<Root>/RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p'
+   */
+  (void)Rte_Read_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p
+    (&ScpAp_VechilestateEsti_ARID_DEF.IMU_AccelX_L1p);
+
   /* SignalConversion generated from: '<Root>/RP_ScpAp_ValidityFlag_L1p_IF_ValidityFlag_L1p' incorporates:
    *  Inport: '<Root>/RP_ScpAp_ValidityFlag_L1p_IF_ValidityFlag_L1p'
    */
@@ -107,25 +117,11 @@ void VehstateEst_Main(void)
     (&rtb_TmpSignalConversionAtRP_Scp);
 
   /* Outputs for Atomic SubSystem: '<Root>/VehstateEst_Main_sys' */
-  /* Outputs for Atomic SubSystem: '<S2>/Comm_Rx' */
-  /* SignalConversion generated from: '<S3>/RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p' incorporates:
-   *  Inport: '<Root>/RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p'
-   */
-  ScpAp_VechilestateEsti_ARID_DEF.IMU_AccelX_L1p =
-    Rte_IRead_VehstateEst_Main_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p
-    ();
-
-  /* SignalConversion generated from: '<S3>/RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p' incorporates:
-   *  Inport: '<Root>/RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p'
-   */
-  ScpAp_VechilestateEsti_ARID_DEF.MotorSpeed_L1p =
-    Rte_IRead_VehstateEst_Main_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p
-    ();
-
   /* Outputs for Atomic SubSystem: '<S2>/SWC2_Control' */
   /* Outputs for Atomic SubSystem: '<S5>/Wheel_Spd_Avg' */
   /* Outputs for Atomic SubSystem: '<S10>/Valid_Wheels_Chk' */
   /* Outputs for Atomic SubSystem: '<S12>/Chk_Valid_Wheel_FL' */
+  /* Outputs for Atomic SubSystem: '<S2>/Comm_Rx' */
   /* Switch: '<S13>/Switch' incorporates:
    *  SignalConversion generated from: '<S3>/Bus Selector'
    */
@@ -178,17 +174,8 @@ void VehstateEst_Main(void)
 
   /* End of Switch: '<S15>/Switch' */
   /* End of Outputs for SubSystem: '<S12>/Chk_Valid_Wheel_R' */
-
-  /* Sum: '<S12>/Sum' incorporates:
-   *  SignalConversion generated from: '<S3>/Bus Selector'
-   * */
-  ScpAp_Vechilest_Valid_Wheel_Cnt = (uint8)(((uint32)
-    rtb_TmpSignalConversionAtRP_Scp.WSS_FR_Valid_Flg +
-    rtb_TmpSignalConversionAtRP_Scp.WSS_FL_Valid_Flg) +
-    rtb_TmpSignalConversionAtRP_Scp.WSS_R_Valid_Flg);
-
-  /* End of Outputs for SubSystem: '<S10>/Valid_Wheels_Chk' */
   /* End of Outputs for SubSystem: '<S2>/Comm_Rx' */
+  /* End of Outputs for SubSystem: '<S10>/Valid_Wheels_Chk' */
 
   /* Sum: '<S10>/Sum' */
   ScpAp_VechilestateE_Valid_Wheel = (ScpAp_Vechilesta_Valid_Wheel_FR +
@@ -196,11 +183,20 @@ void VehstateEst_Main(void)
 
   /* Switch: '<S10>/Switch1' */
   if (ScpAp_VechilestateE_Valid_Wheel != 0.0) {
+    /* Outputs for Atomic SubSystem: '<S10>/Valid_Wheels_Chk' */
+    /* Outputs for Atomic SubSystem: '<S2>/Comm_Rx' */
     /* Sum: '<S11>/Sum' incorporates:
      *  Product: '<S10>/Divide'
-     */
-    rtb_Sum = ScpAp_VechilestateE_Valid_Wheel / (float64)
-      ScpAp_Vechilest_Valid_Wheel_Cnt;
+     *  SignalConversion generated from: '<S3>/Bus Selector'
+     *  Sum: '<S12>/Sum'
+     * */
+    rtb_Sum = ScpAp_VechilestateE_Valid_Wheel / (((float64)
+      rtb_TmpSignalConversionAtRP_Scp.WSS_FR_Valid_Flg + (float64)
+      rtb_TmpSignalConversionAtRP_Scp.WSS_FL_Valid_Flg) + (float64)
+      rtb_TmpSignalConversionAtRP_Scp.WSS_R_Valid_Flg);
+
+    /* End of Outputs for SubSystem: '<S2>/Comm_Rx' */
+    /* End of Outputs for SubSystem: '<S10>/Valid_Wheels_Chk' */
   } else {
     /* Sum: '<S11>/Sum' incorporates:
      *  UnitDelay: '<S5>/Unit Delay'
@@ -214,10 +210,10 @@ void VehstateEst_Main(void)
   rtb_Sum = fmod(floor(rtb_Sum), 65536.0);
   if (rtb_Sum < 0.0) {
     /* DataTypeConversion: '<S10>/Data Type Conversion' */
-    ScpAp_Vechilest_Wheel_Speed_Avg = (sint16)-(sint16)(uint16)-rtb_Sum;
+    rtb_Wheel_Speed_Avg = (sint16)-(sint16)(uint16)-rtb_Sum;
   } else {
     /* DataTypeConversion: '<S10>/Data Type Conversion' */
-    ScpAp_Vechilest_Wheel_Speed_Avg = (sint16)(uint16)rtb_Sum;
+    rtb_Wheel_Speed_Avg = (sint16)(uint16)rtb_Sum;
   }
 
   /* End of DataTypeConversion: '<S10>/Data Type Conversion' */
@@ -234,7 +230,7 @@ void VehstateEst_Main(void)
       ScpAp_VechilestateEsti_ARID_DEF.MotorSpeed_L1p;
   } else {
     /* Switch: '<S6>/Switch' */
-    ScpAp_VechilestateEst_Motor_Spd = ScpAp_Vechilest_Wheel_Speed_Avg;
+    ScpAp_VechilestateEst_Motor_Spd = rtb_Wheel_Speed_Avg;
   }
 
   /* End of Switch: '<S6>/Switch' */
@@ -248,9 +244,8 @@ void VehstateEst_Main(void)
    *  Product: '<S9>/Product'
    *  Product: '<S9>/Product1'
    */
-  ScpAp_VehicleSpeed_Weighted_L2 = (sint16)((sint16)(W1 *
-    ScpAp_Vechilest_Wheel_Speed_Avg) + (sint16)(W2 *
-    ScpAp_VechilestateEst_Motor_Spd));
+  ScpAp_VehicleSpeed_Weighted_L2 = (sint16)((sint16)(W1 * rtb_Wheel_Speed_Avg) +
+    (sint16)(W2 * ScpAp_VechilestateEst_Motor_Spd));
 
   /* Outputs for Atomic SubSystem: '<S5>/SensorFault' */
   /* Logic: '<S9>/OR' incorporates:
@@ -290,12 +285,12 @@ void VehstateEst_Main(void)
 
   /* Outputs for Atomic SubSystem: '<S5>/SensorFault' */
   /* Sum: '<S7>/Subtract' */
-  u = (sint16)(ScpAp_Vechilest_VehicleSpeed_L2 -
-               ScpAp_VechilestateEsti_ARID_DEF.MotorSpeed_L1p);
+  rtb_Wheel_Speed_Avg = (sint16)(ScpAp_Vechilest_VehicleSpeed_L2 -
+    ScpAp_VechilestateEsti_ARID_DEF.MotorSpeed_L1p);
 
   /* Abs: '<S7>/Abs' */
-  if (u < 0) {
-    u = (sint16)-u;
+  if (rtb_Wheel_Speed_Avg < 0) {
+    rtb_Wheel_Speed_Avg = (sint16)-rtb_Wheel_Speed_Avg;
   }
 
   /* Outputs for Atomic SubSystem: '<S2>/Comm_Rx' */
@@ -308,7 +303,8 @@ void VehstateEst_Main(void)
    *  SignalConversion generated from: '<S3>/Bus Selector'
    */
   ScpAp_Vechilesta_MotorRPM_Fault =
-    (rtb_TmpSignalConversionAtRP_Scp.Motor_RPM_Valid_Flg && (u > Speed_Diff_Th));
+    (rtb_TmpSignalConversionAtRP_Scp.Motor_RPM_Valid_Flg && (rtb_Wheel_Speed_Avg
+      > Speed_Diff_Th));
 
   /* Switch: '<S7>/Switch1' incorporates:
    *  Abs: '<S7>/Abs1'
@@ -385,13 +381,13 @@ void VehstateEst_Main(void)
     /* Switch: '<S7>/Switch2' incorporates:
      *  Constant: '<S7>/Constant9'
      */
-    ScpAp_VechilestateEst_WSS_fault = TRUE;
+    ScpAp_VechilestateEst_WSS_Fault = TRUE;
   } else {
     /* Switch: '<S7>/Switch2' incorporates:
      *  Constant: '<S7>/Constant10'
      *  RelationalOperator: '<S7>/Relational Operator7'
      */
-    ScpAp_VechilestateEst_WSS_fault = (ScpAp_VechilestateE_Valid_Wheel == 0.0);
+    ScpAp_VechilestateEst_WSS_Fault = (ScpAp_VechilestateE_Valid_Wheel == 0.0);
   }
 
   /* End of Switch: '<S7>/Switch2' */
@@ -479,7 +475,7 @@ void VehstateEst_Main(void)
   ScpAp_VechilestateEsti_ARID_DEF.PP_SensorValidityFlag_L2p_IF_Se.Accel_Fault =
     ScpAp_VechilestateE_Accel_Fault;
   ScpAp_VechilestateEsti_ARID_DEF.PP_SensorValidityFlag_L2p_IF_Se.WSS_Fault =
-    ScpAp_VechilestateEst_WSS_fault;
+    ScpAp_VechilestateEst_WSS_Fault;
   ScpAp_VechilestateEsti_ARID_DEF.PP_SensorValidityFlag_L2p_IF_Se.VechSpeedEst_Fault
     = ScpAp_Vechile_VehSpeedEst_Fault;
 

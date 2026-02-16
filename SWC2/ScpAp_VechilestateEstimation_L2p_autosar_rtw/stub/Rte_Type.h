@@ -6,8 +6,8 @@
 
    This file is generated for:
    Atomic software component:  "ScpAp_VechilestateEstimation_L2p"
-   ARXML schema: "R23-11"
-   File generated on: "Tue Feb 10 13:11:22 2026"  */
+   ARXML schema: "R20-11"
+   File generated on: "Mon Feb 16 10:54:59 2026"  */
 
 #ifndef Rte_Type_h
 #define Rte_Type_h

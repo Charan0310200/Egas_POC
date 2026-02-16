@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_VechilestateEstimation_L2p'.
  *
- * Model version                  : 1.128
+ * Model version                  : 1.17
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Feb 10 13:10:56 2026
+ * C/C++ source code generated on : Mon Feb 16 10:54:50 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -50,15 +50,14 @@ extern ARID_DEF_ScpAp_VechilestateEs_T ScpAp_VechilestateEsti_ARID_DEF;
 
 /* Static Memory for Internal Data */
 
-/* SwAddrMethod ASW_Variables for Internal Data */
-#define ScpAp_VechilestateEstimation_L2p_START_SEC_ASW_Variables
+/* SwAddrMethod ASW_Variable for Internal Data */
+#define ScpAp_VechilestateEstimation_L2p_START_SEC_ASW_Variable
 #include "ScpAp_VechilestateEstimation_L2p_MemMap.h"
 
 extern float64 ScpAp_VechilestateE_Valid_Wheel;/* '<S10>/Sum' */
 extern float64 ScpAp_Vechilestat_Valid_Wheel_R;/* '<S15>/Switch' */
 extern float64 ScpAp_Vechilesta_Valid_Wheel_FR;/* '<S14>/Switch' */
 extern float64 ScpAp_Vechilesta_Valid_Wheel_FL;/* '<S13>/Switch' */
-extern sint16 ScpAp_Vechilest_Wheel_Speed_Avg;/* '<S10>/Data Type Conversion' */
 extern sint16 ScpAp_VehicleSpeed_Weighted_L2;/* '<S9>/Sum' */
 extern sint16 ScpAp_Vechilest_VehicleSpeed_L2;/* '<S9>/Switch' */
 extern sint16 ScpAp_VechilestateEst_Motor_Spd;/* '<S6>/Switch' */
@@ -68,14 +67,13 @@ extern uint16 ScpAp_Vechilest_VehicleAccel_L2;/* '<S8>/Switch1' */
 extern uint16 ScpAp_Vechi_Cal_VehicleAccel_L2;/* '<S11>/Data Type Conversion' */
 extern uint16 ScpAp_Vechilestat_WSS_x_L1p_Max;/* '<S7>/Max' */
 extern uint16 ScpAp_Vechilestat_WSS_x_L1p_Min;/* '<S7>/Max1' */
-extern uint8 ScpAp_Vechilest_Valid_Wheel_Cnt;/* '<S12>/Sum' */
 extern boolean ScpAp_Vech_VhlSpd_Wgt_L2_Switch;/* '<S9>/OR' */
 extern boolean ScpAp_Vechilesta_MotorRPM_Fault;/* '<S7>/Switch' */
 extern boolean ScpAp_VechilestateE_Accel_Fault;/* '<S7>/Switch1' */
-extern boolean ScpAp_VechilestateEst_WSS_fault;/* '<S7>/Switch2' */
+extern boolean ScpAp_VechilestateEst_WSS_Fault;/* '<S7>/Switch2' */
 extern boolean ScpAp_Vechile_VehSpeedEst_Fault;/* '<S7>/Switch3' */
 
-#define ScpAp_VechilestateEstimation_L2p_STOP_SEC_ASW_Variables
+#define ScpAp_VechilestateEstimation_L2p_STOP_SEC_ASW_Variable
 #include "ScpAp_VechilestateEstimation_L2p_MemMap.h"
 
 /* Constant memory autosar model workspace parameters */

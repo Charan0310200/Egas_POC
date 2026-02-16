@@ -46,8 +46,48 @@
           </ELEMENTS>
         </AR-PACKAGE>
         <AR-PACKAGE>
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD>
+              <SHORT-NAME>boolean_CompuMethod</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>FALSE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>FALSE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>TRUE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>TRUE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
           <SHORT-NAME>DataConstrs</SHORT-NAME>
           <ELEMENTS>
+            <DATA-CONSTR>
+              <SHORT-NAME>boolean_DataConstr</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
             <DATA-CONSTR>
               <SHORT-NAME>float32_DataConstr</SHORT-NAME>
               <DATA-CONSTR-RULES>
@@ -97,6 +137,25 @@
         <AR-PACKAGE>
           <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
           <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>boolean</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">boolean has the value space required to support the mathematical concept of 
+binary-valued logic: {true, false}.</L-2>
+              </DESC>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/boolean</BASE-TYPE-REF>
+                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_Platform/CompuMethods/boolean_CompuMethod</COMPU-METHOD-REF>
+                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/boolean_DataConstr</DATA-CONSTR-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <TYPE-EMITTER>Platform_Types.h</TYPE-EMITTER>
+            </IMPLEMENTATION-DATA-TYPE>
             <IMPLEMENTATION-DATA-TYPE>
               <SHORT-NAME>float32</SHORT-NAME>
               <DESC>
@@ -215,11 +274,6 @@ For example: 1, 0, 126, +10.</L-2>
           <PORTS>
             <P-PORT-PROTOTYPE UUID="ADB8C1F8-C132-466B-98AD-4F53FD287613">
               <SHORT-NAME>PP_SensorValidityFlag_L2p</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV" />
-                </SDGS>
-              </ADMIN-DATA>
               <PROVIDED-COM-SPECS>
                 <NONQUEUED-SENDER-COM-SPEC>
                   <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SensorFaultFlags_L2p/IF_SensorFaultFlags_L2p</DATA-ELEMENT-REF>
@@ -257,6 +311,12 @@ For example: 1, 0, 126, +10.</L-2>
                   <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_VechileAccel_L2p/IF_VechileAccel_L2p</DATA-ELEMENT-REF>
                   <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
                   <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                  <INIT-VALUE>
+                    <NUMERICAL-VALUE-SPECIFICATION>
+                      <SHORT-LABEL>DefaultInitValue_sint16</SHORT-LABEL>
+                      <VALUE>0</VALUE>
+                    </NUMERICAL-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
                 </NONQUEUED-SENDER-COM-SPEC>
               </PROVIDED-COM-SPECS>
               <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_VechileAccel_L2p</PROVIDED-INTERFACE-TREF>
@@ -268,17 +328,18 @@ For example: 1, 0, 126, +10.</L-2>
                   <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_Vechilespeed_L2p/IF_Vechilespeed_L2p</DATA-ELEMENT-REF>
                   <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
                   <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                  <INIT-VALUE>
+                    <NUMERICAL-VALUE-SPECIFICATION>
+                      <SHORT-LABEL>DefaultInitValue_uint16</SHORT-LABEL>
+                      <VALUE>0</VALUE>
+                    </NUMERICAL-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
                 </NONQUEUED-SENDER-COM-SPEC>
               </PROVIDED-COM-SPECS>
               <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_Vechilespeed_L2p</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
             <R-PORT-PROTOTYPE UUID="59A5395A-F6B1-4B7A-823F-7E76434B1890">
               <SHORT-NAME>RP_ScpAp_IMU_AccelX_L1</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV" />
-                </SDGS>
-              </ADMIN-DATA>
               <REQUIRED-COM-SPECS>
                 <NONQUEUED-RECEIVER-COM-SPEC>
                   <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_IMU_AccelX_L1p/IF_IMU_AccelX_L1p</DATA-ELEMENT-REF>
@@ -294,7 +355,7 @@ For example: 1, 0, 126, +10.</L-2>
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_IMU_AccelX_L1p</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
-            <R-PORT-PROTOTYPE UUID="749770E7-410B-44C9-A0A6-8ACBFA0C1C90">
+            <R-PORT-PROTOTYPE UUID="416FEB9E-700F-4324-B1B7-B9C40431CE2D">
               <SHORT-NAME>RP_ScpAp_MotorSpeed_L1p</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
@@ -312,17 +373,18 @@ For example: 1, 0, 126, +10.</L-2>
                     <DATA-FILTER-TYPE>ALWAYS</DATA-FILTER-TYPE>
                   </FILTER>
                   <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                  <INIT-VALUE>
+                    <NUMERICAL-VALUE-SPECIFICATION>
+                      <SHORT-LABEL>ComSpec8213ca7e_f94256d2655c1c70</SHORT-LABEL>
+                      <VALUE>0</VALUE>
+                    </NUMERICAL-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
                 </NONQUEUED-RECEIVER-COM-SPEC>
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_MotorSpeed_L1p</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
             <R-PORT-PROTOTYPE UUID="E6282276-BEEA-4FB4-8B6F-672FD79C12B7">
               <SHORT-NAME>RP_ScpAp_ValidityFlag_L1p</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV" />
-                </SDGS>
-              </ADMIN-DATA>
               <REQUIRED-COM-SPECS>
                 <NONQUEUED-RECEIVER-COM-SPEC>
                   <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ValidityFlag_L1p/IF_ValidityFlag_L1p</DATA-ELEMENT-REF>
@@ -370,11 +432,6 @@ For example: 1, 0, 126, +10.</L-2>
             </R-PORT-PROTOTYPE>
             <R-PORT-PROTOTYPE UUID="56AFD7DF-C52B-4D9F-8B46-58D5575CB33E">
               <SHORT-NAME>RP_ScpAp_Wheelspeed_FL_L1p</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV" />
-                </SDGS>
-              </ADMIN-DATA>
               <REQUIRED-COM-SPECS>
                 <NONQUEUED-RECEIVER-COM-SPEC>
                   <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_Wheelspeed_Fx_L1p/IF_Wheelspeed_Fx_L1p</DATA-ELEMENT-REF>
@@ -397,11 +454,6 @@ For example: 1, 0, 126, +10.</L-2>
             </R-PORT-PROTOTYPE>
             <R-PORT-PROTOTYPE UUID="B3BD1FD6-9E5D-4F4F-AC9B-2DE3C8E8DC3B">
               <SHORT-NAME>RP_ScpAp_Wheelspeed_FR_L1p</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV" />
-                </SDGS>
-              </ADMIN-DATA>
               <REQUIRED-COM-SPECS>
                 <NONQUEUED-RECEIVER-COM-SPEC>
                   <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_Wheelspeed_Fx_L1p/IF_Wheelspeed_Fx_L1p</DATA-ELEMENT-REF>
@@ -424,11 +476,6 @@ For example: 1, 0, 126, +10.</L-2>
             </R-PORT-PROTOTYPE>
             <R-PORT-PROTOTYPE UUID="1C132619-9820-4EE5-9521-11DDAEFBB692">
               <SHORT-NAME>RP_ScpAp_Wheelspeed_R_L1p</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV" />
-                </SDGS>
-              </ADMIN-DATA>
               <REQUIRED-COM-SPECS>
                 <NONQUEUED-RECEIVER-COM-SPEC>
                   <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_Wheelspeed_Fx_L1p/IF_Wheelspeed_Fx_L1p</DATA-ELEMENT-REF>
@@ -476,8 +523,8 @@ For example: 1, 0, 126, +10.</L-2>
                         </AUTOSAR-VARIABLE-IREF>
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>
-                    <VARIABLE-ACCESS UUID="FF986AD0-CAA7-458A-87E0-C0BB09530D57">
-                      <SHORT-NAME>REC_RP_ScpAp_MotorSpeed_L1p_Element</SHORT-NAME>
+                    <VARIABLE-ACCESS UUID="9FD49AEC-7C1E-400E-9AE2-383123FE5542">
+                      <SHORT-NAME>REC_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p</SHORT-NAME>
                       <ACCESSED-VARIABLE>
                         <AUTOSAR-VARIABLE-IREF>
                           <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/ScpAp_VechilestateEstimation_L2p/RP_ScpAp_MotorSpeed_L1p</PORT-PROTOTYPE-REF>
@@ -561,11 +608,10 @@ For example: 1, 0, 126, +10.</L-2>
         <SWC-IMPLEMENTATION UUID="39ED318F-116D-4213-B58E-ED138B1C3843">
           <SHORT-NAME>ScpAp_VechilestateEstimation_L2p_Implementation</SHORT-NAME>
           <CODE-DESCRIPTORS>
-            <CODE>
+            <CODE UUID="BB8F4612-50EA-4AF5-BB82-012029C4CF28">
               <SHORT-NAME>Default</SHORT-NAME>
               <ARTIFACT-DESCRIPTORS>
                 <AUTOSAR-ENGINEERING-OBJECT>
-                  <SHORT-LABEL>Default</SHORT-LABEL>
                   <CATEGORY>SWSRC</CATEGORY>
                 </AUTOSAR-ENGINEERING-OBJECT>
               </ARTIFACT-DESCRIPTORS>
@@ -653,72 +699,78 @@ For example: 1, 0, 126, +10.</L-2>
           <SUB-ELEMENTS>
             <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="EDCFA721-3722-46FA-8963-899B28665218">
               <SHORT-NAME>Motor_RPM_Valid_Flg</SHORT-NAME>
-              <CATEGORY>VALUE</CATEGORY>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
               <SW-DATA-DEF-PROPS>
                 <SW-DATA-DEF-PROPS-VARIANTS>
                   <SW-DATA-DEF-PROPS-CONDITIONAL>
                     <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/boolean</BASE-TYPE-REF>
                     <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
                   </SW-DATA-DEF-PROPS-CONDITIONAL>
                 </SW-DATA-DEF-PROPS-VARIANTS>
               </SW-DATA-DEF-PROPS>
             </IMPLEMENTATION-DATA-TYPE-ELEMENT>
             <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="0F4EA6ED-52A3-43E9-9E36-BBBF0547E8E9">
               <SHORT-NAME>WSS_FR_Valid_Flg</SHORT-NAME>
-              <CATEGORY>VALUE</CATEGORY>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
               <SW-DATA-DEF-PROPS>
                 <SW-DATA-DEF-PROPS-VARIANTS>
                   <SW-DATA-DEF-PROPS-CONDITIONAL>
                     <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/boolean</BASE-TYPE-REF>
                     <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
                   </SW-DATA-DEF-PROPS-CONDITIONAL>
                 </SW-DATA-DEF-PROPS-VARIANTS>
               </SW-DATA-DEF-PROPS>
             </IMPLEMENTATION-DATA-TYPE-ELEMENT>
             <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="BE6EF74E-63BB-4A9D-8CD3-FB29946F90A1">
               <SHORT-NAME>WSS_FL_Valid_Flg</SHORT-NAME>
-              <CATEGORY>VALUE</CATEGORY>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
               <SW-DATA-DEF-PROPS>
                 <SW-DATA-DEF-PROPS-VARIANTS>
                   <SW-DATA-DEF-PROPS-CONDITIONAL>
                     <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/boolean</BASE-TYPE-REF>
                     <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
                   </SW-DATA-DEF-PROPS-CONDITIONAL>
                 </SW-DATA-DEF-PROPS-VARIANTS>
               </SW-DATA-DEF-PROPS>
             </IMPLEMENTATION-DATA-TYPE-ELEMENT>
             <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="BF427966-F88A-419B-A02A-4CDD87677F82">
               <SHORT-NAME>WSS_R_Valid_Flg</SHORT-NAME>
-              <CATEGORY>VALUE</CATEGORY>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
               <SW-DATA-DEF-PROPS>
                 <SW-DATA-DEF-PROPS-VARIANTS>
                   <SW-DATA-DEF-PROPS-CONDITIONAL>
                     <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/boolean</BASE-TYPE-REF>
                     <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
                   </SW-DATA-DEF-PROPS-CONDITIONAL>
                 </SW-DATA-DEF-PROPS-VARIANTS>
               </SW-DATA-DEF-PROPS>
             </IMPLEMENTATION-DATA-TYPE-ELEMENT>
             <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="2D1C0C63-458E-4036-9A7B-4464CDE996E5">
               <SHORT-NAME>IMU_AccelX_Valid_Flg</SHORT-NAME>
-              <CATEGORY>VALUE</CATEGORY>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
               <SW-DATA-DEF-PROPS>
                 <SW-DATA-DEF-PROPS-VARIANTS>
                   <SW-DATA-DEF-PROPS-CONDITIONAL>
                     <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/boolean</BASE-TYPE-REF>
                     <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
                   </SW-DATA-DEF-PROPS-CONDITIONAL>
                 </SW-DATA-DEF-PROPS-VARIANTS>
               </SW-DATA-DEF-PROPS>
             </IMPLEMENTATION-DATA-TYPE-ELEMENT>
             <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="57EC54CC-9758-49EA-99ED-75079E0641BB">
               <SHORT-NAME>SensorStuck_Valid_Flg</SHORT-NAME>
-              <CATEGORY>VALUE</CATEGORY>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
               <SW-DATA-DEF-PROPS>
                 <SW-DATA-DEF-PROPS-VARIANTS>
                   <SW-DATA-DEF-PROPS-CONDITIONAL>
                     <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/boolean</BASE-TYPE-REF>
                     <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
                   </SW-DATA-DEF-PROPS-CONDITIONAL>
                 </SW-DATA-DEF-PROPS-VARIANTS>
               </SW-DATA-DEF-PROPS>
@@ -737,10 +789,11 @@ For example: 1, 0, 126, +10.</L-2>
           <DATA-ELEMENTS>
             <VARIABLE-DATA-PROTOTYPE UUID="01E2298A-BC70-4F34-BABB-A07816BCAD66">
               <SHORT-NAME>IF_IMU_AccelX_L1p</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
               <SW-DATA-DEF-PROPS>
                 <SW-DATA-DEF-PROPS-VARIANTS>
                   <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                    <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
                     <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
                   </SW-DATA-DEF-PROPS-CONDITIONAL>
                 </SW-DATA-DEF-PROPS-VARIANTS>
@@ -761,10 +814,11 @@ For example: 1, 0, 126, +10.</L-2>
           <DATA-ELEMENTS>
             <VARIABLE-DATA-PROTOTYPE UUID="257DCB91-6C87-4F2A-B950-490F2D4254ED">
               <SHORT-NAME>IF_MotorSpeed_L1p</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
               <SW-DATA-DEF-PROPS>
                 <SW-DATA-DEF-PROPS-VARIANTS>
                   <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                    <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
                     <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
                   </SW-DATA-DEF-PROPS-CONDITIONAL>
                 </SW-DATA-DEF-PROPS-VARIANTS>
@@ -809,10 +863,11 @@ For example: 1, 0, 126, +10.</L-2>
           <DATA-ELEMENTS>
             <VARIABLE-DATA-PROTOTYPE UUID="57C85BC6-5A45-4576-B4F3-7DA10C7FB66A">
               <SHORT-NAME>IF_ValidityFlag_L1p</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
               <SW-DATA-DEF-PROPS>
                 <SW-DATA-DEF-PROPS-VARIANTS>
                   <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                    <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
                     <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
                   </SW-DATA-DEF-PROPS-CONDITIONAL>
                 </SW-DATA-DEF-PROPS-VARIANTS>
@@ -881,10 +936,11 @@ For example: 1, 0, 126, +10.</L-2>
           <DATA-ELEMENTS>
             <VARIABLE-DATA-PROTOTYPE UUID="9DF34738-6CBC-441C-AB32-DBAE7B32C591">
               <SHORT-NAME>IF_Wheelspeed_Fx_L1p</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
               <SW-DATA-DEF-PROPS>
                 <SW-DATA-DEF-PROPS-VARIANTS>
                   <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                    <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
                     <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
                   </SW-DATA-DEF-PROPS-CONDITIONAL>
                 </SW-DATA-DEF-PROPS-VARIANTS>
