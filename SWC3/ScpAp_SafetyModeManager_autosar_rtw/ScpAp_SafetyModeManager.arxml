@@ -3,7 +3,7 @@
 Auto generated XML Component Description for model ScpAp_SafetyModeManager
 Model version                : 1.75
 Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
-XML source code generated on : Thu Feb 12 16:24:24 2026
+XML source code generated on : Tue Feb 17 17:07:40 2026
 Model Checksum               : 350733017 2564835752 3426896705 3036312786
 -->
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
@@ -169,7 +169,7 @@ binary-valued logic: {true, false}.</L-2>
                         <SWC-INTERNAL-BEHAVIOR UUID="4F77F767-504C-4442-B88A-FA752B547000">
                             <SHORT-NAME>ScpAp_SafetyModeManager_InternalBehavior</SHORT-NAME>
                             <STATIC-MEMORYS>
-                                <VARIABLE-DATA-PROTOTYPE UUID="553864ae-2101-5d29-33e4-3850e674d675">
+                                <VARIABLE-DATA-PROTOTYPE UUID="ecaf0fd4-a331-5caf-ceb9-1094354959d5">
                                     <SHORT-NAME>ScpAp_SafetyModeMana_Status_Chk</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -183,7 +183,7 @@ binary-valued logic: {true, false}.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="c7732ec4-a229-5ac3-b840-fd43c718e506">
+                                <VARIABLE-DATA-PROTOTYPE UUID="ac7ed75d-2ece-5961-506b-2e91962864d7">
                                     <SHORT-NAME>ScpAp_SafetyM_AutonomousAllowed</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -197,7 +197,7 @@ binary-valued logic: {true, false}.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="e6d5af92-d0a1-5735-68d3-703baec74985">
+                                <VARIABLE-DATA-PROTOTYPE UUID="88a06eec-34ab-5d39-49a7-5fc32c36c69a">
                                     <SHORT-NAME>ScpAp_SafetyModeManage_Mode_Chk</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -211,7 +211,7 @@ binary-valued logic: {true, false}.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="b48b2074-a491-572d-e49c-84428af8a95a">
+                                <VARIABLE-DATA-PROTOTYPE UUID="bc526006-3221-5d31-b605-4b12d977bdba">
                                     <SHORT-NAME>ScpAp_SafetyModeManage_Mode_L2p</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>

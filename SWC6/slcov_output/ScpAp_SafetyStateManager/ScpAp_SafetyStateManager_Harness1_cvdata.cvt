@@ -1,0 +1,1573 @@
+CV_Database {
+  modelcov {
+    id			    1
+    name		    "ScpAp_SafetyStateManager_Harness1@(R2025b)"
+    unmangledName	    "ScpAp_SafetyStateManager_Harness1"
+    dbVersion		    "(R2025b)"
+    ownerModel		    "ScpAp_SafetyStateManager"
+    ownerBlock		    "ScpAp_SafetyStateManager/SafetyState_Main_sys/EGAS_StateMachine"
+    harnessModel	    "ScpAp_SafetyStateManager_Harness1"
+    canHarnessMapBackToOwner 1
+    refModelcovIds	    [1]
+    topModelcovId	    [1]
+    rootTree		    [0 2 0 0]
+    blockTypes		    [5]
+  }
+  root {
+    id			    2
+    modelcov		    1
+    topSlsf		    6
+    firstTest		    3
+    treeNode		    [1 0 0 0]
+    path		    "EGAS_StateMachine"
+    modelDepth		    1
+    checksum		    [337108758 3464298585 955046238 895909309]
+    structuralChecksum	    [4274296430 3030221928 1178869108 407673307]
+    metricChecksum	    [0 0 0 0 289244611 3245861359 3434970488 2743121117 0 0 0 0]
+    dataSize		    [59 34 0 47 40 0 0]
+    runningTotal	    3
+  }
+  testdata {
+    id			    3
+    modelcov		    1
+    rootPath		    "EGAS_StateMachine"
+    ownerBlock		    "ScpAp_SafetyStateManager/SafetyState_Main_sys/EGAS_StateMachine"
+    ownerModel		    "ScpAp_SafetyStateManager"
+    harnessModel	    "ScpAp_SafetyStateManager_Harness1"
+    tag			    "Run 1"
+    uniqueId		    "5d18b6a0-4c40-41fb-a4fc-81d198cd4d8c"
+    linkNode		    [2 0 0]
+    type		    DLGENABLED_TST
+    settings		    [1 0 0 0 0 0 0]
+    modelVersion	    "1.146"
+    creator		    "IAST283"
+    lastModifiedDate	    "Thu Feb 19 12:02:35 2026"
+    blockReductionStatus    "forcedOff"
+    defaultParameterBehavior "Inlined"
+    dbVersion		    "(R2025b)"
+    dbversionToRestore	    "(R2025b)"
+    conditionallyExecuteInputs 1
+    startTime		    740032.5039360764
+    stopTime		    740032.5039524884
+    simStopTime		    0.18
+    data {
+      decision		      "100 M59x1[14 0 3 0 14 0 4 0 2 3 3 0 1 0 3 0 3 2 0 2 0 2 1 1 0 1 0 0 2 1 0 1 0 3 0 0 0 0 0 0 0 2"
+      " 0 2 0 1 2 2 0 2 0 3 1 2 0 2 0 2 1]"
+    }
+    testobjectives	    [0 0 0 0 0 0 0 0 0 0 0 0 0 4]
+    mcdcMode		    1
+    mldref_enable	    "on"
+    covExternalEMLEnable    1
+    forceBlockReductionOff  1
+    covBoundaryRelTol	    0.01
+    covBoundaryAbsTol	    1e-05
+    covSFcnEnable	    1
+  }
+  metricdata {
+    id			    4
+    metricenumValue	    14
+    metricName		    "cvmetric_Structural_block"
+    size		    13
+    data {
+      rawdata		      "100 M13x1[1 0 1 0 1 0 1 0 1 0 1 0 3]"
+    }
+  }
+  typename {
+    id			    5
+    type		    "MinMax"
+  }
+  slsfobj {
+    id			    6
+    name		    "EGAS_StateMachine"
+    origin		    SIMULINK_OBJ
+    isAtomicSubsytem	    1
+    modelcov		    1
+    treeNode		    [0 7 0 0]
+    metricFlags		    24667
+    metrics		    [25 26 27 28 29 30 31]
+    cvChecksum {
+      u1		      337108758
+      u2		      3464298585
+      u3		      955046238
+      u4		      895909309
+    }
+    cvStructuralChecksum    [4274296430 3030221928 1178869108 407673307]
+    cvMetricChecksum	    [289244611 3245861359 3434970488 2743121117 0 0 0 0]
+  }
+  slsfobj {
+    id			    7
+    name		    " Demux "
+    SID			    "1::110"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [6 0 0 8]
+    cvChecksum {
+      u1		      3439279571
+      u2		      2561743879
+      u3		      3663033115
+      u4		      195740233
+    }
+    cvStructuralChecksum    [3439279571 2561743879 3663033115 195740233]
+  }
+  slsfobj {
+    id			    8
+    name		    " SFunction "
+    SID			    "1::109"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [6 0 7 9]
+    cvChecksum {
+      u1		      3439279571
+      u2		      2561743879
+      u3		      3663033115
+      u4		      195740233
+    }
+    cvStructuralChecksum    [3439279571 2561743879 3663033115 195740233]
+  }
+  slsfobj {
+    id			    9
+    name		    "EGAS_StateMachine"
+    origPath		    "ScpAp_SafetyStateManager_Harness1:1"
+    origin		    STATEFLOW_OBJ
+    refClass		    1
+    modelcov		    1
+    treeNode		    [6 10 8 0]
+    metricFlags		    24667
+    metrics		    [32 33 34 35 36 37 38]
+    cvChecksum {
+      u1		      3759175700
+      u2		      3325133093
+      u3		      4026259139
+      u4		      2051025371
+    }
+    cvStructuralChecksum    [3853353448 3473392267 1791730221 2393671633]
+    cvMetricChecksum	    [2923812485 3003543051 1686981778 1811847874 0 0 0 0]
+  }
+  slsfobj {
+    id			    10
+    name		    "Degrade"
+    SID			    ":4"
+    origin		    STATEFLOW_OBJ
+    refClass		    4
+    modelcov		    1
+    treeNode		    [9 0 0 11]
+    code		    45
+    cvChecksum {
+      u1		      3572054170
+      u2		      2749201432
+      u3		      2772398342
+      u4		      1872653971
+    }
+    cvStructuralChecksum    [3572054170 2749201432 2772398342 1872653971]
+  }
+  slsfobj {
+    id			    11
+    name		    "Energency_Stop"
+    SID			    ":5"
+    origin		    STATEFLOW_OBJ
+    refClass		    4
+    modelcov		    1
+    treeNode		    [9 0 10 12]
+    code		    46
+    cvChecksum {
+      u1		      1430339450
+      u2		      2488956448
+      u3		      929864383
+      u4		      612161900
+    }
+    cvStructuralChecksum    [1430339450 2488956448 929864383 612161900]
+  }
+  slsfobj {
+    id			    12
+    name		    "Minimum"
+    SID			    ":38"
+    origin		    STATEFLOW_OBJ
+    refClass		    4
+    modelcov		    1
+    treeNode		    [9 13 11 16]
+    metricFlags		    24657
+    metrics		    [47 48 49 50 51]
+    code		    52
+    cvChecksum {
+      u1		      3702552722
+      u2		      324299706
+      u3		      2706275156
+      u4		      34840603
+    }
+    cvStructuralChecksum    [2189488050 3189037336 1503772384 3557967452]
+    cvMetricChecksum	    [603177637 611791655 1384297777 2974731313 0 0 0 0]
+  }
+  slsfobj {
+    id			    13
+    name		    "Minimum"
+    SID			    "1::144"
+    origin		    SIMULINK_OBJ
+    isAtomicSubsytem	    1
+    modelcov		    1
+    treeNode		    [12 14 0 0]
+    metricFlags		    24657
+    metrics		    [53 54 55 56 57]
+    cvChecksum {
+      u1		      3327774110
+      u2		      1174830332
+      u3		      3427576027
+      u4		      84738996
+    }
+    cvStructuralChecksum    [3183952605 2462693771 2500231059 1360485599]
+    cvMetricChecksum	    [1078601632 3473748042 3791241059 1604232039 0 0 0 0]
+  }
+  slsfobj {
+    id			    14
+    name		    "Min"
+    SID			    "1::149"
+    origin		    SIMULINK_OBJ
+    slBlckType		    5
+    modelcov		    1
+    treeNode		    [13 0 0 15]
+    metricFlags		    24657
+    metrics		    [61 62 63 64 65]
+    cvChecksum {
+      u1		      3963700976
+      u2		      748459259
+      u3		      3206290515
+      u4		      3003481243
+    }
+    cvStructuralChecksum    [4019108905 973909187 443298075 2663704905]
+    cvMetricChecksum	    [4264983733 3437504619 2399887230 319675933 0 0 0 0]
+  }
+  slsfobj {
+    id			    15
+    name		    "f"
+    SID			    "1::145"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [13 0 14 0]
+    cvChecksum {
+      u1		      3439279571
+      u2		      2561743879
+      u3		      3663033115
+      u4		      195740233
+    }
+    cvStructuralChecksum    [3439279571 2561743879 3663033115 195740233]
+  }
+  slsfobj {
+    id			    16
+    name		    "Normal"
+    SID			    ":1"
+    origin		    STATEFLOW_OBJ
+    refClass		    4
+    modelcov		    1
+    treeNode		    [9 0 12 17]
+    code		    78
+    cvChecksum {
+      u1		      1542395908
+      u2		      1202039255
+      u3		      3919655169
+      u4		      524821162
+    }
+    cvStructuralChecksum    [1542395908 1202039255 3919655169 524821162]
+  }
+  slsfobj {
+    id			    17
+    name		    "OverSpeed_Handling"
+    SID			    ":3"
+    origin		    STATEFLOW_OBJ
+    refClass		    4
+    modelcov		    1
+    treeNode		    [9 0 16 18]
+    code		    79
+    cvChecksum {
+      u1		      1968668273
+      u2		      188087796
+      u3		      96585862
+      u4		      1840623708
+    }
+    cvStructuralChecksum    [1968668273 188087796 96585862 1840623708]
+  }
+  slsfobj {
+    id			    18
+    SID			    ":2"
+    origin		    STATEFLOW_OBJ
+    refClass		    5
+    modelcov		    1
+    treeNode		    [9 0 17 19]
+    code		    80
+    cvChecksum {
+      u1		      555668416
+      u2		      1955580048
+      u3		      3865771421
+      u4		      2562474511
+    }
+    cvStructuralChecksum    [555668416 1955580048 3865771421 2562474511]
+  }
+  slsfobj {
+    id			    19
+    name		    "[SafetyOverspeedFlag == 1]"
+    SID			    ":6"
+    origin		    STATEFLOW_OBJ
+    refClass		    5
+    modelcov		    1
+    treeNode		    [9 0 18 20]
+    metricFlags		    8257
+    metrics		    [81 82 83]
+    code		    92
+    cvChecksum {
+      u1		      820315893
+      u2		      3539246883
+      u3		      2800036742
+      u4		      868889458
+    }
+    cvStructuralChecksum    [3435921370 3606325213 1039895543 2109273303]
+    cvMetricChecksum	    [1108078863 3304959925 3198701671 2940710241 0 0 0 0]
+  }
+  slsfobj {
+    id			    20
+    name		    "[[SafetyOverspeedFlag == 0 && Accel_Fault == 0 && MotorRPM_Fault == 0 && WSS_Fault == 0 && VechSpeedEst"
+    "_Fault == 0]]"
+    SID			    ":13"
+    origin		    STATEFLOW_OBJ
+    refClass		    5
+    modelcov		    1
+    treeNode		    [9 0 19 21]
+    metricFlags		    65
+    metrics		    [93 94]
+    code		    99
+    cvChecksum {
+      u1		      3656567144
+      u2		      1163228734
+      u3		      2746526702
+      u4		      4190103682
+    }
+    cvStructuralChecksum    [3656567144 1163228734 2746526702 4190103682]
+  }
+  slsfobj {
+    id			    21
+    name		    "[SafetySpeedMonitorFaultFlag == 1 || Accel_Fault == 1 && MotorRPM_Fault == 1 && WSS_Fault == 1 && VechS"
+    "peedEst_Fault == 1]"
+    SID			    ":14"
+    origin		    STATEFLOW_OBJ
+    refClass		    5
+    modelcov		    1
+    treeNode		    [9 0 20 22]
+    metricFlags		    8267
+    metrics		    [100 101 102 103 104]
+    code		    141
+    cvChecksum {
+      u1		      3682039169
+      u2		      850914422
+      u3		      947410688
+      u4		      2771957623
+    }
+    cvStructuralChecksum    [559848560 620594900 4197029316 892956396]
+    cvMetricChecksum	    [2770093879 1688943838 3463410907 2438668284 0 0 0 0]
+  }
+  slsfobj {
+    id			    22
+    name		    "[[SafetySpeedMonitorFaultFlag == 1 || Accel_Fault == 1 && MotorRPM_Fault == 1 && WSS_Fault == 1 && Vech"
+    "SpeedEst_Fault == 1]]"
+    SID			    ":19"
+    origin		    STATEFLOW_OBJ
+    refClass		    5
+    modelcov		    1
+    treeNode		    [9 0 21 23]
+    metricFlags		    65
+    metrics		    [142 143]
+    code		    148
+    cvChecksum {
+      u1		      2388957326
+      u2		      554549816
+      u3		      3320221663
+      u4		      3702353537
+    }
+    cvStructuralChecksum    [2388957326 554549816 3320221663 3702353537]
+  }
+  slsfobj {
+    id			    23
+    name		    "[after(60, msec)]"
+    SID			    ":20"
+    origin		    STATEFLOW_OBJ
+    refClass		    5
+    modelcov		    1
+    treeNode		    [9 0 22 24]
+    metricFlags		    65
+    metrics		    [149 150]
+    code		    155
+    cvChecksum {
+      u1		      1302413594
+      u2		      1438587039
+      u3		      1945498817
+      u4		      2362920967
+    }
+    cvStructuralChecksum    [1302413594 1438587039 1945498817 2362920967]
+  }
+  slsfobj {
+    id			    24
+    name		    "[SafetySpeedMonitorFaultFlag == 0 && SafetyOverspeedFlag == 0 && Accel_Fault == 0 && MotorRPM_Fault == "
+    "0 && WSS_Fault == 0 && VechSpeedEst_Fault == 0]"
+    SID			    ":22"
+    origin		    STATEFLOW_OBJ
+    refClass		    5
+    modelcov		    1
+    treeNode		    [9 0 23 0]
+    metricFlags		    8267
+    metrics		    [156 157 158 159 160]
+    code		    203
+    cvChecksum {
+      u1		      148074878
+      u2		      2960960355
+      u3		      232677736
+      u4		      3933134958
+    }
+    cvStructuralChecksum    [987618340 3426370305 2101925551 725991006]
+    cvMetricChecksum	    [2316797771 1457345394 4254589816 3129124906 0 0 0 0]
+  }
+  metric {
+    id			    25
+    dataIdx		    [0 -1]
+    justifiedDataIdx	    [1 0]
+    dataCnt		    [19 0 -1 -1]
+    dataWidth		    60
+  }
+  metric {
+    id			    26
+    dataIdx		    [0 -1]
+    justifiedDataIdx	    [1 0]
+    dataCnt		    [22 0 -1 -1]
+    dataWidth		    35
+  }
+  metric {
+    id			    27
+    dataIdx		    [0 -1]
+    justifiedDataIdx	    [1 0]
+    dataCnt		    [11 0 -1 -1]
+    dataWidth		    48
+  }
+  sigranger {
+    id			    28
+    modelcov		    1
+    slsfobj		    6
+    cov			    [0 5 1 1 1 1 1 5 0 0 0 0 0]
+  }
+  metric {
+    id			    29
+    dataIdx		    [1 1]
+    dataCnt		    [21 1 0 0]
+  }
+  metric {
+    id			    30
+  }
+  metric {
+    id			    31
+    dataIdx		    [0 -1]
+    justifiedDataIdx	    [1 0]
+    dataCnt		    [1 0 -1 -1]
+    dataWidth		    14
+  }
+  metric {
+    id			    32
+    baseObjs		    [39]
+    dataIdx		    [4 2]
+    justifiedDataIdx	    [5 3]
+    dataCnt		    [19 4 -1 -1]
+    dataWidth		    58
+  }
+  metric {
+    id			    33
+    dataIdx		    [2 -1]
+    justifiedDataIdx	    [3 0]
+    dataCnt		    [22 0 -1 -1]
+    dataWidth		    33
+  }
+  metric {
+    id			    34
+    dataIdx		    [2 -1]
+    justifiedDataIdx	    [3 0]
+    dataCnt		    [11 0 -1 -1]
+    dataWidth		    46
+  }
+  sigranger {
+    id			    35
+    modelcov		    1
+    cov			    [10 14 1 1 1 1 1 1 1 1 1 1 1 1 1 1 14 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  }
+  metric {
+    id			    36
+    dataCnt		    [20 3 0 0]
+  }
+  metric {
+    id			    37
+  }
+  metric {
+    id			    38
+    dataIdx		    [2 -1]
+    justifiedDataIdx	    [3 0]
+    dataCnt		    [1 0 -1 -1]
+    dataWidth		    12
+  }
+  decision {
+    id			    39
+    modelcov		    1
+    slsfobj		    9
+    descriptor		    40
+    outMsgs		    [41 42 43 44]
+    dc			    [4 0 6 0]
+  }
+  message {
+    id			    40
+    keyNum		    16
+    startChar		    -1
+  }
+  message {
+    id			    41
+    keyNum		    160
+    objParams		    [10]
+    startChar		    -1
+  }
+  message {
+    id			    42
+    keyNum		    160
+    objParams		    [11]
+    startChar		    -1
+  }
+  message {
+    id			    43
+    keyNum		    160
+    objParams		    [16]
+    startChar		    -1
+  }
+  message {
+    id			    44
+    keyNum		    160
+    objParams		    [17]
+    startChar		    -1
+  }
+  codeblock {
+    id			    45
+    slsfobj		    10
+    code		    "Degrade\nen:\nTrqCmd=0;\nBrkTrqRq=Brake_Limp;\nSafetyStatus=1;\ndu:\nTrqCmd=0;\nBrkTrqRq=Brake_Limp;\nS"
+    "afetyStatus=1;\n"
+  }
+  codeblock {
+    id			    46
+    slsfobj		    11
+    code		    "Energency_Stop\nen:\nTrqCmd=0;\nBrkTrqRq=Brake_Max_Safe;\nSafetyStatus=2;\ndu:\nTrqCmd=0;\nBrkTrqRq=Bra"
+    "ke_Max_Safe;\nSafetyStatus=2;"
+  }
+  metric {
+    id			    47
+    dataIdx		    [10 -1]
+    justifiedDataIdx	    [11 0]
+    dataCnt		    [3 0 -1 -1]
+    dataWidth		    14
+  }
+  metric {
+    id			    48
+  }
+  metric {
+    id			    49
+    dataCnt		    [2 0 0 0]
+  }
+  metric {
+    id			    50
+  }
+  metric {
+    id			    51
+    dataIdx		    [4 -1]
+    justifiedDataIdx	    [5 0]
+    dataCnt		    [1 0 -1 -1]
+    dataWidth		    10
+  }
+  codeblock {
+    id			    52
+    slsfobj		    12
+    code		    "Out1 = Minimum(In1,In2)"
+  }
+  metric {
+    id			    53
+    baseObjs		    [58]
+    dataIdx		    [14 12]
+    justifiedDataIdx	    [15 13]
+    dataCnt		    [3 1 -1 -1]
+    dataWidth		    12
+  }
+  metric {
+    id			    54
+  }
+  metric {
+    id			    55
+    dataIdx		    [1 1]
+    dataCnt		    [2 1 0 0]
+  }
+  metric {
+    id			    56
+  }
+  metric {
+    id			    57
+    dataIdx		    [6 -1]
+    justifiedDataIdx	    [7 0]
+    dataCnt		    [1 0 -1 -1]
+    dataWidth		    8
+  }
+  decision {
+    id			    58
+    modelcov		    1
+    slsfobj		    13
+    descriptor		    59
+    outMsgs		    [60]
+    dc			    [1 0 16 0]
+  }
+  message {
+    id			    59
+    keyNum		    106
+    startChar		    -1
+  }
+  message {
+    id			    60
+    keyNum		    154
+    intParams		    [1]
+    startChar		    -1
+  }
+  metric {
+    id			    61
+    baseObjs		    [66]
+    dataIdx		    [19 17]
+    justifiedDataIdx	    [20 18]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    7
+  }
+  sigranger {
+    id			    62
+    modelcov		    1
+    slsfobj		    14
+    cov			    [38 1 1 1 0]
+  }
+  metric {
+    id			    63
+    dataCnt		    [1 1 0 0]
+  }
+  metric {
+    id			    64
+    baseObjs		    [70 71]
+  }
+  metric {
+    id			    65
+    baseObjs		    [76]
+    dataIdx		    [10 8]
+    justifiedDataIdx	    [11 9]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    66
+    modelcov		    1
+    slsfobj		    14
+    descriptor		    67
+    outMsgs		    [68 69]
+    dc			    [2 0 21 0]
+  }
+  message {
+    id			    67
+    keyNum		    58
+    startChar		    -1
+  }
+  message {
+    id			    68
+    keyNum		    60
+    intParams		    [1]
+    startChar		    -1
+  }
+  message {
+    id			    69
+    keyNum		    60
+    intParams		    [2]
+    startChar		    -1
+  }
+  decision {
+    id			    70
+    modelcov		    1
+    slsfobj		    14
+    relopChkExprIdx	    -1
+    descriptor		    72
+    outMsgs		    [73]
+    dc			    [1 0 0 0]
+  }
+  decision {
+    id			    71
+    modelcov		    1
+    slsfobj		    14
+    relopChkExprIdx	    -1
+    descriptor		    74
+    outMsgs		    [75]
+    dc			    [1 0 0 0]
+  }
+  message {
+    id			    72
+    keyNum		    187
+    txtParams		    "1"
+    startChar		    -1
+  }
+  message {
+    id			    73
+    keyNum		    36
+    startChar		    -1
+  }
+  message {
+    id			    74
+    keyNum		    186
+    txtParams		    "2"
+    startChar		    -1
+  }
+  message {
+    id			    75
+    keyNum		    35
+    startChar		    -1
+  }
+  decision {
+    id			    76
+    modelcov		    1
+    slsfobj		    14
+    relopChkExprIdx	    -1
+    descriptor		    77
+    dc			    [1 0 12 0]
+  }
+  message {
+    id			    77
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  codeblock {
+    id			    78
+    slsfobj		    16
+    code		    "Normal\nen:\nSafetyStatus=0;\nBrkTrqRq=0;\nTrqCmd=SafeTorquecmd_L2p;\ndu:\nSafetyStatus=0;\nBrkTrqRq=0;"
+    "\nTrqCmd=SafeTorquecmd_L2p;\n"
+  }
+  codeblock {
+    id			    79
+    slsfobj		    17
+    code		    "OverSpeed_Handling\nen:\nTrqCmd=Minimum(SafeTorquecmd_L2p,Torque_Decel_Limit);\nBrkTrqRq=Brake_Decel_Le"
+    "vel;\nSafetyStatus=3;\ndu:\nTrqCmd=Minimum(SafeTorquecmd_L2p,Torque_Decel_Limit);\nBrkTrqRq=Brake_Decel_Level;\nSa"
+    "fetyStatus=3;"
+  }
+  codeblock {
+    id			    80
+    slsfobj		    18
+  }
+  metric {
+    id			    81
+    baseObjs		    [84]
+    dataIdx		    [25 23]
+    justifiedDataIdx	    [26 24]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    7
+  }
+  metric {
+    id			    82
+    dataCnt		    [1 1 0 0]
+  }
+  metric {
+    id			    83
+    baseObjs		    [88]
+  }
+  decision {
+    id			    84
+    modelcov		    1
+    slsfobj		    19
+    descriptor		    85
+    outMsgs		    [86 87]
+    dc			    [2 0 27 0]
+  }
+  message {
+    id			    85
+    keyNum		    164
+    startChar		    1
+    length		    25
+  }
+  message {
+    id			    86
+    keyNum		    159
+    startChar		    -1
+  }
+  message {
+    id			    87
+    keyNum		    158
+    startChar		    26
+  }
+  decision {
+    id			    88
+    modelcov		    1
+    slsfobj		    19
+    descriptor		    89
+    outMsgs		    [90 91]
+    dc			    [2 0 0 0]
+  }
+  message {
+    id			    89
+    keyNum		    162
+    intParams		    [1 25]
+    txtParams		    "SafetyOverspeedFlag - 1"
+    startChar		    1
+    length		    25
+  }
+  message {
+    id			    90
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    91
+    keyNum		    41
+    startChar		    -1
+  }
+  codeblock {
+    id			    92
+    slsfobj		    19
+    code		    "[SafetyOverspeedFlag == 1]"
+    totalNumOfObjs	    [1 0 0 0]
+  }
+  metric {
+    id			    93
+    baseObjs		    [95]
+    dataIdx		    [31 29]
+    justifiedDataIdx	    [32 30]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    7
+  }
+  metric {
+    id			    94
+    dataCnt		    [1 1 0 0]
+  }
+  decision {
+    id			    95
+    modelcov		    1
+    slsfobj		    20
+    descriptor		    96
+    outMsgs		    [97 98]
+    dc			    [2 0 33 0]
+  }
+  message {
+    id			    96
+    keyNum		    164
+    startChar		    1
+    length		    115
+  }
+  message {
+    id			    97
+    keyNum		    159
+    startChar		    -1
+  }
+  message {
+    id			    98
+    keyNum		    158
+    startChar		    116
+  }
+  codeblock {
+    id			    99
+    slsfobj		    20
+    code		    "[[SafetyOverspeedFlag == 0 && Accel_Fault == 0 && MotorRPM_Fault == 0 && WSS_Fault == 0 && VechSpeedEst"
+    "_Fault == 0]]"
+    totalNumOfObjs	    [1 0 0 0]
+  }
+  metric {
+    id			    100
+    baseObjs		    [105]
+    dataIdx		    [37 35]
+    justifiedDataIdx	    [38 36]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    7
+  }
+  metric {
+    id			    101
+    baseObjs		    [109 110 111 112 113]
+    dataIdx		    [6 4]
+    justifiedDataIdx	    [7 5]
+    dataCnt		    [10 10 -1 -1]
+    dataWidth		    15
+  }
+  metric {
+    id			    102
+    baseObjs		    [119]
+    dataIdx		    [6 4]
+    justifiedDataIdx	    [7 5]
+    dataCnt		    [5 5 -1 -1]
+    dataWidth		    21
+  }
+  metric {
+    id			    103
+    dataCnt		    [5 5 0 0]
+  }
+  metric {
+    id			    104
+    baseObjs		    [121 122 123 124 125]
+  }
+  decision {
+    id			    105
+    modelcov		    1
+    slsfobj		    21
+    descriptor		    106
+    outMsgs		    [107 108]
+    dc			    [2 0 39 0]
+  }
+  message {
+    id			    106
+    keyNum		    164
+    startChar		    1
+    length		    121
+  }
+  message {
+    id			    107
+    keyNum		    159
+    startChar		    -1
+  }
+  message {
+    id			    108
+    keyNum		    158
+    startChar		    122
+  }
+  condition {
+    id			    109
+    modelcov		    1
+    slsfobj		    21
+    key			    -1
+    descriptor		    114
+    coverage		    [9 8 0]
+  }
+  condition {
+    id			    110
+    modelcov		    1
+    slsfobj		    21
+    key			    -1
+    descriptor		    115
+    coverage		    [11 10 0]
+  }
+  condition {
+    id			    111
+    modelcov		    1
+    slsfobj		    21
+    key			    -1
+    descriptor		    116
+    coverage		    [13 12 0]
+  }
+  condition {
+    id			    112
+    modelcov		    1
+    slsfobj		    21
+    key			    -1
+    descriptor		    117
+    coverage		    [15 14 0]
+  }
+  condition {
+    id			    113
+    modelcov		    1
+    slsfobj		    21
+    key			    -1
+    descriptor		    118
+    coverage		    [17 16 0]
+  }
+  message {
+    id			    114
+    keyNum		    164
+    startChar		    1
+    length		    33
+  }
+  message {
+    id			    115
+    keyNum		    164
+    startChar		    37
+    length		    17
+  }
+  message {
+    id			    116
+    keyNum		    164
+    startChar		    57
+    length		    20
+  }
+  message {
+    id			    117
+    keyNum		    164
+    startChar		    80
+    length		    15
+  }
+  message {
+    id			    118
+    keyNum		    164
+    startChar		    98
+    length		    24
+  }
+  mcdcentry {
+    id			    119
+    modelcov		    1
+    slsfobj		    21
+    key			    -1
+    numPredicates	    5
+    pathCount		    6
+    pathStorageCount	    1
+    mcdcMode		    MCDCMODE_MASKING
+    bst			    [0 1 2 -3 3 -3 4 -3 -2]
+    expressionTree	    [9 -1 -1 -1 1 -1 3 -1 5 0 9 -1 -1 -1 2 -1 4 -1 6 7 9 8 3 3 5 5 7 7 8 -1]
+    descriptor		    120
+    conditions		    [109 110 111 112 113]
+    dataBaseIdx		    [8 13 18 23 9999 0]
+  }
+  message {
+    id			    120
+    keyNum		    164
+    startChar		    1
+    length		    121
+  }
+  decision {
+    id			    121
+    modelcov		    1
+    slsfobj		    21
+    descriptor		    126
+    outMsgs		    [127 128]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    122
+    modelcov		    1
+    slsfobj		    21
+    relopChkExprIdx	    1
+    descriptor		    129
+    outMsgs		    [130 131]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    123
+    modelcov		    1
+    slsfobj		    21
+    relopChkExprIdx	    2
+    descriptor		    132
+    outMsgs		    [133 134]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    124
+    modelcov		    1
+    slsfobj		    21
+    relopChkExprIdx	    3
+    descriptor		    135
+    outMsgs		    [136 137]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    125
+    modelcov		    1
+    slsfobj		    21
+    relopChkExprIdx	    4
+    descriptor		    138
+    outMsgs		    [139 140]
+    dc			    [2 0 0 0]
+  }
+  message {
+    id			    126
+    keyNum		    162
+    intParams		    [1 33]
+    txtParams		    "SafetySpeedMonitorFaultFlag - 1"
+    startChar		    1
+    length		    33
+  }
+  message {
+    id			    127
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    128
+    keyNum		    41
+    startChar		    -1
+  }
+  message {
+    id			    129
+    keyNum		    162
+    intParams		    [37 53]
+    txtParams		    "Accel_Fault - 1"
+    startChar		    37
+    length		    17
+  }
+  message {
+    id			    130
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    131
+    keyNum		    41
+    startChar		    -1
+  }
+  message {
+    id			    132
+    keyNum		    162
+    intParams		    [57 76]
+    txtParams		    "MotorRPM_Fault - 1"
+    startChar		    57
+    length		    20
+  }
+  message {
+    id			    133
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    134
+    keyNum		    41
+    startChar		    -1
+  }
+  message {
+    id			    135
+    keyNum		    162
+    intParams		    [80 94]
+    txtParams		    "WSS_Fault - 1"
+    startChar		    80
+    length		    15
+  }
+  message {
+    id			    136
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    137
+    keyNum		    41
+    startChar		    -1
+  }
+  message {
+    id			    138
+    keyNum		    162
+    intParams		    [98 121]
+    txtParams		    "VechSpeedEst_Fault - 1"
+    startChar		    98
+    length		    24
+  }
+  message {
+    id			    139
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    140
+    keyNum		    41
+    startChar		    -1
+  }
+  codeblock {
+    id			    141
+    slsfobj		    21
+    code		    "[SafetySpeedMonitorFaultFlag == 1 || Accel_Fault == 1 && MotorRPM_Fault == 1 && WSS_Fault == 1 && VechS"
+    "peedEst_Fault == 1]"
+    totalNumOfObjs	    [1 5 1 0]
+  }
+  metric {
+    id			    142
+    baseObjs		    [144]
+    dataIdx		    [43 41]
+    justifiedDataIdx	    [44 42]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    7
+  }
+  metric {
+    id			    143
+    dataCnt		    [1 1 0 0]
+  }
+  decision {
+    id			    144
+    modelcov		    1
+    slsfobj		    22
+    descriptor		    145
+    outMsgs		    [146 147]
+    dc			    [2 0 45 0]
+  }
+  message {
+    id			    145
+    keyNum		    164
+    startChar		    1
+    length		    123
+  }
+  message {
+    id			    146
+    keyNum		    159
+    startChar		    -1
+  }
+  message {
+    id			    147
+    keyNum		    158
+    startChar		    124
+  }
+  codeblock {
+    id			    148
+    slsfobj		    22
+    code		    "[[SafetySpeedMonitorFaultFlag == 1 || Accel_Fault == 1 && MotorRPM_Fault == 1 && WSS_Fault == 1 && Vech"
+    "SpeedEst_Fault == 1]]"
+    totalNumOfObjs	    [1 0 0 0]
+  }
+  metric {
+    id			    149
+    baseObjs		    [151]
+    dataIdx		    [49 47]
+    justifiedDataIdx	    [50 48]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    7
+  }
+  metric {
+    id			    150
+    dataCnt		    [1 1 0 0]
+  }
+  decision {
+    id			    151
+    modelcov		    1
+    slsfobj		    23
+    descriptor		    152
+    outMsgs		    [153 154]
+    dc			    [2 0 51 0]
+  }
+  message {
+    id			    152
+    keyNum		    164
+    startChar		    1
+    length		    16
+  }
+  message {
+    id			    153
+    keyNum		    159
+    startChar		    -1
+  }
+  message {
+    id			    154
+    keyNum		    158
+    startChar		    17
+  }
+  codeblock {
+    id			    155
+    slsfobj		    23
+    code		    "[after(60, msec)]"
+    totalNumOfObjs	    [1 0 0 0]
+  }
+  metric {
+    id			    156
+    baseObjs		    [161]
+    dataIdx		    [55 53]
+    justifiedDataIdx	    [56 54]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    7
+  }
+  metric {
+    id			    157
+    baseObjs		    [165 166 167 168 169 170]
+    dataIdx		    [20 18]
+    justifiedDataIdx	    [21 19]
+    dataCnt		    [12 12 -1 -1]
+    dataWidth		    17
+  }
+  metric {
+    id			    158
+    baseObjs		    [177]
+    dataIdx		    [26 24]
+    justifiedDataIdx	    [27 25]
+    dataCnt		    [6 6 -1 -1]
+    dataWidth		    24
+  }
+  metric {
+    id			    159
+    dataCnt		    [6 6 0 0]
+  }
+  metric {
+    id			    160
+    baseObjs		    [179 180 181 182 183 184]
+  }
+  decision {
+    id			    161
+    modelcov		    1
+    slsfobj		    24
+    descriptor		    162
+    outMsgs		    [163 164]
+    dc			    [2 0 57 0]
+  }
+  message {
+    id			    162
+    keyNum		    164
+    startChar		    1
+    length		    149
+  }
+  message {
+    id			    163
+    keyNum		    159
+    startChar		    -1
+  }
+  message {
+    id			    164
+    keyNum		    158
+    startChar		    150
+  }
+  condition {
+    id			    165
+    modelcov		    1
+    slsfobj		    24
+    key			    -1
+    descriptor		    171
+    coverage		    [23 22 0]
+  }
+  condition {
+    id			    166
+    modelcov		    1
+    slsfobj		    24
+    key			    -1
+    descriptor		    172
+    coverage		    [25 24 0]
+  }
+  condition {
+    id			    167
+    modelcov		    1
+    slsfobj		    24
+    key			    -1
+    descriptor		    173
+    coverage		    [27 26 0]
+  }
+  condition {
+    id			    168
+    modelcov		    1
+    slsfobj		    24
+    key			    -1
+    descriptor		    174
+    coverage		    [29 28 0]
+  }
+  condition {
+    id			    169
+    modelcov		    1
+    slsfobj		    24
+    key			    -1
+    descriptor		    175
+    coverage		    [31 30 0]
+  }
+  condition {
+    id			    170
+    modelcov		    1
+    slsfobj		    24
+    key			    -1
+    descriptor		    176
+    coverage		    [33 32 0]
+  }
+  message {
+    id			    171
+    keyNum		    164
+    startChar		    1
+    length		    33
+  }
+  message {
+    id			    172
+    keyNum		    164
+    startChar		    37
+    length		    25
+  }
+  message {
+    id			    173
+    keyNum		    164
+    startChar		    65
+    length		    17
+  }
+  message {
+    id			    174
+    keyNum		    164
+    startChar		    85
+    length		    20
+  }
+  message {
+    id			    175
+    keyNum		    164
+    startChar		    108
+    length		    15
+  }
+  message {
+    id			    176
+    keyNum		    164
+    startChar		    126
+    length		    24
+  }
+  mcdcentry {
+    id			    177
+    modelcov		    1
+    slsfobj		    24
+    key			    -1
+    numPredicates	    6
+    pathCount		    7
+    pathStorageCount	    1
+    mcdcMode		    MCDCMODE_MASKING
+    bst			    [0 1 -3 2 -3 3 -3 4 -3 5 -3]
+    expressionTree	    [11 -1 -1 0 -1 2 -1 4 -1 6 -1 8 11 -1 -1 1 -1 3 -1 5 -1 7 -1 9 11 2 2 4 4 6 6 8 8 10 10 -1]
+    descriptor		    178
+    conditions		    [165 166 167 168 169 170]
+    dataBaseIdx		    [28 34 40 46 9999 0]
+  }
+  message {
+    id			    178
+    keyNum		    164
+    startChar		    1
+    length		    149
+  }
+  decision {
+    id			    179
+    modelcov		    1
+    slsfobj		    24
+    descriptor		    185
+    outMsgs		    [186 187]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    180
+    modelcov		    1
+    slsfobj		    24
+    relopChkExprIdx	    1
+    descriptor		    188
+    outMsgs		    [189 190]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    181
+    modelcov		    1
+    slsfobj		    24
+    relopChkExprIdx	    2
+    descriptor		    191
+    outMsgs		    [192 193]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    182
+    modelcov		    1
+    slsfobj		    24
+    relopChkExprIdx	    3
+    descriptor		    194
+    outMsgs		    [195 196]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    183
+    modelcov		    1
+    slsfobj		    24
+    relopChkExprIdx	    4
+    descriptor		    197
+    outMsgs		    [198 199]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    184
+    modelcov		    1
+    slsfobj		    24
+    relopChkExprIdx	    5
+    descriptor		    200
+    outMsgs		    [201 202]
+    dc			    [2 0 0 0]
+  }
+  message {
+    id			    185
+    keyNum		    162
+    intParams		    [1 33]
+    txtParams		    "SafetySpeedMonitorFaultFlag - 0"
+    startChar		    1
+    length		    33
+  }
+  message {
+    id			    186
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    187
+    keyNum		    41
+    startChar		    -1
+  }
+  message {
+    id			    188
+    keyNum		    162
+    intParams		    [37 61]
+    txtParams		    "SafetyOverspeedFlag - 0"
+    startChar		    37
+    length		    25
+  }
+  message {
+    id			    189
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    190
+    keyNum		    41
+    startChar		    -1
+  }
+  message {
+    id			    191
+    keyNum		    162
+    intParams		    [65 81]
+    txtParams		    "Accel_Fault - 0"
+    startChar		    65
+    length		    17
+  }
+  message {
+    id			    192
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    193
+    keyNum		    41
+    startChar		    -1
+  }
+  message {
+    id			    194
+    keyNum		    162
+    intParams		    [85 104]
+    txtParams		    "MotorRPM_Fault - 0"
+    startChar		    85
+    length		    20
+  }
+  message {
+    id			    195
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    196
+    keyNum		    41
+    startChar		    -1
+  }
+  message {
+    id			    197
+    keyNum		    162
+    intParams		    [108 122]
+    txtParams		    "WSS_Fault - 0"
+    startChar		    108
+    length		    15
+  }
+  message {
+    id			    198
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    199
+    keyNum		    41
+    startChar		    -1
+  }
+  message {
+    id			    200
+    keyNum		    162
+    intParams		    [126 149]
+    txtParams		    "VechSpeedEst_Fault - 0"
+    startChar		    126
+    length		    24
+  }
+  message {
+    id			    201
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    202
+    keyNum		    41
+    startChar		    -1
+  }
+  codeblock {
+    id			    203
+    slsfobj		    24
+    code		    "[SafetySpeedMonitorFaultFlag == 0 && SafetyOverspeedFlag == 0 && Accel_Fault == 0 && MotorRPM_Fault == "
+    "0 && WSS_Fault == 0 && VechSpeedEst_Fault == 0]"
+    totalNumOfObjs	    [1 6 1 0]
+  }
+}

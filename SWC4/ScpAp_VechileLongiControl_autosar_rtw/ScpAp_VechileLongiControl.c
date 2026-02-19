@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_VechileLongiControl'.
  *
- * Model version                  : 1.45
+ * Model version                  : 1.5
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Thu Feb 12 10:19:38 2026
+ * C/C++ source code generated on : Tue Feb 17 16:18:36 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -32,12 +32,12 @@ ARID_DEF_ScpAp_VechileLongiCo_T ScpAp_VechileLongiCont_ARID_DEF;
 #define ScpAp_VechileLongiControl_START_SEC_ASW_Variables
 #include "ScpAp_VechileLongiControl_MemMap.h"
 
-float64 ScpAp_Clamped_Integrator_State;/* '<S6>/Saturation1' */
 float64 Integrator_State;              /* '<S6>/Unit Delay' */
 float32 ScpAp_VechileLong_VehSpdCmd_Kph;/* '<S6>/m//s to Kmph' */
 float32 ScpAp_VechileLongiC_Speed_Error;/* '<S6>/Subtract' */
-float32 ScpAp_Vechile_proportional_term;/* '<S6>/Gain1' */
 sint16 ScpAp_Vech_NominalTorquecmd_L2p;/* '<S5>/Switch' */
+sint16 ScpAp_Clamped_Integrator_State; /* '<S6>/Data Type Conversion' */
+sint16 ScpAp_Vechile_proportional_term;/* '<S6>/Data Type Conversion1' */
 sint16 ScpAp_VechileLongiC_Control_raw;/* '<S6>/Add1' */
 sint16 ScpAp_Cal_NominalTorquecmd_L2p; /* '<S6>/Saturation2' */
 
@@ -56,8 +56,8 @@ void VechileLongiControl_Main(void)
   float64 tmp;
   float32 tmp_0;
 
-  /* Inport: '<Root>/RP_SCpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq' */
-  (void)Rte_Read_RP_SCpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq(&tmpRead);
+  /* Inport: '<Root>/RP_ScpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq' */
+  (void)Rte_Read_RP_ScpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq(&tmpRead);
 
   /* SignalConversion generated from: '<S3>/RP_ScpAp_Vechilespeed_L2p_IF_Vechilespeed_L2p' incorporates:
    *  Inport: '<Root>/RP_ScpAp_Vechilespeed_L2p_IF_Vechilespeed_L2p'
@@ -78,17 +78,26 @@ void VechileLongiControl_Main(void)
    *  UnitDelay: '<S6>/Unit Delay'
    */
   if (Integrator_State > 30.0) {
-    /* Saturate: '<S6>/Saturation1' */
-    ScpAp_Clamped_Integrator_State = 30.0;
+    tmp = 30.0;
   } else if (Integrator_State < -30.0) {
-    /* Saturate: '<S6>/Saturation1' */
-    ScpAp_Clamped_Integrator_State = -30.0;
+    tmp = -30.0;
   } else {
-    /* Saturate: '<S6>/Saturation1' */
-    ScpAp_Clamped_Integrator_State = Integrator_State;
+    tmp = Integrator_State;
   }
 
-  /* End of Saturate: '<S6>/Saturation1' */
+  /* DataTypeConversion: '<S6>/Data Type Conversion' incorporates:
+   *  Saturate: '<S6>/Saturation1'
+   */
+  tmp = fmod(floor(tmp), 65536.0);
+  if (tmp < 0.0) {
+    /* DataTypeConversion: '<S6>/Data Type Conversion' */
+    ScpAp_Clamped_Integrator_State = (sint16)-(sint16)(uint16)-tmp;
+  } else {
+    /* DataTypeConversion: '<S6>/Data Type Conversion' */
+    ScpAp_Clamped_Integrator_State = (sint16)(uint16)tmp;
+  }
+
+  /* End of DataTypeConversion: '<S6>/Data Type Conversion' */
 
   /* Outputs for Atomic SubSystem: '<S2>/Comm_Rx' */
   /* Gain: '<S6>/m//s to Kmph' incorporates:
@@ -113,21 +122,23 @@ void VechileLongiControl_Main(void)
   ScpAp_VechileLongiC_Speed_Error = tmp_0 - (float32)
     ScpAp_VechileLongiCont_ARID_DEF.Vechilespeed_L2p;
 
-  /* Gain: '<S6>/Gain1' */
-  ScpAp_Vechile_proportional_term = 4.0F * ScpAp_VechileLongiC_Speed_Error;
-
-  /* Sum: '<S6>/Add1' */
-  tmp = fmod(floor(ScpAp_Vechile_proportional_term +
-                   ScpAp_Clamped_Integrator_State), 65536.0);
-  if (tmp < 0.0) {
-    /* Sum: '<S6>/Add1' */
-    ScpAp_VechileLongiC_Control_raw = (sint16)-(sint16)(uint16)-tmp;
+  /* DataTypeConversion: '<S6>/Data Type Conversion1' incorporates:
+   *  Gain: '<S6>/Gain1'
+   */
+  tmp_0 = fmodf(floorf(4.0F * ScpAp_VechileLongiC_Speed_Error), 65536.0F);
+  if (tmp_0 < 0.0F) {
+    /* DataTypeConversion: '<S6>/Data Type Conversion1' */
+    ScpAp_Vechile_proportional_term = (sint16)-(sint16)(uint16)-tmp_0;
   } else {
-    /* Sum: '<S6>/Add1' */
-    ScpAp_VechileLongiC_Control_raw = (sint16)(uint16)tmp;
+    /* DataTypeConversion: '<S6>/Data Type Conversion1' */
+    ScpAp_Vechile_proportional_term = (sint16)(uint16)tmp_0;
   }
 
-  /* End of Sum: '<S6>/Add1' */
+  /* End of DataTypeConversion: '<S6>/Data Type Conversion1' */
+
+  /* Sum: '<S6>/Add1' */
+  ScpAp_VechileLongiC_Control_raw = (sint16)(ScpAp_Vechile_proportional_term +
+    ScpAp_Clamped_Integrator_State);
 
   /* Saturate: '<S6>/Saturation2' */
   if (ScpAp_VechileLongiC_Control_raw > 120) {

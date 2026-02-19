@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model ScpAp_SafetyStateManager
+Model version                : 1.148
+Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
+XML source code generated on : Thu Feb 19 12:25:24 2026
+Model Checksum               : 3957479753 973619637 2390882439 3564985407
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>ComponentTypes</SHORT-NAME>
+            <ELEMENTS>
+                <SWC-IMPLEMENTATION UUID="d5f28d55-597c-522b-700d-ebfe0d6df5c1">
+                    <SHORT-NAME>ScpAp_SafetyStateManager_imp</SHORT-NAME>
+                    <CODE-DESCRIPTORS>
+                        <CODE>
+                            <SHORT-NAME>Code</SHORT-NAME>
+                            <ARTIFACT-DESCRIPTORS>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SafetyStateManager_c</SHORT-LABEL>
+                                    <CATEGORY>SWSRC</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SafetyStateManager_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SafetyStateManager_private_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SafetyStateManager_types_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                            </ARTIFACT-DESCRIPTORS>
+                        </CODE>
+                    </CODE-DESCRIPTORS>
+                    <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                    <RESOURCE-CONSUMPTION>
+                        <SHORT-NAME>RsrcCons_ScpAp_SafetyStateManager</SHORT-NAME>
+                        <MEMORY-SECTIONS>
+                            <MEMORY-SECTION>
+                                <SHORT-NAME>CODE</SHORT-NAME>
+                                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+                            </MEMORY-SECTION>
+                            <MEMORY-SECTION>
+                                <SHORT-NAME>ASW_Variables</SHORT-NAME>
+                                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDRMETHOD-REF>
+                            </MEMORY-SECTION>
+                        </MEMORY-SECTIONS>
+                    </RESOURCE-CONSUMPTION>
+                    <SW-VERSION>1.148.1</SW-VERSION>
+                    <USED-CODE-GENERATOR>Embedded Coder 25.2 (R2025b) 28-Jul-2025</USED-CODE-GENERATOR>
+                    <VENDOR-ID>0</VENDOR-ID>
+                    <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/ScpAp_SafetyStateManager/ScpAp_SafetyStateManager_InternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+            </ELEMENTS>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

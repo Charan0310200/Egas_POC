@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model ScpAp_SpeedSupervision
+Model version                : 1.104
+Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
+XML source code generated on : Tue Feb 17 12:13:37 2026
+Model Checksum               : 3165621992 2577381992 4174799197 3000540644
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>ComponentTypes</SHORT-NAME>
+            <ELEMENTS>
+                <SWC-IMPLEMENTATION UUID="85911ce4-f97c-5567-d5f3-9e683043e8e3">
+                    <SHORT-NAME>ScpAp_SpeedSupervision_imp</SHORT-NAME>
+                    <CODE-DESCRIPTORS>
+                        <CODE>
+                            <SHORT-NAME>Code</SHORT-NAME>
+                            <ARTIFACT-DESCRIPTORS>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SpeedSupervision_c</SHORT-LABEL>
+                                    <CATEGORY>SWSRC</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SpeedSupervision_data_c</SHORT-LABEL>
+                                    <CATEGORY>SWSRC</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SpeedSupervision_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SpeedSupervision_private_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SpeedSupervision_types_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                            </ARTIFACT-DESCRIPTORS>
+                        </CODE>
+                    </CODE-DESCRIPTORS>
+                    <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                    <RESOURCE-CONSUMPTION>
+                        <SHORT-NAME>RsrcCons_ScpAp_SpeedSupervision</SHORT-NAME>
+                        <MEMORY-SECTIONS>
+                            <MEMORY-SECTION>
+                                <SHORT-NAME>CODE</SHORT-NAME>
+                                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+                            </MEMORY-SECTION>
+                            <MEMORY-SECTION>
+                                <SHORT-NAME>ASW_Variables</SHORT-NAME>
+                                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ASW_Variables</SW-ADDRMETHOD-REF>
+                            </MEMORY-SECTION>
+                            <MEMORY-SECTION>
+                                <SHORT-NAME>CALIB</SHORT-NAME>
+                                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CALIB</SW-ADDRMETHOD-REF>
+                            </MEMORY-SECTION>
+                        </MEMORY-SECTIONS>
+                    </RESOURCE-CONSUMPTION>
+                    <SW-VERSION>1.104.1</SW-VERSION>
+                    <USED-CODE-GENERATOR>Embedded Coder 25.2 (R2025b) 28-Jul-2025</USED-CODE-GENERATOR>
+                    <VENDOR-ID>0</VENDOR-ID>
+                    <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/ScpAp_SpeedSupervision/ScpAp_SpeedSupervision_InternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+            </ELEMENTS>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

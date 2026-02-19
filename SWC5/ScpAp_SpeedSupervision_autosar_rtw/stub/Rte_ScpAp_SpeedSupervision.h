@@ -1,0 +1,86 @@
+/* This file contains stub implementations of the AUTOSAR RTE functions.
+   The stub implementations can be used for testing the generated code in
+   Simulink, for example, in SIL/PIL simulations of the component under
+   test. Note that this file should be replaced with an appropriate RTE
+   file when deploying the generated code outside of Simulink.
+
+   This file is generated for:
+   Atomic software component:  "ScpAp_SpeedSupervision"
+   ARXML schema: "R20-11"
+   File generated on: "Mon Feb 16 11:15:24 2026"  */
+
+#ifndef Rte_ScpAp_SpeedSupervision_h
+#define Rte_ScpAp_SpeedSupervision_h
+#include "Rte_Type.h"
+#include "Compiler.h"
+
+/* Data access functions */
+#define Rte_Read_RP_ScpAP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p Rte_Read_ScpAp_SpeedSupervision_RP_ScpAP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p
+
+Std_ReturnType Rte_Read_RP_ScpAP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p
+  (sint16* u);
+
+#define Rte_Read_RP_ScpAP_VechileAccel_L2p_IF_VechileAccel_L2p Rte_Read_ScpAp_SpeedSupervision_RP_ScpAP_VechileAccel_L2p_IF_VechileAccel_L2p
+
+Std_ReturnType Rte_Read_RP_ScpAP_VechileAccel_L2p_IF_VechileAccel_L2p(sint16* u);
+
+#define Rte_Read_RP_ScpAp_AutonomousAllowed_IF_AutonomousAllowed Rte_Read_ScpAp_SpeedSupervision_RP_ScpAp_AutonomousAllowed_IF_AutonomousAllowed
+
+Std_ReturnType Rte_Read_RP_ScpAp_AutonomousAllowed_IF_AutonomousAllowed(boolean*
+  u);
+
+#define Rte_Read_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p Rte_Read_ScpAp_SpeedSupervision_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p
+
+Std_ReturnType Rte_Read_RP_ScpAp_IMU_AccelX_L1_IF_IMU_AccelX_L1p(float32* u);
+
+#define Rte_Read_RP_ScpAp_Mode_L2p_IF_SafetyMode_L2p Rte_Read_ScpAp_SpeedSupervision_RP_ScpAp_Mode_L2p_IF_SafetyMode_L2p
+
+Std_ReturnType Rte_Read_RP_ScpAp_Mode_L2p_IF_SafetyMode_L2p(SafetyMode_L2p_IDT*
+  u);
+
+#define Rte_Read_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p Rte_Read_ScpAp_SpeedSupervision_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p
+
+Std_ReturnType Rte_Read_RP_ScpAp_MotorSpeed_L1p_IF_MotorSpeed_L1p(uint8* u);
+
+#define Rte_Read_RP_ScpAp_SensorValidityFlag_L2p_IF_SensorFaultFlags_L2p Rte_Read_ScpAp_SpeedSupervision_RP_ScpAp_SensorValidityFlag_L2p_IF_SensorFaultFlags_L2p
+
+Std_ReturnType Rte_Read_RP_ScpAp_SensorValidityFlag_L2p_IF_SensorFaultFlags_L2p
+  (IF_SensorFaultFlgs_L2p_IDT* u);
+
+#define Rte_Read_RP_ScpAp_Vechilespeed_L2p_IF_Vechilespeed_L2p Rte_Read_ScpAp_SpeedSupervision_RP_ScpAp_Vechilespeed_L2p_IF_Vechilespeed_L2p
+
+Std_ReturnType Rte_Read_RP_ScpAp_Vechilespeed_L2p_IF_Vechilespeed_L2p(uint16* u);
+
+#define Rte_Write_PP_SafeTorquecmd_L2p_IF_SafeTorquecmd_L2p Rte_Write_ScpAp_SpeedSupervision_PP_SafeTorquecmd_L2p_IF_SafeTorquecmd_L2p
+
+Std_ReturnType Rte_Write_PP_SafeTorquecmd_L2p_IF_SafeTorquecmd_L2p(sint16 u);
+
+#define Rte_Invalidate_PP_SafeTorquecmd_L2p_IF_SafeTorquecmd_L2p Rte_Invalidate_ScpAp_SpeedSupervision_PP_SafeTorquecmd_L2p_IF_SafeTorquecmd_L2p
+
+Std_ReturnType Rte_Invalidate_PP_SafeTorquecmd_L2p_IF_SafeTorquecmd_L2p(void);
+
+#define Rte_Write_PP_SafetyOverspeedFlag_IF_SafetyOverspeedFlag Rte_Write_ScpAp_SpeedSupervision_PP_SafetyOverspeedFlag_IF_SafetyOverspeedFlag
+
+Std_ReturnType Rte_Write_PP_SafetyOverspeedFlag_IF_SafetyOverspeedFlag(boolean u);
+
+#define Rte_Invalidate_PP_SafetyOverspeedFlag_IF_SafetyOverspeedFlag Rte_Invalidate_ScpAp_SpeedSupervision_PP_SafetyOverspeedFlag_IF_SafetyOverspeedFlag
+
+Std_ReturnType Rte_Invalidate_PP_SafetyOverspeedFlag_IF_SafetyOverspeedFlag(void);
+
+#define Rte_Write_PP_SafetySpeedMonitorFaultFlag_IF_SafetySpeedMonitorFaultFlag Rte_Write_ScpAp_SpeedSupervision_PP_SafetySpeedMonitorFaultFlag_IF_SafetySpeedMonitorFaultFlag
+
+Std_ReturnType
+  Rte_Write_PP_SafetySpeedMonitorFaultFlag_IF_SafetySpeedMonitorFaultFlag
+  (boolean u);
+
+#define Rte_Invalidate_PP_SafetySpeedMonitorFaultFlag_IF_SafetySpeedMonitorFaultFlag Rte_Invalidate_ScpAp_SpeedSupervision_PP_SafetySpeedMonitorFaultFlag_IF_SafetySpeedMonitorFaultFlag
+
+Std_ReturnType
+  Rte_Invalidate_PP_SafetySpeedMonitorFaultFlag_IF_SafetySpeedMonitorFaultFlag
+  (void);
+
+/* Entry point functions */
+extern FUNC(void, ScpAp_SpeedSupervision_CODE) SafetySpeedSuperv_Main(void);
+extern FUNC(void, ScpAp_SpeedSupervision_CODE) ScpAp_SpeedSupervision_Init(void);
+
+#endif
