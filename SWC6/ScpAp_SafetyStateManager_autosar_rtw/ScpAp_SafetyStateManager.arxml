@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Auto generated XML Component Description for model ScpAp_SafetyStateManager
-Model version                : 1.148
+Model version                : 1.151
 Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
-XML source code generated on : Thu Feb 19 12:25:24 2026
+XML source code generated on : Fri Feb 20 12:21:25 2026
 Model Checksum               : 3957479753 973619637 2390882439 3564985407
 -->
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
@@ -593,7 +593,7 @@ For example: 1, 0, 126, +10.</L-2>
                         <SWC-INTERNAL-BEHAVIOR UUID="1DBB625E-FFD7-40B2-9B2A-4C48E3DCA2E3">
                             <SHORT-NAME>ScpAp_SafetyStateManager_InternalBehavior</SHORT-NAME>
                             <STATIC-MEMORYS>
-                                <VARIABLE-DATA-PROTOTYPE UUID="56690976-4194-5acf-6ef5-c00c06246282">
+                                <VARIABLE-DATA-PROTOTYPE UUID="491ec3ad-a344-5bd9-7e5c-f5aac554521f">
                                     <SHORT-NAME>ScpAp_SafetyStateManag_BrkTrqRq</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -607,7 +607,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="4b130ebf-b02f-5792-f1f7-15d25562f0d7">
+                                <VARIABLE-DATA-PROTOTYPE UUID="6047d501-7bb9-5199-41fa-c41d6b0cc10d">
                                     <SHORT-NAME>ScpAp_SafetyStateManager_TrqCmd</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -621,7 +621,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="2740b8f1-1c98-53e4-acd9-56aad3080506">
+                                <VARIABLE-DATA-PROTOTYPE UUID="c494a8f1-8614-53a7-998a-a9a60bca5ce6">
                                     <SHORT-NAME>ScpAp_SafetyStateManager_SpdCmd</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -635,7 +635,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="7b6075d7-56a2-5fa9-01eb-de696a795bcd">
+                                <VARIABLE-DATA-PROTOTYPE UUID="43acf16e-f980-5862-e8e0-a1567e91ce02">
                                     <SHORT-NAME>ScpAp_SafetyStateMan_SpdSlewLmt</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -649,7 +649,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="bc89f06c-9480-59b2-8499-65ef523fd08e">
+                                <VARIABLE-DATA-PROTOTYPE UUID="c8e31b1a-a5de-517d-2561-bf6ec0f0788d">
                                     <SHORT-NAME>ScpAp_SafetyStateMan_TrqSlewLmt</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -663,7 +663,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="3d12e88a-0457-554f-e8e3-a8fe3476a6d5">
+                                <VARIABLE-DATA-PROTOTYPE UUID="707bfa46-f3a8-5b48-ae72-13e61ba3985a">
                                     <SHORT-NAME>ScpAp_SafetyS_SafeTorquecmd_L2p</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -677,7 +677,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="f2393cab-4c1e-5a82-6192-5048f73e2dfb">
+                                <VARIABLE-DATA-PROTOTYPE UUID="420aeef4-6d2d-5acb-a37e-9ff73acb2edf">
                                     <SHORT-NAME>ScpAp_SafetySta_MsgCrc_mBrkCtrl</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -691,7 +691,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="95c20829-bcb9-51e3-dfef-b47a586bccdb">
+                                <VARIABLE-DATA-PROTOTYPE UUID="48c8044b-987a-5ba0-67e8-78fc7742f575">
                                     <SHORT-NAME>ScpAp_SafetyStateManager_EPBCmd</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -705,7 +705,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="8791065a-7d24-5f44-dc61-37c1da78acc6">
+                                <VARIABLE-DATA-PROTOTYPE UUID="f4c84a34-0db5-5ccb-92b7-84af4b97c0a2">
                                     <SHORT-NAME>ScpAp_SafetySt_MsgCntr_mBrkCtrl</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -719,7 +719,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="e5c84f10-a1b7-5248-9ff8-411f37adc525">
+                                <VARIABLE-DATA-PROTOTYPE UUID="76203621-5e81-5f0a-08db-9f54c5b9a89e">
                                     <SHORT-NAME>ScpAp_SafetyStateM_CtrlMode_Whd</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -733,7 +733,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="3fa84767-4a76-5a99-d911-576c7b33e56c">
+                                <VARIABLE-DATA-PROTOTYPE UUID="69bad1e9-3d5e-5549-107e-a185e07a03e2">
                                     <SHORT-NAME>ScpAp_SafetySt_MsgCntr_mWhdCtrl</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -747,7 +747,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="21d8da65-37f0-5ace-2166-e23c61716afc">
+                                <VARIABLE-DATA-PROTOTYPE UUID="5285d6e2-ca78-574e-8451-76c5d7f2bc5c">
                                     <SHORT-NAME>ScpAp_SafetySta_MsgCrc_mWhdCtrl</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -761,7 +761,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="01f22077-d9e0-5c67-f9fb-44e8ca7e4b76">
+                                <VARIABLE-DATA-PROTOTYPE UUID="64e039bc-811c-5348-aaec-4e250fc482bc">
                                     <SHORT-NAME>ScpAp_SafetyStateManage_MtrMode</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -775,7 +775,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="205f3f5a-34cd-5880-67b9-088c3e632b8c">
+                                <VARIABLE-DATA-PROTOTYPE UUID="5eee75e8-d66e-51c0-83e9-85732ceb3d2c">
                                     <SHORT-NAME>ScpAp_SafetySta_Aeb_Active_Ebcm</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -789,7 +789,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="de882873-0274-5646-df2a-7f5725fbd048">
+                                <VARIABLE-DATA-PROTOTYPE UUID="8ac89ea7-5ddb-50eb-b529-a580960b4b41">
                                     <SHORT-NAME>ScpAp_SafetyStat_BrkEnbl_EBCM2L</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -803,7 +803,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="7d55d726-4a36-59cc-e4fa-08926a4c86a7">
+                                <VARIABLE-DATA-PROTOTYPE UUID="7afc99c6-f727-57a4-676e-e73ad11f4583">
                                     <SHORT-NAME>ScpAp_SafetySta_ClearFltRq_Ebcm</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -817,7 +817,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="0f2f5d5b-53d4-54fb-87be-5133298a8407">
+                                <VARIABLE-DATA-PROTOTYPE UUID="0b000819-7871-581f-9c5b-69dc16ec8ea8">
                                     <SHORT-NAME>ScpAp_SafetyStateManage_DsblTCS</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -831,7 +831,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="d738695a-ac5f-5b58-05a2-039d7eca9553">
+                                <VARIABLE-DATA-PROTOTYPE UUID="7e10a588-3bd2-5c43-e89f-4ac29e59f121">
                                     <SHORT-NAME>ScpAp_SafetySta_EbcmMaintModeRq</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -845,7 +845,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="be343e93-d746-543f-193e-80a83b669fde">
+                                <VARIABLE-DATA-PROTOTYPE UUID="50248619-0e09-54e3-38c3-1988df0d28b2">
                                     <SHORT-NAME>ScpAp_SafetyStateM_EbcmShtdwnRq</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -859,7 +859,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="b92bfb56-27eb-58b1-8838-5311bb3e2743">
+                                <VARIABLE-DATA-PROTOTYPE UUID="b12bb636-d522-534e-fbc0-c5dce8a05d24">
                                     <SHORT-NAME>ScpAp_SafetyStateMana_EpbCalCmd</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -873,7 +873,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="049eec97-8d92-5b99-6401-0a0acd61c9d3">
+                                <VARIABLE-DATA-PROTOTYPE UUID="ac4c7fae-9e6c-5416-3f2c-6823ef6e0ceb">
                                     <SHORT-NAME>ScpAp_SafetyStateManager_HoldRq</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -887,7 +887,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="860a688f-5941-5056-ba6c-3d869a738f7d">
+                                <VARIABLE-DATA-PROTOTYPE UUID="5c1ce325-88c7-5512-60de-ee8d905f338e">
                                     <SHORT-NAME>ScpAp_SafetyStateManager_Boot</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -901,7 +901,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="d3657c0b-836a-5dee-94fa-9bd3eb2912bc">
+                                <VARIABLE-DATA-PROTOTYPE UUID="dcc5a5ad-8089-5e4c-946d-601f42ecbd12">
                                     <SHORT-NAME>ScpAp_SafetyStateManager_Debug</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -915,7 +915,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="11b3368e-2b9c-55ed-f8b3-144c3476e2c6">
+                                <VARIABLE-DATA-PROTOTYPE UUID="9031a96e-a7b5-5447-0f9a-c0b737b3063b">
                                     <SHORT-NAME>ScpAp_SafetyStateManage_EnblCmd</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>
@@ -929,7 +929,7 @@ For example: 1, 0, 126, +10.</L-2>
                                     </SW-DATA-DEF-PROPS>
                                     <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
                                 </VARIABLE-DATA-PROTOTYPE>
-                                <VARIABLE-DATA-PROTOTYPE UUID="89c51d6b-a0e7-5db0-d522-72a0e193d6fd">
+                                <VARIABLE-DATA-PROTOTYPE UUID="803260cc-6a69-5a29-98ed-10b3fb3c5ede">
                                     <SHORT-NAME>ScpAp_SafetySta_MultiportSwitch</SHORT-NAME>
                                     <CATEGORY>VALUE</CATEGORY>
                                     <SW-DATA-DEF-PROPS>

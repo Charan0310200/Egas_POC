@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Auto generated XML Component Description for model ScpAp_SafetyStateManager
-Model version                : 1.148
+Model version                : 1.151
 Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
-XML source code generated on : Thu Feb 19 12:25:24 2026
+XML source code generated on : Fri Feb 20 12:21:25 2026
 Model Checksum               : 3957479753 973619637 2390882439 3564985407
 -->
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
