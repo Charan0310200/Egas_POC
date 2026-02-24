@@ -7,7 +7,7 @@
    This file is generated for:
    Atomic software component:  "ScpAp_VechileLongiControl"
    ARXML schema: "R20-11"
-   File generated on: "Tue Feb 17 16:18:47 2026"  */
+   File generated on: "Mon Feb 23 14:17:27 2026"  */
 
 #ifndef Rte_ScpAp_VechileLongiControl_h
 #define Rte_ScpAp_VechileLongiControl_h
@@ -24,6 +24,11 @@ Std_ReturnType Rte_Read_RP_ScpAp_Mode_L2p_IF_SafetyMode_L2p(SafetyMode_L2p_IDT*
 
 Std_ReturnType Rte_Read_RP_ScpAp_Vechilespeed_L2p_IF_Vechilespeed_L2p(uint16* u);
 
+#define Rte_Read_RP_ScpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq Rte_Read_ScpAp_VechileLongiControl_RP_ScpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq
+
+Std_ReturnType Rte_Read_RP_ScpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq
+  (SG_mVehCtrlADRq_IDT_E2E* u);
+
 #define Rte_Write_PP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p Rte_Write_ScpAp_VechileLongiControl_PP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p
 
 Std_ReturnType Rte_Write_PP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p(sint16
@@ -33,11 +38,6 @@ Std_ReturnType Rte_Write_PP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p(sint16
 
 Std_ReturnType Rte_Invalidate_PP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p
   (void);
-
-#define Rte_Read_RP_ScpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq Rte_Read_ScpAp_VechileLongiControl_RP_ScpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq
-
-Std_ReturnType Rte_Read_RP_ScpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq
-  (SG_mVehCtrlADRq_IDT_E2E* u);
 
 /* Entry point functions */
 extern FUNC(void, ScpAp_VechileLongiControl_CODE) ScpAp_VechileLongiControl_Init

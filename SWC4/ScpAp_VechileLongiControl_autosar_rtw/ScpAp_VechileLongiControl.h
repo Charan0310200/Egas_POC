@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_VechileLongiControl'.
  *
- * Model version                  : 1.5
+ * Model version                  : 1.4
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Feb 17 16:18:36 2026
+ * C/C++ source code generated on : Mon Feb 23 14:17:06 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -30,14 +30,14 @@
 
 /* PublicStructure Variables for Internal Data, for system '<Root>' */
 typedef struct {
+  sint16 NominalTorquecmd_L2p_g;       /* '<S4>/NominalTorquecmd_L2p' */
   uint16 Vechilespeed_L2p;
                       /* '<S3>/RP_ScpAp_Vechilespeed_L2p_IF_Vechilespeed_L2p' */
   SafetyMode_L2p_IDT Mode_L2p;  /* '<S3>/RP_ScpAp_Mode_L2p_IF_SafetyMode_L2p' */
 } ARID_DEF_ScpAp_VechileLongiCo_T;
 
 /* PublicStructure Variables for Internal Data */
-extern ARID_DEF_ScpAp_VechileLongiCo_T ScpAp_VechileLongiCont_ARID_DEF;
-                      /* '<S3>/RP_ScpAp_Vechilespeed_L2p_IF_Vechilespeed_L2p' */
+extern ARID_DEF_ScpAp_VechileLongiCo_T ScpAp_VechileLongiCont_ARID_DEF;/* '<S4>/NominalTorquecmd_L2p' */
 
 /* Static Memory for Internal Data */
 

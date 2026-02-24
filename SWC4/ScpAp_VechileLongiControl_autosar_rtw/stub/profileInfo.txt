@@ -2,6 +2,6 @@
 #this file contains the list of RTE methods that the profiling must filter out
 -Rte_Read_RP_ScpAp_Mode_L2p_IF_SafetyMode_L2p
 -Rte_Read_RP_ScpAp_Vechilespeed_L2p_IF_Vechilespeed_L2p
+-Rte_Read_RP_ScpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq
 -Rte_Write_PP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p
 -Rte_Invalidate_PP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p
--Rte_Read_RP_ScpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq

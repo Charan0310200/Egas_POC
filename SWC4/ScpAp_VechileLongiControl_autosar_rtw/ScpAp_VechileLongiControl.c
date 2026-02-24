@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ScpAp_VechileLongiControl'.
  *
- * Model version                  : 1.5
+ * Model version                  : 1.4
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Feb 17 16:18:36 2026
+ * C/C++ source code generated on : Mon Feb 23 14:17:06 2026
  *
  * Target selection: autosar.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -23,8 +23,7 @@
 #include "Platform_Types.h"
 
 /* PublicStructure Variables for Internal Data */
-ARID_DEF_ScpAp_VechileLongiCo_T ScpAp_VechileLongiCont_ARID_DEF;
-                      /* '<S3>/RP_ScpAp_Vechilespeed_L2p_IF_Vechilespeed_L2p' */
+ARID_DEF_ScpAp_VechileLongiCo_T ScpAp_VechileLongiCont_ARID_DEF;/* '<S4>/NominalTorquecmd_L2p' */
 
 /* Static Memory for Internal Data */
 
@@ -183,14 +182,16 @@ void VechileLongiControl_Main(void)
   /* End of Outputs for SubSystem: '<S2>/SWC4_Control' */
 
   /* Outputs for Atomic SubSystem: '<S2>/Comm_Tx' */
-  /* Outport: '<Root>/PP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p' incorporates:
-   *  SignalConversion generated from: '<S4>/NominalTorquecmd_L2p'
-   */
-  (void)Rte_Write_PP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p
-    (ScpAp_Vech_NominalTorquecmd_L2p);
+  /* SignalConversion generated from: '<S4>/NominalTorquecmd_L2p' */
+  ScpAp_VechileLongiCont_ARID_DEF.NominalTorquecmd_L2p_g =
+    ScpAp_Vech_NominalTorquecmd_L2p;
 
   /* End of Outputs for SubSystem: '<S2>/Comm_Tx' */
   /* End of Outputs for SubSystem: '<Root>/VechileLongiControl_Main_sys' */
+
+  /* Outport: '<Root>/PP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p' */
+  (void)Rte_Write_PP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p
+    (ScpAp_VechileLongiCont_ARID_DEF.NominalTorquecmd_L2p_g);
 }
 
 #define ScpAp_VechileLongiControl_STOP_SEC_CODE

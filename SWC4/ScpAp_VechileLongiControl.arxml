@@ -95,7 +95,7 @@
                 </DATA-CONSTR-RULE>
               </DATA-CONSTR-RULES>
             </DATA-CONSTR>
-            <DATA-CONSTR UUID="df854928-5fd2-5322-6d84-a4b674e1645d">
+            <DATA-CONSTR UUID="f208ad4c-d032-522e-f04d-68dcb15321ee">
               <SHORT-NAME>DC_SafetyMode_L2p_IDT</SHORT-NAME>
               <DATA-CONSTR-RULES>
                 <DATA-CONSTR-RULE>
@@ -349,16 +349,6 @@ For example: 1, 0, 126, +10.</L-2>
                 </SW-ADDR-METHOD>
               </ELEMENTS>
             </AR-PACKAGE>
-            <AR-PACKAGE>
-              <SHORT-NAME>Units</SHORT-NAME>
-              <ELEMENTS>
-                <UNIT UUID="560360a5-e99c-5bc9-7500-179c60d148d3">
-                  <SHORT-NAME>NoUnit</SHORT-NAME>
-                  <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
-                  <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
-                </UNIT>
-              </ELEMENTS>
-            </AR-PACKAGE>
           </AR-PACKAGES>
         </AR-PACKAGE>
       </AR-PACKAGES>
@@ -436,15 +426,10 @@ For example: 1, 0, 126, +10.</L-2>
             </R-PORT-PROTOTYPE>
             <R-PORT-PROTOTYPE UUID="F642DE94-0F69-4208-A1A9-900B5F240379">
               <SHORT-NAME>RP_ScpApADRx_SG_mVehCtrlADRq</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV" />
-                </SDGS>
-              </ADMIN-DATA>
               <REQUIRED-COM-SPECS>
                 <NONQUEUED-RECEIVER-COM-SPEC>
                   <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mVehCtrlADRq_E2E/SG_mVehCtrlADRq</DATA-ELEMENT-REF>
-                  <HANDLE-OUT-OF-RANGE>DEFAULT</HANDLE-OUT-OF-RANGE>
+                  <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
                   <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
                   <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
                   <ENABLE-UPDATE>false</ENABLE-UPDATE>
@@ -452,8 +437,10 @@ For example: 1, 0, 126, +10.</L-2>
                     <DATA-FILTER-TYPE>ALWAYS</DATA-FILTER-TYPE>
                   </FILTER>
                   <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                  <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
                   <INIT-VALUE>
                     <RECORD-VALUE-SPECIFICATION>
+                      <SHORT-LABEL>ComSpec64bb04c2_01277ab3d6cb378d</SHORT-LABEL>
                       <FIELDS>
                         <NUMERICAL-VALUE-SPECIFICATION>
                           <SHORT-LABEL>AebEvent</SHORT-LABEL>
@@ -507,7 +494,7 @@ For example: 1, 0, 126, +10.</L-2>
             <SWC-INTERNAL-BEHAVIOR UUID="BCE3A1E2-49F4-4D38-AF39-9DC9C273FDA0">
               <SHORT-NAME>ScpAp_VechileLongiControl_InternalBehavior</SHORT-NAME>
               <STATIC-MEMORYS>
-                <VARIABLE-DATA-PROTOTYPE UUID="5cdade7e-cc49-5fe4-1cfd-5776e1fdcec3">
+                <VARIABLE-DATA-PROTOTYPE UUID="858b719a-2131-5540-4d56-55f7aaa0774b">
                   <SHORT-NAME>Integrator_State</SHORT-NAME>
                   <CATEGORY>VALUE</CATEGORY>
                   <SW-DATA-DEF-PROPS>
@@ -521,7 +508,7 @@ For example: 1, 0, 126, +10.</L-2>
                   </SW-DATA-DEF-PROPS>
                   <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float64</TYPE-TREF>
                 </VARIABLE-DATA-PROTOTYPE>
-                <VARIABLE-DATA-PROTOTYPE UUID="2494c02a-2be8-5dd9-b3c2-ba44c6320fde">
+                <VARIABLE-DATA-PROTOTYPE UUID="a4170ff5-1453-5297-9235-87d9866ae10e">
                   <SHORT-NAME>ScpAp_VechileLong_VehSpdCmd_Kph</SHORT-NAME>
                   <CATEGORY>VALUE</CATEGORY>
                   <SW-DATA-DEF-PROPS>
@@ -535,7 +522,7 @@ For example: 1, 0, 126, +10.</L-2>
                   </SW-DATA-DEF-PROPS>
                   <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
                 </VARIABLE-DATA-PROTOTYPE>
-                <VARIABLE-DATA-PROTOTYPE UUID="44676872-e70f-5ad2-ff0f-6f5ec99f6daf">
+                <VARIABLE-DATA-PROTOTYPE UUID="5f6cfbad-f937-5ff6-725d-a62c01ae5594">
                   <SHORT-NAME>ScpAp_VechileLongiC_Speed_Error</SHORT-NAME>
                   <CATEGORY>VALUE</CATEGORY>
                   <SW-DATA-DEF-PROPS>
@@ -549,7 +536,7 @@ For example: 1, 0, 126, +10.</L-2>
                   </SW-DATA-DEF-PROPS>
                   <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
                 </VARIABLE-DATA-PROTOTYPE>
-                <VARIABLE-DATA-PROTOTYPE UUID="ce1b4fbd-0dbd-57ca-49fc-344c1d46135c">
+                <VARIABLE-DATA-PROTOTYPE UUID="c3a6a77b-5492-53e8-2b70-d94cbf03a75b">
                   <SHORT-NAME>ScpAp_Vech_NominalTorquecmd_L2p</SHORT-NAME>
                   <CATEGORY>VALUE</CATEGORY>
                   <SW-DATA-DEF-PROPS>
@@ -563,7 +550,7 @@ For example: 1, 0, 126, +10.</L-2>
                   </SW-DATA-DEF-PROPS>
                   <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</TYPE-TREF>
                 </VARIABLE-DATA-PROTOTYPE>
-                <VARIABLE-DATA-PROTOTYPE UUID="dd47beaf-dbee-5104-1a5e-99411b090fe0">
+                <VARIABLE-DATA-PROTOTYPE UUID="a4ec12b9-96cd-5243-a9f3-429fa13c5ccf">
                   <SHORT-NAME>ScpAp_Clamped_Integrator_State</SHORT-NAME>
                   <CATEGORY>VALUE</CATEGORY>
                   <SW-DATA-DEF-PROPS>
@@ -577,7 +564,7 @@ For example: 1, 0, 126, +10.</L-2>
                   </SW-DATA-DEF-PROPS>
                   <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</TYPE-TREF>
                 </VARIABLE-DATA-PROTOTYPE>
-                <VARIABLE-DATA-PROTOTYPE UUID="13225bf1-aa02-57b2-0688-95da01ffda8e">
+                <VARIABLE-DATA-PROTOTYPE UUID="e46dd9d7-3289-572c-fdad-919b09c81571">
                   <SHORT-NAME>ScpAp_Vechile_proportional_term</SHORT-NAME>
                   <CATEGORY>VALUE</CATEGORY>
                   <SW-DATA-DEF-PROPS>
@@ -591,7 +578,7 @@ For example: 1, 0, 126, +10.</L-2>
                   </SW-DATA-DEF-PROPS>
                   <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</TYPE-TREF>
                 </VARIABLE-DATA-PROTOTYPE>
-                <VARIABLE-DATA-PROTOTYPE UUID="486fa039-ce1a-5d56-c859-495ccf467bf0">
+                <VARIABLE-DATA-PROTOTYPE UUID="9f89af24-1526-5a4e-55a9-4c6ca761c834">
                   <SHORT-NAME>ScpAp_VechileLongiC_Control_raw</SHORT-NAME>
                   <CATEGORY>VALUE</CATEGORY>
                   <SW-DATA-DEF-PROPS>
@@ -605,7 +592,7 @@ For example: 1, 0, 126, +10.</L-2>
                   </SW-DATA-DEF-PROPS>
                   <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</TYPE-TREF>
                 </VARIABLE-DATA-PROTOTYPE>
-                <VARIABLE-DATA-PROTOTYPE UUID="09b0070b-f99a-5bc6-6b7b-dbc94c322248">
+                <VARIABLE-DATA-PROTOTYPE UUID="84c9d45d-ced6-5b3f-03de-6f5989497a1d">
                   <SHORT-NAME>ScpAp_Cal_NominalTorquecmd_L2p</SHORT-NAME>
                   <CATEGORY>VALUE</CATEGORY>
                   <SW-DATA-DEF-PROPS>
@@ -634,6 +621,17 @@ For example: 1, 0, 126, +10.</L-2>
                   <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
                   <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CODE</SW-ADDR-METHOD-REF>
                   <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="0C0D9D9F-17E3-4CEB-97B4-8FC1EA8C294D">
+                      <SHORT-NAME>SEND_PP_NominalTorquecmd_L2p_IF_NominalTorquecmd_L2p</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/ScpAp_VechileLongiControl/PP_NominalTorquecmd_L2p</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_NominalTorquecmd_L2p/IF_NominalTorquecmd_L2p</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
                   <SYMBOL>ScpAp_VechileLongiControl_Init</SYMBOL>
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="E47991C1-DF3E-4A13-AFFF-72E0DC777AFC">
@@ -660,8 +658,8 @@ For example: 1, 0, 126, +10.</L-2>
                         </AUTOSAR-VARIABLE-IREF>
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>
-                    <VARIABLE-ACCESS UUID="859EB7A8-A35F-49B9-BCF8-57770F4CC5D8">
-                      <SHORT-NAME>REC_RP_ScpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq</SHORT-NAME>
+                    <VARIABLE-ACCESS UUID="d825cc11-d31e-554a-15df-ac46208b0e62">
+                      <SHORT-NAME>IN_RP_ScpApADRx_SG_mVehCtrlADRq_SG_mVehCtrlADRq</SHORT-NAME>
                       <ACCESSED-VARIABLE>
                         <AUTOSAR-VARIABLE-IREF>
                           <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/ScpAp_VechileLongiControl/RP_ScpApADRx_SG_mVehCtrlADRq</PORT-PROTOTYPE-REF>
@@ -727,7 +725,7 @@ For example: 1, 0, 126, +10.</L-2>
               </MEMORY-SECTION>
             </MEMORY-SECTIONS>
           </RESOURCE-CONSUMPTION>
-          <SW-VERSION>1.52.1</SW-VERSION>
+          <SW-VERSION>1.5.1</SW-VERSION>
           <USED-CODE-GENERATOR>Embedded Coder 25.2 (R2025b) 28-Jul-2025</USED-CODE-GENERATOR>
           <VENDOR-ID>0</VENDOR-ID>
           <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/ScpAp_VechileLongiControl/ScpAp_VechileLongiControl_InternalBehavior</BEHAVIOR-REF>
@@ -899,7 +897,7 @@ For example: 1, 0, 126, +10.</L-2>
             <COMPU-METHOD UUID="FD96C8A6-C4CD-4F3A-8CC2-1B4F72A8CC54">
               <SHORT-NAME>CM_SafetyMode_L2p</SHORT-NAME>
               <CATEGORY>TEXTTABLE</CATEGORY>
-              <UNIT-REF DEST="UNIT">/AUTOSAR_Platform/ImplementationDataTypes/Units/NoUnit</UNIT-REF>
+              <UNIT-REF DEST="UNIT">/DataTypes/Units/NoUnit</UNIT-REF>
               <COMPU-INTERNAL-TO-PHYS>
                 <COMPU-SCALES>
                   <COMPU-SCALE>
@@ -1030,6 +1028,16 @@ For example: 1, 0, 126, +10.</L-2>
                 </DATA-CONSTR-RULE>
               </DATA-CONSTR-RULES>
             </DATA-CONSTR>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>Units</SHORT-NAME>
+          <ELEMENTS>
+            <UNIT UUID="53a1749d-c677-5361-d7c4-118318590f75">
+              <SHORT-NAME>NoUnit</SHORT-NAME>
+              <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
+              <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
+            </UNIT>
           </ELEMENTS>
         </AR-PACKAGE>
       </AR-PACKAGES>
