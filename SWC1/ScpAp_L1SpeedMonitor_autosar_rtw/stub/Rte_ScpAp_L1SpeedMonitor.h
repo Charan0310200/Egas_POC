@@ -1,0 +1,86 @@
+/* This file contains stub implementations of the AUTOSAR RTE functions.
+   The stub implementations can be used for testing the generated code in
+   Simulink, for example, in SIL/PIL simulations of the component under
+   test. Note that this file should be replaced with an appropriate RTE
+   file when deploying the generated code outside of Simulink.
+
+   This file is generated for:
+   Atomic software component:  "ScpAp_L1SpeedMonitor"
+   ARXML schema: "R23-11"
+   File generated on: "Tue Feb 10 15:17:31 2026"  */
+
+#ifndef Rte_ScpAp_L1SpeedMonitor_h
+#define Rte_ScpAp_L1SpeedMonitor_h
+#include "Rte_Type.h"
+#include "Compiler.h"
+
+/* Data access functions */
+#define Rte_Read_RP_SCpAPSG_mVcuImuLinAccel_SG_mVcuImuLinAccel_VDP Rte_Read_ScpAp_L1SpeedMonitor_RP_SCpAPSG_mVcuImuLinAccel_SG_mVcuImuLinAccel_VDP
+
+Std_ReturnType Rte_Read_RP_SCpAPSG_mVcuImuLinAccel_SG_mVcuImuLinAccel_VDP
+  (SG_mVcuImuLinAccel_IDT* u);
+
+#define Rte_Read_RP_SCpApVmEbcm2LRx_SG_mEbcm2L_WhlSpd_SG_mEbcm2L_WhlSpd Rte_Read_ScpAp_L1SpeedMonitor_RP_SCpApVmEbcm2LRx_SG_mEbcm2L_WhlSpd_SG_mEbcm2L_WhlSpd
+
+Std_ReturnType Rte_Read_RP_SCpApVmEbcm2LRx_SG_mEbcm2L_WhlSpd_SG_mEbcm2L_WhlSpd
+  (SG_mEbcm2L_WhlSpd_IDT_E2E* u);
+
+#define Rte_Read_RP_SCpApVmRx_SG_mWhdStat_SG_mWhdStat Rte_Read_ScpAp_L1SpeedMonitor_RP_SCpApVmRx_SG_mWhdStat_SG_mWhdStat
+
+Std_ReturnType Rte_Read_RP_SCpApVmRx_SG_mWhdStat_SG_mWhdStat(SG_mWhdStat_IDT_E2E*
+  u);
+
+#define Rte_Write_PP_IMU_AccelX_L1_IF_IMU_AccelX_L1p Rte_Write_ScpAp_L1SpeedMonitor_PP_IMU_AccelX_L1_IF_IMU_AccelX_L1p
+
+Std_ReturnType Rte_Write_PP_IMU_AccelX_L1_IF_IMU_AccelX_L1p(float32 u);
+
+#define Rte_Invalidate_PP_IMU_AccelX_L1_IF_IMU_AccelX_L1p Rte_Invalidate_ScpAp_L1SpeedMonitor_PP_IMU_AccelX_L1_IF_IMU_AccelX_L1p
+
+Std_ReturnType Rte_Invalidate_PP_IMU_AccelX_L1_IF_IMU_AccelX_L1p(void);
+
+#define Rte_Write_PP_MotorSpeed_L1p_IF_MotorSpeed_L1p Rte_Write_ScpAp_L1SpeedMonitor_PP_MotorSpeed_L1p_IF_MotorSpeed_L1p
+
+Std_ReturnType Rte_Write_PP_MotorSpeed_L1p_IF_MotorSpeed_L1p(uint8 u);
+
+#define Rte_Invalidate_PP_MotorSpeed_L1p_IF_MotorSpeed_L1p Rte_Invalidate_ScpAp_L1SpeedMonitor_PP_MotorSpeed_L1p_IF_MotorSpeed_L1p
+
+Std_ReturnType Rte_Invalidate_PP_MotorSpeed_L1p_IF_MotorSpeed_L1p(void);
+
+#define Rte_Write_PP_ValidityFlag_L1p_IF_ValidityFlag_L1p Rte_Write_ScpAp_L1SpeedMonitor_PP_ValidityFlag_L1p_IF_ValidityFlag_L1p
+
+Std_ReturnType Rte_Write_PP_ValidityFlag_L1p_IF_ValidityFlag_L1p(const
+  IF_ValidityFlag_L1p_IDT* u);
+
+#define Rte_Invalidate_PP_ValidityFlag_L1p_IF_ValidityFlag_L1p Rte_Invalidate_ScpAp_L1SpeedMonitor_PP_ValidityFlag_L1p_IF_ValidityFlag_L1p
+
+Std_ReturnType Rte_Invalidate_PP_ValidityFlag_L1p_IF_ValidityFlag_L1p(void);
+
+#define Rte_Write_PP_Wheelspeed_FL_L1p_IF_Wheelspeed_Fx_L1p Rte_Write_ScpAp_L1SpeedMonitor_PP_Wheelspeed_FL_L1p_IF_Wheelspeed_Fx_L1p
+
+Std_ReturnType Rte_Write_PP_Wheelspeed_FL_L1p_IF_Wheelspeed_Fx_L1p(uint16 u);
+
+#define Rte_Invalidate_PP_Wheelspeed_FL_L1p_IF_Wheelspeed_Fx_L1p Rte_Invalidate_ScpAp_L1SpeedMonitor_PP_Wheelspeed_FL_L1p_IF_Wheelspeed_Fx_L1p
+
+Std_ReturnType Rte_Invalidate_PP_Wheelspeed_FL_L1p_IF_Wheelspeed_Fx_L1p(void);
+
+#define Rte_Write_PP_Wheelspeed_FR_L1p_IF_Wheelspeed_Fx_L1p Rte_Write_ScpAp_L1SpeedMonitor_PP_Wheelspeed_FR_L1p_IF_Wheelspeed_Fx_L1p
+
+Std_ReturnType Rte_Write_PP_Wheelspeed_FR_L1p_IF_Wheelspeed_Fx_L1p(uint16 u);
+
+#define Rte_Invalidate_PP_Wheelspeed_FR_L1p_IF_Wheelspeed_Fx_L1p Rte_Invalidate_ScpAp_L1SpeedMonitor_PP_Wheelspeed_FR_L1p_IF_Wheelspeed_Fx_L1p
+
+Std_ReturnType Rte_Invalidate_PP_Wheelspeed_FR_L1p_IF_Wheelspeed_Fx_L1p(void);
+
+#define Rte_Write_PP_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p Rte_Write_ScpAp_L1SpeedMonitor_PP_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p
+
+Std_ReturnType Rte_Write_PP_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p(uint16 u);
+
+#define Rte_Invalidate_PP_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p Rte_Invalidate_ScpAp_L1SpeedMonitor_PP_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p
+
+Std_ReturnType Rte_Invalidate_PP_Wheelspeed_R_L1p_IF_Wheelspeed_Fx_L1p(void);
+
+/* Entry point functions */
+extern FUNC(void, ScpAp_L1SpeedMonitor_CODE) SensorIFL1_Main_10(void);
+extern FUNC(void, ScpAp_L1SpeedMonitor_CODE) ScpAp_L1SpeedMonitor_Init(void);
+
+#endif

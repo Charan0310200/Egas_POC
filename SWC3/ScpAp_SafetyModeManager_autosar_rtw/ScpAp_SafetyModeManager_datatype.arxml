@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model ScpAp_SafetyModeManager
+Model version                : 1.75
+Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
+XML source code generated on : Tue Feb 17 17:07:40 2026
+Model Checksum               : 350733017 2564835752 3426896705 3036312786
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_Platform</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>DataConstrs</SHORT-NAME>
+                    <ELEMENTS>
+                        <DATA-CONSTR UUID="42b9ade7-6597-5e62-3344-5ed87ad30c28">
+                            <SHORT-NAME>DC_VechSafetyStatus_L2p_IDT</SHORT-NAME>
+                            <DATA-CONSTR-RULES>
+                                <DATA-CONSTR-RULE>
+                                    <INTERNAL-CONSTRS>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                                    </INTERNAL-CONSTRS>
+                                </DATA-CONSTR-RULE>
+                            </DATA-CONSTR-RULES>
+                        </DATA-CONSTR>
+                        <DATA-CONSTR UUID="df854928-5fd2-5322-6d84-a4b674e1645d">
+                            <SHORT-NAME>DC_SafetyMode_L2p_IDT</SHORT-NAME>
+                            <DATA-CONSTR-RULES>
+                                <DATA-CONSTR-RULE>
+                                    <INTERNAL-CONSTRS>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                                    </INTERNAL-CONSTRS>
+                                </DATA-CONSTR-RULE>
+                            </DATA-CONSTR-RULES>
+                        </DATA-CONSTR>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+            <SHORT-NAME>DataTypes</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>SwAddrMethods</SHORT-NAME>
+                    <ELEMENTS>
+                        <SW-ADDR-METHOD UUID="840fb0a3-44dd-5bd5-445c-bac504056abf">
+                            <SHORT-NAME>CODE</SHORT-NAME>
+                            <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                            <SECTION-TYPE>CODE</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD UUID="30c1c9bb-9c00-58fb-86ce-e8c515ea0e7e">
+                            <SHORT-NAME>CALIB</SHORT-NAME>
+                            <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                            <SECTION-TYPE>CONST</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD UUID="6d6dba57-43ff-592b-7dcb-9e0648ea7fb8">
+                            <SHORT-NAME>AswVariable</SHORT-NAME>
+                            <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                            <SECTION-INITIALIZATION-POLICY>INIT</SECTION-INITIALIZATION-POLICY>
+                            <SECTION-TYPE>VAR</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                    <SHORT-NAME>Units</SHORT-NAME>
+                    <ELEMENTS>
+                        <UNIT UUID="61c229c1-b08d-5240-421d-7f0c64aa31c1">
+                            <SHORT-NAME>NoUnit</SHORT-NAME>
+                            <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
+                            <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
+                        </UNIT>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

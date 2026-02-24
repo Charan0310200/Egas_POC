@@ -1,0 +1,10 @@
+-IF:/POC/EGas_Models/Git_Clone/Egas_POC/SWC1
+-IF:/POC/EGas_Models/Git_Clone/Egas_POC/SWC1/ScpAp_L1SpeedMonitor_autosar_rtw
+-IF:/Matlab_2025B/toolbox/coder/autosar/rte
+-IF:/Matlab_2025B/toolbox/coder/autosar/rte/lst
+-IF:/POC/EGas_Models/Git_Clone/Egas_POC/SWC1/ScpAp_L1SpeedMonitor_autosar_rtw/stub
+-IF:/Matlab_2025B/extern/include
+-IF:/Matlab_2025B/simulink/include
+-IF:/Matlab_2025B/rtw/c/src
+-IF:/Matlab_2025B/rtw/c/src/ext_mode/common
+-IF:/Matlab_2025B/rtw/c/ert

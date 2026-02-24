@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model ScpAp_VechilestateEstimation_L2p
+Model version                : 1.17
+Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
+XML source code generated on : Mon Feb 16 10:55:02 2026
+Model Checksum               : 4196720126 422608983 2185846794 279106034
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>ComponentTypes</SHORT-NAME>
+            <ELEMENTS>
+                <SWC-IMPLEMENTATION UUID="71af2813-5b6e-577d-7716-e4f58d0121cb">
+                    <SHORT-NAME>ScpAp_VechilestateEstimation_L2p_imp</SHORT-NAME>
+                    <CODE-DESCRIPTORS>
+                        <CODE>
+                            <SHORT-NAME>Code</SHORT-NAME>
+                            <ARTIFACT-DESCRIPTORS>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_VechilestateEstimation_L2p_c</SHORT-LABEL>
+                                    <CATEGORY>SWSRC</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_VechilestateEstimation_L2p_data_c</SHORT-LABEL>
+                                    <CATEGORY>SWSRC</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_VechilestateEstimation_L2p_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_VechilestateEstimation_L2p_private_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_VechilestateEstimation_L2p_types_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                            </ARTIFACT-DESCRIPTORS>
+                        </CODE>
+                    </CODE-DESCRIPTORS>
+                    <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                    <RESOURCE-CONSUMPTION>
+                        <SHORT-NAME>RsrcCons_ScpAp_VechilestateEstimation_L2p_New</SHORT-NAME>
+                        <MEMORY-SECTIONS>
+                            <MEMORY-SECTION>
+                                <SHORT-NAME>CODE</SHORT-NAME>
+                                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+                            </MEMORY-SECTION>
+                            <MEMORY-SECTION>
+                                <SHORT-NAME>ASW_Variable</SHORT-NAME>
+                                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/ASW_Variable</SW-ADDRMETHOD-REF>
+                            </MEMORY-SECTION>
+                            <MEMORY-SECTION>
+                                <SHORT-NAME>CALIB</SHORT-NAME>
+                                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_Platform/ImplementationDataTypes/SwAddrMethods/CALIB</SW-ADDRMETHOD-REF>
+                            </MEMORY-SECTION>
+                        </MEMORY-SECTIONS>
+                    </RESOURCE-CONSUMPTION>
+                    <SW-VERSION>1.17.1</SW-VERSION>
+                    <USED-CODE-GENERATOR>Embedded Coder 25.2 (R2025b) 28-Jul-2025</USED-CODE-GENERATOR>
+                    <VENDOR-ID>0</VENDOR-ID>
+                    <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/ScpAp_VechilestateEstimation_L2p/ScpAp_VechilestateEstimation_L2p_InternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+            </ELEMENTS>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,1 @@
+var modelInfo = {model:"ScpAp_L1SpeedMonitor"};var modelHierarchy=[{model:"ScpAp_L1SpeedMonitor",relativePath:"_internal.html",parent:"null"},];var AddCode = true;var ProtectedModel = false;

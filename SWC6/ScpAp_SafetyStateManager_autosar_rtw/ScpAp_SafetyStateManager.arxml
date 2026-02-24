@@ -1,0 +1,1736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model ScpAp_SafetyStateManager
+Model version                : 1.151
+Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
+XML source code generated on : Fri Feb 20 12:21:25 2026
+Model Checksum               : 3957479753 973619637 2390882439 3564985407
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_Platform</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>BaseTypes</SHORT-NAME>
+                    <ELEMENTS>
+                        <SW-BASE-TYPE>
+                            <SHORT-NAME>boolean</SHORT-NAME>
+                            <CATEGORY>FIXED_LENGTH</CATEGORY>
+                            <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+                            <BASE-TYPE-ENCODING>BOOLEAN</BASE-TYPE-ENCODING>
+                            <NATIVE-DECLARATION>boolean</NATIVE-DECLARATION>
+                        </SW-BASE-TYPE>
+                        <SW-BASE-TYPE>
+                            <SHORT-NAME>float32</SHORT-NAME>
+                            <CATEGORY>FIXED_LENGTH</CATEGORY>
+                            <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
+                            <BASE-TYPE-ENCODING>IEEE754</BASE-TYPE-ENCODING>
+                            <NATIVE-DECLARATION>float32</NATIVE-DECLARATION>
+                        </SW-BASE-TYPE>
+                        <SW-BASE-TYPE>
+                            <SHORT-NAME>sint16</SHORT-NAME>
+                            <CATEGORY>FIXED_LENGTH</CATEGORY>
+                            <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+                            <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
+                            <NATIVE-DECLARATION>sint16</NATIVE-DECLARATION>
+                        </SW-BASE-TYPE>
+                        <SW-BASE-TYPE>
+                            <SHORT-NAME>uint8</SHORT-NAME>
+                            <CATEGORY>FIXED_LENGTH</CATEGORY>
+                            <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+                            <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+                            <NATIVE-DECLARATION>uint8</NATIVE-DECLARATION>
+                        </SW-BASE-TYPE>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                    <SHORT-NAME>CompuMethods</SHORT-NAME>
+                    <ELEMENTS>
+                        <COMPU-METHOD>
+                            <SHORT-NAME>boolean_CompuMethod</SHORT-NAME>
+                            <CATEGORY>TEXTTABLE</CATEGORY>
+                            <UNIT-REF DEST="UNIT">/DataTypes/Units/NoUnit</UNIT-REF>
+                            <COMPU-INTERNAL-TO-PHYS>
+                                <COMPU-SCALES>
+                                    <COMPU-SCALE>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>FALSE</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>TRUE</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                </COMPU-SCALES>
+                            </COMPU-INTERNAL-TO-PHYS>
+                        </COMPU-METHOD>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                    <SHORT-NAME>DataConstrs</SHORT-NAME>
+                    <ELEMENTS>
+                        <DATA-CONSTR>
+                            <SHORT-NAME>boolean_DataConstr</SHORT-NAME>
+                            <DATA-CONSTR-RULES>
+                                <DATA-CONSTR-RULE>
+                                    <INTERNAL-CONSTRS>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                                    </INTERNAL-CONSTRS>
+                                </DATA-CONSTR-RULE>
+                            </DATA-CONSTR-RULES>
+                        </DATA-CONSTR>
+                        <DATA-CONSTR>
+                            <SHORT-NAME>float32_DataConstr</SHORT-NAME>
+                            <DATA-CONSTR-RULES>
+                                <DATA-CONSTR-RULE>
+                                    <INTERNAL-CONSTRS>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-INF</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">INF</UPPER-LIMIT>
+                                    </INTERNAL-CONSTRS>
+                                </DATA-CONSTR-RULE>
+                            </DATA-CONSTR-RULES>
+                        </DATA-CONSTR>
+                        <DATA-CONSTR>
+                            <SHORT-NAME>sint16_DataConstr</SHORT-NAME>
+                            <DATA-CONSTR-RULES>
+                                <DATA-CONSTR-RULE>
+                                    <INTERNAL-CONSTRS>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                                    </INTERNAL-CONSTRS>
+                                </DATA-CONSTR-RULE>
+                            </DATA-CONSTR-RULES>
+                        </DATA-CONSTR>
+                        <DATA-CONSTR>
+                            <SHORT-NAME>uint8_DataConstr</SHORT-NAME>
+                            <DATA-CONSTR-RULES>
+                                <DATA-CONSTR-RULE>
+                                    <INTERNAL-CONSTRS>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                                    </INTERNAL-CONSTRS>
+                                </DATA-CONSTR-RULE>
+                            </DATA-CONSTR-RULES>
+                        </DATA-CONSTR>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                    <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+                    <ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE>
+                            <SHORT-NAME>boolean</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="FOR-ALL">boolean has the value space required to support the mathematical concept of 
+binary-valued logic: {true, false}.</L-2>
+                            </DESC>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/boolean</BASE-TYPE-REF>
+                                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_Platform/CompuMethods/boolean_CompuMethod</COMPU-METHOD-REF>
+                                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/boolean_DataConstr</DATA-CONSTR-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE>
+                            <SHORT-NAME>float32</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="FOR-ALL">float32 corresponds to the IEEE single-precision 32-bit floating point type
+[IEEE 754-1985]. The basic value space of float32 consists of the values 
+m * 2^e, where m is an integer whose absolute value is less than 2^24, 
+and e is an integer between -149 and 104, inclusive. In addition to the basic
+value space described above, the value space of float32 also contains the 
+following special values: positive and negative zero, positive and negative 
+infinity and not-a-number. The order-relation on float32 is: 
+x &lt; y if y - x is positive. Positive zero is greater than negative zero.
+Not-a-number equals itself and is greater than all float values including positive infinity. 
+
+float32 values have a lexical representation consisting of a mantissa followed, 
+optionally, by the character &quot;E&quot; or &quot;e&quot;, followed by an exponent. The exponent
+must be an integer. The mantissa must be a decimal number. The representations
+for exponent and mantissa must follow the lexical rules for integer and decimal.
+If the &quot;E&quot; or &quot;e&quot; and the following exponent are omitted, an exponent value 
+of 0 is assumed. 
+
+The special values positive and negative zero, positive and negative infinity
+and not-a-number have lexical representations 0, -0, INF, -INF and NaN, 
+respectively. 
+
+For example, -1E4, 1267.43233E12, 12.78e-2, 12 and INF are all legal literals
+for float32.</L-2>
+                            </DESC>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/float32</BASE-TYPE-REF>
+                                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/float32_DataConstr</DATA-CONSTR-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE>
+                            <SHORT-NAME>sint16</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="FOR-ALL">SInt16 represents integers with a minimum value of -32768 and a maximum value 
+of 32767. The order-relation on sint16 is: x &lt; y if y - x is positive.
+sint16 has a lexical representation consisting of an optional sign followed
+by a finite-length sequence of decimal digits (#x30-#x39). If the sign is
+omitted, &quot;+&quot; is assumed. 
+
+For example: -1, 0, -12678, +10000, 2500</L-2>
+                            </DESC>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/sint16</BASE-TYPE-REF>
+                                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/sint16_DataConstr</DATA-CONSTR-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE>
+                            <SHORT-NAME>uint8</SHORT-NAME>
+                            <DESC>
+                                <L-2 L="FOR-ALL">uint8 represents integers with a minimum value of 0 and a maximum value of 255.
+The order-relation on uint8 is: x &lt; y if y - x is positive.
+uint8 has a lexical representation consisting of a finite-length sequence 
+of decimal digits (#x30-#x39).
+
+For example: 1, 0, 126, +10.</L-2>
+                            </DESC>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint8</BASE-TYPE-REF>
+                                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/uint8_DataConstr</DATA-CONSTR-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+            <SHORT-NAME>ComponentTypes</SHORT-NAME>
+            <ELEMENTS>
+                <APPLICATION-SW-COMPONENT-TYPE UUID="943473ED-B88E-4EAE-A7E8-1903B5EF4DBC">
+                    <SHORT-NAME>ScpAp_SafetyStateManager</SHORT-NAME>
+                    <PORTS>
+                        <R-PORT-PROTOTYPE UUID="1FD2DB0F-20D0-4B4B-B81D-479623C18068">
+                            <SHORT-NAME>RP_ScpAp_AutonomousAllowed</SHORT-NAME>
+                            <ADMIN-DATA>
+                                <SDGS>
+                                    <SDG GID="DV:DEV"/>
+                                </SDGS>
+                            </ADMIN-DATA>
+                            <REQUIRED-COM-SPECS>
+                                <NONQUEUED-RECEIVER-COM-SPEC>
+                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_AutonomousAllowed/IF_AutonomousAllowed</DATA-ELEMENT-REF>
+                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                    <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                    <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                                    <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                                    <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                                    <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                            <SHORT-LABEL>DefaultInitValue_boolean</SHORT-LABEL>
+                                            <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                    </INIT-VALUE>
+                                </NONQUEUED-RECEIVER-COM-SPEC>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_AutonomousAllowed</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="A6B21044-7BCE-4FD0-A48D-3AFF881A6F2B">
+                            <SHORT-NAME>RP_ScpAp_Mode_L2p</SHORT-NAME>
+                            <ADMIN-DATA>
+                                <SDGS>
+                                    <SDG GID="DV:DEV"/>
+                                </SDGS>
+                            </ADMIN-DATA>
+                            <REQUIRED-COM-SPECS>
+                                <NONQUEUED-RECEIVER-COM-SPEC>
+                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SafetyMode_L2p/IF_SafetyMode_L2p</DATA-ELEMENT-REF>
+                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                    <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                    <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                                    <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                                    <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                                    <INIT-VALUE>
+                                        <TEXT-VALUE-SPECIFICATION>
+                                            <SHORT-LABEL>DefaultInitValue_SafetyMode_L2p_IDT</SHORT-LABEL>
+                                            <VALUE>AUTONOMOUS</VALUE>
+                                        </TEXT-VALUE-SPECIFICATION>
+                                    </INIT-VALUE>
+                                </NONQUEUED-RECEIVER-COM-SPEC>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_SafetyMode_L2p</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="D623870B-3722-4CFC-B4CE-36F1ECEE8885">
+                            <SHORT-NAME>RP_ScpAP_NominalTorquecmd_L2p</SHORT-NAME>
+                            <ADMIN-DATA>
+                                <SDGS>
+                                    <SDG GID="DV:DEV"/>
+                                </SDGS>
+                            </ADMIN-DATA>
+                            <REQUIRED-COM-SPECS>
+                                <NONQUEUED-RECEIVER-COM-SPEC>
+                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_NominalTorquecmd_L2p/IF_NominalTorquecmd_L2p</DATA-ELEMENT-REF>
+                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                    <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                    <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                                    <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                                    <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                                    <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                            <SHORT-LABEL>DefaultInitValue_sint16</SHORT-LABEL>
+                                            <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                    </INIT-VALUE>
+                                </NONQUEUED-RECEIVER-COM-SPEC>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_NominalTorquecmd_L2p</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="AF5DAE27-D79C-45FC-A687-330245F47926">
+                            <SHORT-NAME>RP_ScpAp_SafeTorquecmd_L2p</SHORT-NAME>
+                            <ADMIN-DATA>
+                                <SDGS>
+                                    <SDG GID="DV:DEV"/>
+                                </SDGS>
+                            </ADMIN-DATA>
+                            <REQUIRED-COM-SPECS>
+                                <NONQUEUED-RECEIVER-COM-SPEC>
+                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SafeTorquecmd_L2p/IF_SafeTorquecmd_L2p</DATA-ELEMENT-REF>
+                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                    <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                    <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                                    <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                                    <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                                    <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                            <SHORT-LABEL>DefaultInitValue_sint16</SHORT-LABEL>
+                                            <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                    </INIT-VALUE>
+                                </NONQUEUED-RECEIVER-COM-SPEC>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_SafeTorquecmd_L2p</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="65B3D4A3-AC71-414C-8305-21CADA3BB18F">
+                            <SHORT-NAME>RP_ScpAp_SafetyOverspeedFlag</SHORT-NAME>
+                            <ADMIN-DATA>
+                                <SDGS>
+                                    <SDG GID="DV:DEV"/>
+                                </SDGS>
+                            </ADMIN-DATA>
+                            <REQUIRED-COM-SPECS>
+                                <NONQUEUED-RECEIVER-COM-SPEC>
+                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SafetyOverspeedFlag/IF_SafetyOverspeedFlag</DATA-ELEMENT-REF>
+                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                    <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                    <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                                    <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                                    <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                                    <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                            <SHORT-LABEL>ComSpec6968f42a_68ad0311d0d789b3</SHORT-LABEL>
+                                            <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                    </INIT-VALUE>
+                                </NONQUEUED-RECEIVER-COM-SPEC>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_SafetyOverspeedFlag</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="F4891192-E0DD-46FB-952B-18B01F8F6AE9">
+                            <SHORT-NAME>RP_ScpAP_SafetySpeedMonitorFaultFlag</SHORT-NAME>
+                            <ADMIN-DATA>
+                                <SDGS>
+                                    <SDG GID="DV:DEV"/>
+                                </SDGS>
+                            </ADMIN-DATA>
+                            <REQUIRED-COM-SPECS>
+                                <NONQUEUED-RECEIVER-COM-SPEC>
+                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SafetySpeedMonitorFaultFlag/IF_SafetySpeedMonitorFaultFlag</DATA-ELEMENT-REF>
+                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                    <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                    <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                                    <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                                    <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                                    <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                            <SHORT-LABEL>ComSpecf84f6e99_1a9cf03014e21de2</SHORT-LABEL>
+                                            <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                    </INIT-VALUE>
+                                </NONQUEUED-RECEIVER-COM-SPEC>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_SafetySpeedMonitorFaultFlag</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="DA66CD31-5E3A-496A-9C29-E56E1CD62073">
+                            <SHORT-NAME>RP_ScpAp_SensorValidityFlag_L2p</SHORT-NAME>
+                            <ADMIN-DATA>
+                                <SDGS>
+                                    <SDG GID="DV:DEV"/>
+                                </SDGS>
+                            </ADMIN-DATA>
+                            <REQUIRED-COM-SPECS>
+                                <NONQUEUED-RECEIVER-COM-SPEC>
+                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SensorFaultFlags_L2p/IF_SensorFaultFlags_L2p</DATA-ELEMENT-REF>
+                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                    <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                    <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                                    <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                                    <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                                    <INIT-VALUE>
+                                        <RECORD-VALUE-SPECIFICATION>
+                                            <SHORT-LABEL>ComSpec84119ff2_2545e808b3362872</SHORT-LABEL>
+                                            <FIELDS>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>MotorRPM_Fault</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>Accel_Fault</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>WSS_Fault</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>VechSpeedEst_Fault</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                            </FIELDS>
+                                        </RECORD-VALUE-SPECIFICATION>
+                                    </INIT-VALUE>
+                                </NONQUEUED-RECEIVER-COM-SPEC>
+                            </REQUIRED-COM-SPECS>
+                            <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_SensorFaultFlags_L2p</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="129A85E6-272D-44EB-8AC7-B59D7ED11939">
+                            <SHORT-NAME>PP_SG_mBrkCtrl</SHORT-NAME>
+                            <ADMIN-DATA>
+                                <SDGS>
+                                    <SDG GID="DV:DEV"/>
+                                </SDGS>
+                            </ADMIN-DATA>
+                            <PROVIDED-COM-SPECS>
+                                <NONQUEUED-SENDER-COM-SPEC>
+                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mBrkCtrl/SG_mBrkCtrl_VDP</DATA-ELEMENT-REF>
+                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                    <INIT-VALUE>
+                                        <RECORD-VALUE-SPECIFICATION>
+                                            <SHORT-LABEL>ComSpec3ce80adb_42ffe0d9d679ecb2</SHORT-LABEL>
+                                            <FIELDS>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>Aeb_Active_Ebcm</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>BrkEnbl_EBCM2L</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>BrkTrqRq</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>ClearFltRq_Ebcm</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>DsblTCS</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>EbcmMaintModeRq</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>EbcmShtdwnRq</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>EpbCalCmd</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>EPBCmd</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>HoldRq</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>MsgCntr_mBrkCtrl</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>MsgCrc_mBrkCtrl</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                            </FIELDS>
+                                        </RECORD-VALUE-SPECIFICATION>
+                                    </INIT-VALUE>
+                                </NONQUEUED-SENDER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_SG_mBrkCtrl</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="78FB6D3D-D232-488D-AB5A-4FF94C03CED2">
+                            <SHORT-NAME>PP_SG_mWhdCtrl</SHORT-NAME>
+                            <ADMIN-DATA>
+                                <SDGS>
+                                    <SDG GID="DV:DEV"/>
+                                </SDGS>
+                            </ADMIN-DATA>
+                            <PROVIDED-COM-SPECS>
+                                <NONQUEUED-SENDER-COM-SPEC>
+                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mWhdCtrl/SG_mWhdCtrl_VDP</DATA-ELEMENT-REF>
+                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                    <INIT-VALUE>
+                                        <RECORD-VALUE-SPECIFICATION>
+                                            <SHORT-LABEL>ComSpec52014817_cbff72f33b0d015a</SHORT-LABEL>
+                                            <FIELDS>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>Boot</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>CtrlMode_Whd</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>Debug</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>EnblCmd</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>MsgCntr_mWhdCtrl</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>MsgCrc_mWhdCtrl</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>MtrMode</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>SpdCmd</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>SpdSlewLmt</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>TrqCmd</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>TrqSlewLmt</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                            </FIELDS>
+                                        </RECORD-VALUE-SPECIFICATION>
+                                    </INIT-VALUE>
+                                </NONQUEUED-SENDER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_SG_mWhdCtrl</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE UUID="74A64CD2-15F2-4B5E-A92D-0FB5484639B3">
+                            <SHORT-NAME>PP_VechSafetyStatus_L2p</SHORT-NAME>
+                            <ADMIN-DATA>
+                                <SDGS>
+                                    <SDG GID="DV:DEV"/>
+                                </SDGS>
+                            </ADMIN-DATA>
+                            <PROVIDED-COM-SPECS>
+                                <NONQUEUED-SENDER-COM-SPEC>
+                                    <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_VechSafetyStatus_L2p/IF_VechSafetyStatus_L2p</DATA-ELEMENT-REF>
+                                    <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                    <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                    <INIT-VALUE>
+                                        <TEXT-VALUE-SPECIFICATION>
+                                            <SHORT-LABEL>DefaultInitValue_VechSafetyStatus_L2p_IDT</SHORT-LABEL>
+                                            <VALUE>NORMAL</VALUE>
+                                        </TEXT-VALUE-SPECIFICATION>
+                                    </INIT-VALUE>
+                                </NONQUEUED-SENDER-COM-SPEC>
+                            </PROVIDED-COM-SPECS>
+                            <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/IF_VechSafetyStatus_L2p</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                    </PORTS>
+                    <INTERNAL-BEHAVIORS>
+                        <SWC-INTERNAL-BEHAVIOR UUID="1DBB625E-FFD7-40B2-9B2A-4C48E3DCA2E3">
+                            <SHORT-NAME>ScpAp_SafetyStateManager_InternalBehavior</SHORT-NAME>
+                            <STATIC-MEMORYS>
+                                <VARIABLE-DATA-PROTOTYPE UUID="491ec3ad-a344-5bd9-7e5c-f5aac554521f">
+                                    <SHORT-NAME>ScpAp_SafetyStateManag_BrkTrqRq</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="6047d501-7bb9-5199-41fa-c41d6b0cc10d">
+                                    <SHORT-NAME>ScpAp_SafetyStateManager_TrqCmd</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="c494a8f1-8614-53a7-998a-a9a60bca5ce6">
+                                    <SHORT-NAME>ScpAp_SafetyStateManager_SpdCmd</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="43acf16e-f980-5862-e8e0-a1567e91ce02">
+                                    <SHORT-NAME>ScpAp_SafetyStateMan_SpdSlewLmt</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="c8e31b1a-a5de-517d-2561-bf6ec0f0788d">
+                                    <SHORT-NAME>ScpAp_SafetyStateMan_TrqSlewLmt</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="707bfa46-f3a8-5b48-ae72-13e61ba3985a">
+                                    <SHORT-NAME>ScpAp_SafetyS_SafeTorquecmd_L2p</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="420aeef4-6d2d-5acb-a37e-9ff73acb2edf">
+                                    <SHORT-NAME>ScpAp_SafetySta_MsgCrc_mBrkCtrl</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="48c8044b-987a-5ba0-67e8-78fc7742f575">
+                                    <SHORT-NAME>ScpAp_SafetyStateManager_EPBCmd</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="f4c84a34-0db5-5ccb-92b7-84af4b97c0a2">
+                                    <SHORT-NAME>ScpAp_SafetySt_MsgCntr_mBrkCtrl</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="76203621-5e81-5f0a-08db-9f54c5b9a89e">
+                                    <SHORT-NAME>ScpAp_SafetyStateM_CtrlMode_Whd</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="69bad1e9-3d5e-5549-107e-a185e07a03e2">
+                                    <SHORT-NAME>ScpAp_SafetySt_MsgCntr_mWhdCtrl</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="5285d6e2-ca78-574e-8451-76c5d7f2bc5c">
+                                    <SHORT-NAME>ScpAp_SafetySta_MsgCrc_mWhdCtrl</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="64e039bc-811c-5348-aaec-4e250fc482bc">
+                                    <SHORT-NAME>ScpAp_SafetyStateManage_MtrMode</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="5eee75e8-d66e-51c0-83e9-85732ceb3d2c">
+                                    <SHORT-NAME>ScpAp_SafetySta_Aeb_Active_Ebcm</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="8ac89ea7-5ddb-50eb-b529-a580960b4b41">
+                                    <SHORT-NAME>ScpAp_SafetyStat_BrkEnbl_EBCM2L</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="7afc99c6-f727-57a4-676e-e73ad11f4583">
+                                    <SHORT-NAME>ScpAp_SafetySta_ClearFltRq_Ebcm</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="0b000819-7871-581f-9c5b-69dc16ec8ea8">
+                                    <SHORT-NAME>ScpAp_SafetyStateManage_DsblTCS</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="7e10a588-3bd2-5c43-e89f-4ac29e59f121">
+                                    <SHORT-NAME>ScpAp_SafetySta_EbcmMaintModeRq</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="50248619-0e09-54e3-38c3-1988df0d28b2">
+                                    <SHORT-NAME>ScpAp_SafetyStateM_EbcmShtdwnRq</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="b12bb636-d522-534e-fbc0-c5dce8a05d24">
+                                    <SHORT-NAME>ScpAp_SafetyStateMana_EpbCalCmd</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="ac4c7fae-9e6c-5416-3f2c-6823ef6e0ceb">
+                                    <SHORT-NAME>ScpAp_SafetyStateManager_HoldRq</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="5c1ce325-88c7-5512-60de-ee8d905f338e">
+                                    <SHORT-NAME>ScpAp_SafetyStateManager_Boot</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="dcc5a5ad-8089-5e4c-946d-601f42ecbd12">
+                                    <SHORT-NAME>ScpAp_SafetyStateManager_Debug</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="9031a96e-a7b5-5447-0f9a-c0b737b3063b">
+                                    <SHORT-NAME>ScpAp_SafetyStateManage_EnblCmd</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE UUID="803260cc-6a69-5a29-98ed-10b3fb3c5ede">
+                                    <SHORT-NAME>ScpAp_SafetySta_MultiportSwitch</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/ASW_Variables</SW-ADDR-METHOD-REF>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/VechSafetyStatus_L2p_IDT</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                            </STATIC-MEMORYS>
+                            <EVENTS>
+                                <TIMING-EVENT UUID="97D4DBBE-E3DB-4358-A40D-4BC98057CD3E">
+                                    <SHORT-NAME>TMT_SafetyState_Main</SHORT-NAME>
+                                    <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/ScpAp_SafetyStateManager/ScpAp_SafetyStateManager_InternalBehavior/SafetyState_Main</START-ON-EVENT-REF>
+                                    <PERIOD>0.02</PERIOD>
+                                </TIMING-EVENT>
+                            </EVENTS>
+                            <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                            <RUNNABLES>
+                                <RUNNABLE-ENTITY UUID="75A44556-4968-41D3-BFC6-BCD4B74902AD">
+                                    <SHORT-NAME>SafetyState_Main</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/CODE</SW-ADDR-METHOD-REF>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                                        <VARIABLE-ACCESS UUID="6a2b6bc2-df2b-55e1-d7ec-7775da9a00d2">
+                                            <SHORT-NAME>IN_RP_ScpAP_SafetySpeedMonitorFaultFlag_IF_SafetySpeedMonitorFaultFlag</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/ScpAp_SafetyStateManager/RP_ScpAP_SafetySpeedMonitorFaultFlag</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SafetySpeedMonitorFaultFlag/IF_SafetySpeedMonitorFaultFlag</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="67c23ce3-0930-5946-f9a3-9ca1ebb825b4">
+                                            <SHORT-NAME>IN_RP_ScpAp_SafeTorquecmd_L2p_IF_SafeTorquecmd_L2p</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/ScpAp_SafetyStateManager/RP_ScpAp_SafeTorquecmd_L2p</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SafeTorquecmd_L2p/IF_SafeTorquecmd_L2p</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="ded99ca5-6aa4-5059-b3e8-ec1909893fae">
+                                            <SHORT-NAME>IN_RP_ScpAp_SafetyOverspeedFlag_IF_SafetyOverspeedFlag</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/ScpAp_SafetyStateManager/RP_ScpAp_SafetyOverspeedFlag</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SafetyOverspeedFlag/IF_SafetyOverspeedFlag</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="c9e2682a-42ce-57ca-460c-9fa74aa07850">
+                                            <SHORT-NAME>IN_RP_ScpAp_SensorValidityFlag_L2p_IF_SensorFaultFlags_L2p</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/ScpAp_SafetyStateManager/RP_ScpAp_SensorValidityFlag_L2p</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SensorFaultFlags_L2p/IF_SensorFaultFlags_L2p</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                                    <DATA-SEND-POINTS>
+                                        <VARIABLE-ACCESS UUID="a5384dd8-5639-5f75-2ad3-1717eea237b7">
+                                            <SHORT-NAME>OUT_PP_SG_mBrkCtrl_SG_mBrkCtrl_VDP</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/ScpAp_SafetyStateManager/PP_SG_mBrkCtrl</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mBrkCtrl/SG_mBrkCtrl_VDP</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="9bf303a7-b27f-54bc-65e6-e8611b153524">
+                                            <SHORT-NAME>OUT_PP_SG_mWhdCtrl_SG_mWhdCtrl_VDP</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/ScpAp_SafetyStateManager/PP_SG_mWhdCtrl</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mWhdCtrl/SG_mWhdCtrl_VDP</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                        <VARIABLE-ACCESS UUID="372b89dc-8e72-5efd-10e5-88321fc858c6">
+                                            <SHORT-NAME>OUT_PP_VechSafetyStatus_L2p_IF_VechSafetyStatus_L2p</SHORT-NAME>
+                                            <ACCESSED-VARIABLE>
+                                                <AUTOSAR-VARIABLE-IREF>
+                                                    <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/ScpAp_SafetyStateManager/PP_VechSafetyStatus_L2p</PORT-PROTOTYPE-REF>
+                                                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_VechSafetyStatus_L2p/IF_VechSafetyStatus_L2p</TARGET-DATA-PROTOTYPE-REF>
+                                                </AUTOSAR-VARIABLE-IREF>
+                                            </ACCESSED-VARIABLE>
+                                        </VARIABLE-ACCESS>
+                                    </DATA-SEND-POINTS>
+                                    <SYMBOL>SafetyState_Main</SYMBOL>
+                                </RUNNABLE-ENTITY>
+                                <RUNNABLE-ENTITY UUID="f4a5d32d-3d7f-5824-42c1-a3967542c0e7">
+                                    <SHORT-NAME>ScpAp_SafetyStateManager_Init</SHORT-NAME>
+                                    <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                    <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/CODE</SW-ADDR-METHOD-REF>
+                                    <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                    <SYMBOL>ScpAp_SafetyStateManager_Init</SYMBOL>
+                                </RUNNABLE-ENTITY>
+                            </RUNNABLES>
+                            <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                        </SWC-INTERNAL-BEHAVIOR>
+                    </INTERNAL-BEHAVIORS>
+                </APPLICATION-SW-COMPONENT-TYPE>
+            </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+            <SHORT-NAME>DataTypes</SHORT-NAME>
+            <ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE UUID="6B1A6ACC-1F1F-458C-A6FE-FD812B71C4ED">
+                    <SHORT-NAME>IF_SensorFaultFlgs_L2p_IDT</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="03A14E2C-00EA-454A-BF91-9230EF4669D7">
+                            <SHORT-NAME>MotorRPM_Fault</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="CA25FBE7-27D1-44A8-997B-F40FA51ACAEE">
+                            <SHORT-NAME>Accel_Fault</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="77CE44E5-51F0-4B53-9B90-1175B4687836">
+                            <SHORT-NAME>WSS_Fault</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="B2B18221-4A9A-40A9-BDEF-E3F106003B73">
+                            <SHORT-NAME>VechSpeedEst_Fault</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="B09D4948-14F9-4716-8997-2BEF72D05D9C">
+                    <SHORT-NAME>SG_mBrkCtrl_IDT</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="3C5F52F4-7380-410F-97CE-4FD85B00987F">
+                            <SHORT-NAME>Aeb_Active_Ebcm</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="E6621434-6E3A-403D-B106-F3E2CFBB9BF6">
+                            <SHORT-NAME>BrkEnbl_EBCM2L</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="CB1DCEF2-2C6F-488F-B63E-B4CDB3C7A142">
+                            <SHORT-NAME>BrkTrqRq</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="82A2442C-1E32-48DE-A8C4-DD7FFEDF0E22">
+                            <SHORT-NAME>ClearFltRq_Ebcm</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="09E05848-5D91-4954-AE42-CE22324FF6A0">
+                            <SHORT-NAME>DsblTCS</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="1F922C2F-2D46-4345-B9C1-F280C06BE73D">
+                            <SHORT-NAME>EbcmMaintModeRq</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="475FAD69-2E7C-45F3-8090-4B194DEDE803">
+                            <SHORT-NAME>EbcmShtdwnRq</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="08DE4526-DE39-4C86-97AD-B08282A9AAFB">
+                            <SHORT-NAME>EpbCalCmd</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="7B2A848A-F583-4978-8D5D-8DF9E3FAB2A8">
+                            <SHORT-NAME>EPBCmd</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="83F2FFB6-8BAF-4C4F-86F0-7484F195EFE4">
+                            <SHORT-NAME>HoldRq</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="5DDAEC35-1DFE-4962-9817-E9804C2936A6">
+                            <SHORT-NAME>MsgCntr_mBrkCtrl</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="1F27DAB6-BF63-46E8-966A-D74E120B0E32">
+                            <SHORT-NAME>MsgCrc_mBrkCtrl</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="8BD24123-3256-4A21-A0FD-661D50FA986D">
+                    <SHORT-NAME>SG_mWhdCtrl_IDT</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="7E38AE21-BE5E-44A9-9BC0-8CD7D787DAB6">
+                            <SHORT-NAME>Boot</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="214B09D1-C4C6-42EE-A888-4D6869C1668F">
+                            <SHORT-NAME>CtrlMode_Whd</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="F934F684-0BE9-4978-890F-BEED27178F5B">
+                            <SHORT-NAME>Debug</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="6A0B65A3-DC91-4607-84FF-C281CB41A283">
+                            <SHORT-NAME>EnblCmd</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="5A096261-DB5E-47E1-8526-81ACE37809C4">
+                            <SHORT-NAME>MsgCntr_mWhdCtrl</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="24280032-FC9A-4665-993D-EEAF851D35D6">
+                            <SHORT-NAME>MsgCrc_mWhdCtrl</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="A5893D23-052D-41AE-8B62-E1D1176EB5AB">
+                            <SHORT-NAME>MtrMode</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="BAC574DC-69EE-4467-84F2-4C1A22425288">
+                            <SHORT-NAME>SpdCmd</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="A6E6F712-32FE-4859-990E-0FC130112260">
+                            <SHORT-NAME>SpdSlewLmt</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="2CA0E5EE-E08F-4A87-B2A2-B6BF9C79F9D2">
+                            <SHORT-NAME>TrqCmd</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="9CD3B7DB-89AF-4315-8D03-0D08C2F64F0C">
+                            <SHORT-NAME>TrqSlewLmt</SHORT-NAME>
+                            <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="15903B75-6664-48E7-A55C-A2AE306D2CD2">
+                    <SHORT-NAME>SafetyMode_L2p_IDT</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataTypes/CompuMethods/CM_SafetyMode_L2p</COMPU-METHOD-REF>
+                                <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/DC_SafetyMode_L2p_IDT</DATA-CONSTR-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="DD4D0CF5-D1BE-491C-B3EB-27744724AA7B">
+                    <SHORT-NAME>VechSafetyStatus_L2p_IDT</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint8</BASE-TYPE-REF>
+                                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataTypes/CompuMethods/CM_VechSafetyStatus_L2p</COMPU-METHOD-REF>
+                                <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/DC_VechSafetyStatus_L2p_IDT</DATA-CONSTR-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+            </ELEMENTS>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>BaseTypes</SHORT-NAME>
+                    <ELEMENTS>
+                        <SW-BASE-TYPE UUID="Pbfa80002184f6c3048f15d3c8XPbfa80002184f6c3048f15d3c700">
+                            <SHORT-NAME>uint8</SHORT-NAME>
+                            <CATEGORY>FIXED_LENGTH</CATEGORY>
+                            <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+                            <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+                            <NATIVE-DECLARATION>uint8</NATIVE-DECLARATION>
+                        </SW-BASE-TYPE>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                    <SHORT-NAME>CompuMethods</SHORT-NAME>
+                    <ELEMENTS>
+                        <COMPU-METHOD UUID="FD96C8A6-C4CD-4F3A-8CC2-1B4F72A8CC54">
+                            <SHORT-NAME>CM_SafetyMode_L2p</SHORT-NAME>
+                            <CATEGORY>TEXTTABLE</CATEGORY>
+                            <UNIT-REF DEST="UNIT">/DataTypes/Units/NoUnit</UNIT-REF>
+                            <COMPU-INTERNAL-TO-PHYS>
+                                <COMPU-SCALES>
+                                    <COMPU-SCALE>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>AUTONOMOUS</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MANUAL</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>TELEOPS</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                </COMPU-SCALES>
+                            </COMPU-INTERNAL-TO-PHYS>
+                        </COMPU-METHOD>
+                        <COMPU-METHOD UUID="1CA33D7E-D986-45A2-BD07-531E07D1CACD">
+                            <SHORT-NAME>CM_VechSafetyStatus_L2p</SHORT-NAME>
+                            <CATEGORY>TEXTTABLE</CATEGORY>
+                            <UNIT-REF DEST="UNIT">/DataTypes/Units/NoUnit</UNIT-REF>
+                            <COMPU-INTERNAL-TO-PHYS>
+                                <COMPU-SCALES>
+                                    <COMPU-SCALE>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>NORMAL</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>DEGRADED</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>FAULT_STOP</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>OVERSPEED_HANDLING</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                </COMPU-SCALES>
+                            </COMPU-INTERNAL-TO-PHYS>
+                        </COMPU-METHOD>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                    <SHORT-NAME>DataConstrs</SHORT-NAME>
+                    <ELEMENTS/>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+            <SHORT-NAME>PortInterfaces</SHORT-NAME>
+            <ELEMENTS>
+                <SENDER-RECEIVER-INTERFACE UUID="1218D2AD-9326-4D86-A431-9B49410EBFF3">
+                    <SHORT-NAME>IF_AutonomousAllowed</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="8D906481-86B0-4F88-83B1-D5FCA600D9E6">
+                            <SHORT-NAME>IF_AutonomousAllowed</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_AutonomousAllowed/IF_AutonomousAllowed</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="CE8A23D1-91C2-4D5E-99AC-7663F41E7158">
+                    <SHORT-NAME>IF_NominalTorquecmd_L2p</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="768FECBB-6FB5-41F3-8EB2-D67FE3826B73">
+                            <SHORT-NAME>IF_NominalTorquecmd_L2p</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_NominalTorquecmd_L2p/IF_NominalTorquecmd_L2p</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="449AC049-818F-4AD9-AB11-B9DC9564C912">
+                    <SHORT-NAME>IF_SafeTorquecmd_L2p</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="A975AC99-3267-4081-BB21-4383B269A463">
+                            <SHORT-NAME>IF_SafeTorquecmd_L2p</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SafeTorquecmd_L2p/IF_SafeTorquecmd_L2p</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="18E8B0A5-F22C-4E90-9147-DBC666AB19AF">
+                    <SHORT-NAME>IF_SafetyMode_L2p</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="3156D806-19C7-4CF0-B49F-EC8D856A1205">
+                            <SHORT-NAME>IF_SafetyMode_L2p</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/SafetyMode_L2p_IDT</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SafetyMode_L2p/IF_SafetyMode_L2p</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="A8DAA8C4-99B3-48F9-90B1-EDFCD98B10C8">
+                    <SHORT-NAME>IF_SafetyOverspeedFlag</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="9B5B7225-5AF4-4851-9671-E3C6A1A9D3FC">
+                            <SHORT-NAME>IF_SafetyOverspeedFlag</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SafetyOverspeedFlag/IF_SafetyOverspeedFlag</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="68D3F45D-FD5E-4F94-9164-9C22C7864916">
+                    <SHORT-NAME>IF_SafetySpeedMonitorFaultFlag</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="D0A819D2-D7DC-4BA4-8E86-453ADAF67C36">
+                            <SHORT-NAME>IF_SafetySpeedMonitorFaultFlag</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SafetySpeedMonitorFaultFlag/IF_SafetySpeedMonitorFaultFlag</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="D998C706-4FA4-4886-9CA9-595732010B0B">
+                    <SHORT-NAME>IF_SensorFaultFlags_L2p</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="1C0F0C5A-235B-414A-B277-246DF3884213">
+                            <SHORT-NAME>IF_SensorFaultFlags_L2p</SHORT-NAME>
+                            <CATEGORY>STRUCTURE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/IF_SensorFaultFlgs_L2p_IDT</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SensorFaultFlags_L2p/IF_SensorFaultFlags_L2p</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="BC5FA19F-B525-42CA-990F-111E97564825">
+                    <SHORT-NAME>IF_SG_mBrkCtrl</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="FC492992-DDD6-4DC7-8EDE-B4B24945B640">
+                            <SHORT-NAME>SG_mBrkCtrl_VDP</SHORT-NAME>
+                            <CATEGORY>STRUCTURE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/SG_mBrkCtrl_IDT</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mBrkCtrl/SG_mBrkCtrl_VDP</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="64AE8C8F-4970-4E12-B859-C6501C88C958">
+                    <SHORT-NAME>IF_SG_mWhdCtrl</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="282CBDF2-2D12-4233-99E1-215D033028F4">
+                            <SHORT-NAME>SG_mWhdCtrl_VDP</SHORT-NAME>
+                            <CATEGORY>STRUCTURE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/SG_mWhdCtrl_IDT</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_SG_mWhdCtrl/SG_mWhdCtrl_VDP</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="95959C04-3F00-4C48-B9EB-49D715EF1B3E">
+                    <SHORT-NAME>IF_VechSafetyStatus_L2p</SHORT-NAME>
+                    <IS-SERVICE>false</IS-SERVICE>
+                    <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="C81DB467-45C6-41A2-A967-AF445837B4EF">
+                            <SHORT-NAME>IF_VechSafetyStatus_L2p</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                            <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/VechSafetyStatus_L2p_IDT</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                    </DATA-ELEMENTS>
+                    <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_VechSafetyStatus_L2p/IF_VechSafetyStatus_L2p</DATA-ELEMENT-REF>
+                            <HANDLE-INVALID>DONT-INVALIDATE</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                    </INVALIDATION-POLICYS>
+                </SENDER-RECEIVER-INTERFACE>
+            </ELEMENTS>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

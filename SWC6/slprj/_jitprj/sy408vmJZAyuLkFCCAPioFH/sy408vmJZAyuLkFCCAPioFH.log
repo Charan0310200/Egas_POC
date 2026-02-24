@@ -1,0 +1,17 @@
+"gcc" -c -m64 -O2 -DNDEBUG -DMATLAB_MEX_FILE -fvisibility=hidden -I"F:\Matlab_2025B\extern\include" -I"F:\Matlab_2025B\simulink\include" -I"F:\POC\EGas_Models\Git_Clone\Egas_POC\SWC6\slprj\_jitprj\sy408vmJZAyuLkFCCAPioFH" -I"F:\POC\EGas_Models\Git_Clone\Egas_POC\SWC6"  "F:\POC\EGas_Models\Git_Clone\Egas_POC\SWC6\slprj\_jitprj\sy408vmJZAyuLkFCCAPioFH\sy408vmJZAyuLkFCCAPioFH.c"
+In file included from F:\POC\EGas_Models\Git_Clone\Egas_POC\SWC6\slprj\_jitprj\sy408vmJZAyuLkFCCAPioFH\sy408vmJZAyuLkFCCAPioFH.c:5:
+F:\Matlab_2025B\simulink\include/sfrtif/sfc_sf.h:11: warning: "S_FUNCTION_LEVEL" redefined
+ #define S_FUNCTION_LEVEL 2
+ 
+In file included from F:\Matlab_2025B\simulink\include/simstruc.h:66,
+                 from F:\Matlab_2025B\simulink\include/cgxert.h:41,
+                 from F:\POC\EGas_Models\Git_Clone\Egas_POC\SWC6\slprj\_jitprj\sy408vmJZAyuLkFCCAPioFH\sy408vmJZAyuLkFCCAPioFH.c:3:
+F:\Matlab_2025B\simulink\include/simstruc_compcond.h:152: note: this is the location of the previous definition
+ #define S_FUNCTION_LEVEL 1 /* Backwards compatibility old S-functions */
+ 
+In file included from F:\POC\EGas_Models\Git_Clone\Egas_POC\SWC6\slprj\_jitprj\sy408vmJZAyuLkFCCAPioFH\sy408vmJZAyuLkFCCAPioFH.c:24:
+F:\POC\EGas_Models\Git_Clone\Egas_POC\SWC6\slprj\_jitprj\sy408vmJZAyuLkFCCAPioFH\sy408vmJZAyuLkFCCAPioFH.h:19:10: fatal error: Rte_Type.h: No such file or directory
+ #include "Rte_Type.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+mingw32-make: *** [sy408vmJZAyuLkFCCAPioFH.mak:45: sy408vmJZAyuLkFCCAPioFH.o] Error 1

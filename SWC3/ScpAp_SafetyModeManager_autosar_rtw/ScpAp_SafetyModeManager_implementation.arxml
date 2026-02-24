@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model ScpAp_SafetyModeManager
+Model version                : 1.75
+Simulink Coder version       : Simulink Coder 25.2 (R2025b) 28-Jul-2025
+XML source code generated on : Tue Feb 17 17:07:40 2026
+Model Checksum               : 350733017 2564835752 3426896705 3036312786
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>ComponentTypes</SHORT-NAME>
+            <ELEMENTS>
+                <SWC-IMPLEMENTATION UUID="d58449f4-ddb9-5845-c3cf-e2dfd15b8680">
+                    <SHORT-NAME>ScpAp_SafetyModeManager_imp</SHORT-NAME>
+                    <CODE-DESCRIPTORS>
+                        <CODE>
+                            <SHORT-NAME>Code</SHORT-NAME>
+                            <ARTIFACT-DESCRIPTORS>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SafetyModeManager_c</SHORT-LABEL>
+                                    <CATEGORY>SWSRC</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SafetyModeManager_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SafetyModeManager_private_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>ScpAp_SafetyModeManager_types_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                            </ARTIFACT-DESCRIPTORS>
+                        </CODE>
+                    </CODE-DESCRIPTORS>
+                    <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                    <RESOURCE-CONSUMPTION>
+                        <SHORT-NAME>RsrcCons_ScpAp_SafetyModeManager</SHORT-NAME>
+                        <MEMORY-SECTIONS>
+                            <MEMORY-SECTION>
+                                <SHORT-NAME>CODE</SHORT-NAME>
+                                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+                            </MEMORY-SECTION>
+                            <MEMORY-SECTION>
+                                <SHORT-NAME>AswVariable</SHORT-NAME>
+                                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/DataTypes/SwAddrMethods/AswVariable</SW-ADDRMETHOD-REF>
+                            </MEMORY-SECTION>
+                        </MEMORY-SECTIONS>
+                    </RESOURCE-CONSUMPTION>
+                    <SW-VERSION>1.75.1</SW-VERSION>
+                    <USED-CODE-GENERATOR>Embedded Coder 25.2 (R2025b) 28-Jul-2025</USED-CODE-GENERATOR>
+                    <VENDOR-ID>0</VENDOR-ID>
+                    <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/ScpAp_SafetyModeManager/ScpAp_SafetyModeManager_InternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+            </ELEMENTS>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>
